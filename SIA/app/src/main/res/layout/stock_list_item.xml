@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <FrameLayout
+        android:id="@+id/sli_stock_color_box"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="#FFAAAAAA">
+
+        <TextView
+            android:id="@+id/sli_stock_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text="SYMB"
+            android:textSize="25dp"
+            android:textColor="#FFFFFFFF"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sli_stock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/sli_stock_color_box"
+        android:paddingLeft="10dp"
+        android:text="Stock Name"
+        android:textSize="25dp"
+        android:textColor="#FF000000"/>
+
+    <TextView
+        android:id="@+id/sli_stock_price"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/sli_stock_name"
+        android:layout_toRightOf="@+id/sli_stock_color_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Stock Price"/>
+
+    <ImageView
+        android:id="@+id/sli_stock_change_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/sli_stock_name"
+        android:layout_toRightOf="@+id/sli_stock_price"
+        android:background="#FFAAAAAA"/>
+
+    <TextView
+        android:id="@+id/sli_stock_change"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/sli_stock_name"
+        android:layout_toRightOf="@+id/sli_stock_change_img"
+        android:paddingLeft="10dp"
+        android:text="Stock Change"/>
+
+
+</RelativeLayout>
