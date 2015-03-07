@@ -12,9 +12,9 @@ public class StockListItem {
     public float stockChange;
 
 
-    public StockListItem(String stockSymbol, String stockName) {
+    public StockListItem(String stockSymbol, String stockName, int stockColorCode) {
         this.stockSymbol = stockSymbol;
         this.stockName = stockName;
-        this.stockColorCode = 0xFFAAAAAA;
+        this.stockColorCode = stockColorCode;
     }
 }

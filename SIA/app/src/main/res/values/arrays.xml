@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="stock_symbols">
+        <item>SS1</item>
+        <item>SS2</item>
+        <item>SS3</item>
+        <item>SS4</item>
+        <item>SS5</item>
+    </string-array>
+
+    <string-array name="stock_names">
+        <item>Stock 1</item>
+        <item>Stock 2</item>
+        <item>Stock 3</item>
+        <item>Stock 4</item>
+        <item>Stock 5</item>
+    </string-array>
+
+    <integer-array name="stock_colors">
+        <item>0xFFFF0000</item>
+        <item>0xFF00FF00</item>
+        <item>0xFFFF0000</item>
+        <item>0xFF00FF00</item>
+        <item>0xFFFF0000</item>
+    </integer-array>
+
+</resources>
