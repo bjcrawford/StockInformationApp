@@ -7,6 +7,11 @@
         <item>SS3</item>
         <item>SS4</item>
         <item>SS5</item>
+        <item>SS6</item>
+        <item>SS7</item>
+        <item>SS8</item>
+        <item>SS9</item>
+        <item>SS10</item>
     </string-array>
 
     <string-array name="stock_names">
@@ -15,14 +20,24 @@
         <item>Stock 3</item>
         <item>Stock 4</item>
         <item>Stock 5</item>
+        <item>Stock 6</item>
+        <item>Stock 7</item>
+        <item>Stock 8</item>
+        <item>Stock 9</item>
+        <item>Stock 10</item>
     </string-array>
 
     <integer-array name="stock_colors">
-        <item>0xFFFF0000</item>
-        <item>0xFF00FF00</item>
-        <item>0xFFFF0000</item>
-        <item>0xFF00FF00</item>
-        <item>0xFFFF0000</item>
+        <item>0xFF33B5E5</item>
+        <item>0xFFAA66CC</item>
+        <item>0xFF99CC00</item>
+        <item>0xFFFFBB33</item>
+        <item>0xFFFF4444</item>
+        <item>0xFF0099CC</item>
+        <item>0xFF9933CC</item>
+        <item>0xFF669900</item>
+        <item>0xFFFF8800</item>
+        <item>0xFFCC0000</item>
     </integer-array>
 
 </resources>

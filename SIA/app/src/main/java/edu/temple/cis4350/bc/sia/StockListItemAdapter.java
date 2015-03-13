@@ -9,11 +9,11 @@ import java.util.ArrayList;
 
 public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemViewHolder> {
 
-    private ArrayList<StockListItem> stockListItems;
+    private ArrayList<Stock> stocks;
     private OnItemClickListener listener;
 
-    public StockListItemAdapter(ArrayList<StockListItem> stockListItems, OnItemClickListener listener) {
-        this.stockListItems = stockListItems;
+    public StockListItemAdapter(ArrayList<Stock> stocks, OnItemClickListener listener) {
+        this.stocks = stocks;
         this.listener = listener;
     }
 
@@ -25,7 +25,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
 
     @Override
     public void onBindViewHolder(StockListItemViewHolder viewHolder, final int position) {
-        viewHolder.bindStockListItem(stockListItems.get(position));
+        viewHolder.bindStockListItem(stocks.get(position));
         viewHolder.getView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
 
     @Override
     public int getItemCount() {
-        return stockListItems.size();
+        return stocks.size();
     }
 
     public interface OnItemClickListener {
