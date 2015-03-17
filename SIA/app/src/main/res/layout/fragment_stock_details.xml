@@ -5,80 +5,147 @@
     android:layout_height="match_parent"
     tools:context="edu.temple.cis4350.bc.sia.StockDetailsFragment">
 
-    <TextView
-        android:id="@+id/stock_name_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/stock_name_title"
-        android:textSize="40sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/stock_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_name_title"
-        android:text="@string/placeholder"
-        android:textSize="30sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/stock_symbol_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_name"
-        android:layout_marginTop="10dp"
-        android:text="@string/stock_symbol_title"
-        android:textSize="40sp"/>
+            <TextView
+                android:id="@+id/stock_symbol_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_symbol_title"
+                android:textSize="30sp"/>
 
-    <TextView
-        android:id="@+id/stock_symbol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_symbol_title"
-        android:text="@string/placeholder"
-        android:textSize="30sp" />
+            <TextView
+                android:id="@+id/stock_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_symbol_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/stock_price_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_symbol"
-        android:layout_marginTop="10dp"
-        android:text="@string/stock_price_title"
-        android:textSize="40sp"/>
+            <TextView
+                android:id="@+id/stock_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_symbol"
+                android:text="@string/stock_name_title"
+                android:textSize="30sp"/>
 
-    <TextView
-        android:id="@+id/stock_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_price_title"
-        android:text="@string/placeholder"
-        android:textSize="30sp" />
+            <TextView
+                android:id="@+id/stock_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_name_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/stock_change_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_price"
-        android:layout_marginTop="10dp"
-        android:text="@string/stock_change_title"
-        android:textSize="40sp"/>
+            <TextView
+                android:id="@+id/stock_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_name"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_price_title"
+                android:textSize="30sp"/>
 
-    <TextView
-        android:id="@+id/stock_change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/stock_change_title"
-        android:text="@string/placeholder"
-        android:textSize="30sp" />
+            <TextView
+                android:id="@+id/stock_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_price_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/stock_change_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_price"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_change_title"
+                android:textSize="30sp"/>
 
+            <TextView
+                android:id="@+id/stock_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_change_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/stock_prev_close_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_change"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_prev_close_title"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/stock_prev_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_prev_close_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/stock_open_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_prev_close"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_open_title"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/stock_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_open_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/stock_market_cap_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_open"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_market_cap_title"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/stock_market_cap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_market_cap_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

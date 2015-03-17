@@ -2,16 +2,16 @@
 <resources>
 
     <string-array name="stock_symbols">
-        <item>SS1</item>
-        <item>SS2</item>
-        <item>SS3</item>
-        <item>SS4</item>
-        <item>SS5</item>
-        <item>SS6</item>
-        <item>SS7</item>
-        <item>SS8</item>
-        <item>SS9</item>
-        <item>SS10</item>
+        <item>GOOG</item>
+        <item>AAPL</item>
+        <item>MSFT</item>
+        <item>YHOO</item>
+        <item>INTC</item>
+        <item>SNE</item>
+        <item>FB</item>
+        <item>TWTR</item>
+        <item>COL</item>
+        <item>BAC</item>
     </string-array>
 
     <string-array name="stock_names">

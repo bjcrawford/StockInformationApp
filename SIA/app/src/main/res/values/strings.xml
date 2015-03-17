@@ -16,6 +16,9 @@
     <string name="stock_symbol_title">Symbol:</string>
     <string name="stock_price_title">Price:</string>
     <string name="stock_change_title">Change:</string>
+    <string name="stock_prev_close_title">Previous Close Price:</string>
+    <string name="stock_open_title">Open Price:</string>
+    <string name="stock_market_cap_title">Market Capitalization:</string>
     <string name="placeholder">Placeholder</string>
 
 <!-- TODO: Remove or change this placeholder text -->
