@@ -5,35 +5,35 @@ import org.json.JSONObject;
 
 public class Stock {
 
-    public String stockSymbol;
-    public String stockName;
-    public int stockColorCode;
-    public double stockPrice;
-    public double stockChange;
-    public double stockPrevClosePrice;
-    public double stockOpenPrice;
-    public double stockMarketCap;
+    private String stockSymbol;
+    private String stockName;
+    private int stockColorCode;
+    private String stockPrice;
+    private String stockChange;
+    private String stockPrevClosePrice;
+    private String stockOpenPrice;
+    private String stockMarketCap;
 
     public Stock(String stockSymbol, int stockColorCode) {
         this.stockSymbol = stockSymbol;
         this.stockName = "null";
         this.stockColorCode = stockColorCode;
-        this.stockPrice = 0;
-        this.stockChange = 0;
-        this.stockPrevClosePrice = 0;
-        this.stockOpenPrice = 0;
-        this.stockMarketCap = 0;
+        this.stockPrice = "0";
+        this.stockChange = "0";
+        this.stockPrevClosePrice = "0";
+        this.stockOpenPrice = "0";
+        this.stockMarketCap = "0";
     }
 
     public Stock(String stockSymbol, String stockName, int stockColorCode) {
         this.stockSymbol = stockSymbol;
         this.stockName = stockName;
         this.stockColorCode = stockColorCode;
-        this.stockPrice = 0;
-        this.stockChange = 0;
-        this.stockPrevClosePrice = 0;
-        this.stockOpenPrice = 0;
-        this.stockMarketCap = 0;
+        this.stockPrice = "0";
+        this.stockChange = "0";
+        this.stockPrevClosePrice = "0";
+        this.stockOpenPrice = "0";
+        this.stockMarketCap = "0";
     }
 
     public Stock(JSONObject stockJSONObject) {
@@ -44,11 +44,11 @@ public class Stock {
             this.stockColorCode = stockJSONObject.getInt("colorCode");
 
             // These may not be necessary, as they should be populated during run-time
-            this.stockPrice = stockJSONObject.getDouble("price");
-            this.stockChange = stockJSONObject.getDouble("change");
-            this.stockPrevClosePrice = stockJSONObject.getDouble("prevClosePrice");
-            this.stockOpenPrice = stockJSONObject.getDouble("openPrice");
-            this.stockMarketCap = stockJSONObject.getDouble("marketCap");
+            this.stockPrice = stockJSONObject.getString("price");
+            this.stockChange = stockJSONObject.getString("change");
+            this.stockPrevClosePrice = stockJSONObject.getString("prevClosePrice");
+            this.stockOpenPrice = stockJSONObject.getString("openPrice");
+            this.stockMarketCap = stockJSONObject.getString("marketCap");
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -77,6 +77,22 @@ public class Stock {
         return stockJSONObject;
     }
 
+    public String getStockSymbol() {
+        return stockSymbol;
+    }
+
+    public void setStockSymbol(String stockSymbol) {
+        this.stockSymbol = stockSymbol;
+    }
+
+    public String getStockName() {
+        return stockName;
+    }
+
+    public void setStockName(String stockName) {
+        this.stockName = stockName;
+    }
+
     public int getStockColorCode() {
         return stockColorCode;
     }
@@ -85,43 +101,43 @@ public class Stock {
         this.stockColorCode = stockColorCode;
     }
 
-    public double getStockPrice() {
+    public String getStockPrice() {
         return stockPrice;
     }
 
-    public void setStockPrice(double stockPrice) {
+    public void setStockPrice(String stockPrice) {
         this.stockPrice = stockPrice;
     }
 
-    public double getStockChange() {
+    public String getStockChange() {
         return stockChange;
     }
 
-    public void setStockChange(double stockChange) {
+    public void setStockChange(String stockChange) {
         this.stockChange = stockChange;
     }
 
-    public double getStockPrevClosePrice() {
+    public String getStockPrevClosePrice() {
         return stockPrevClosePrice;
     }
 
-    public void setStockPrevClosePrice(double stockPrevClosePrice) {
+    public void setStockPrevClosePrice(String stockPrevClosePrice) {
         this.stockPrevClosePrice = stockPrevClosePrice;
     }
 
-    public double getStockOpenPrice() {
+    public String getStockOpenPrice() {
         return stockOpenPrice;
     }
 
-    public void setStockOpenPrice(double stockOpenPrice) {
+    public void setStockOpenPrice(String stockOpenPrice) {
         this.stockOpenPrice = stockOpenPrice;
     }
 
-    public double getStockMarketCap() {
+    public String getStockMarketCap() {
         return stockMarketCap;
     }
 
-    public void setStockMarketCap(double stockMarketCap) {
+    public void setStockMarketCap(String stockMarketCap) {
         this.stockMarketCap = stockMarketCap;
     }
 }

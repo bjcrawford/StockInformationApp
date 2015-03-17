@@ -30,8 +30,8 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
 
     public void bindStockListItem(Stock sli) {
 
-        stockColorBox.setBackgroundColor(sli.stockColorCode);
-        stockSymbol.setText(sli.stockSymbol);
+        stockColorBox.setBackgroundColor(sli.getStockColorCode());
+        stockSymbol.setText(sli.getStockSymbol());
         //stockName.setText(sli.stockName);
         //stockPrice.setText(sli.stockPrice);
         //stockChangeImg.setImageDrawable(sli.stockChangeImg);

@@ -9,10 +9,10 @@ import java.util.ArrayList;
 
 public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemViewHolder> {
 
-    private ArrayList<Stock> stocks;
+    private Stocks stocks;
     private OnItemClickListener listener;
 
-    public StockListItemAdapter(ArrayList<Stock> stocks, OnItemClickListener listener) {
+    public StockListItemAdapter(Stocks stocks, OnItemClickListener listener) {
         this.stocks = stocks;
         this.listener = listener;
     }
