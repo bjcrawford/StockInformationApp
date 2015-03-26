@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.stock;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,7 +29,7 @@ public class Stock {
     private String stockMarketCap;
 
     /**
-     * Creates a stock object.
+     * Creates a Stock object.
      *
      * @param stockSymbol the symbol
      * @param stockColorCode the RGB color code
@@ -50,7 +50,7 @@ public class Stock {
     }
 
     /**
-     * Creates a stock object from a JSON representation.
+     * Creates a Stock object from a JSON representation.
      *
      * @param stockJSONObject the JSON representation
      */
@@ -75,7 +75,7 @@ public class Stock {
     }
 
     /**
-     * Returns a JSON representation of the stock object.
+     * Returns a JSON representation of the Stock object.
      *
      * @return the JSON representation
      */

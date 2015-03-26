@@ -5,11 +5,13 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.stock;
 
 import android.util.Log;
 
 import java.util.ArrayList;
+
+import edu.temple.cis4350.bc.sia.stock.Stock;
 
 /**
  * A class that holds an ArrayList of Stock objects.
@@ -30,12 +32,12 @@ public class Stocks {
     }
 
     /**
-     * Adds a stock to the list of stocks. Checks the list of stocks
+     * Adds a Stock to the list of stocks. Checks the list of stocks
      * for the stock symbol being added. If the stock symbol already
      * exists the stock is not added and false is returned. Otherwise,
      * the stock is added to the list and true is returned.
      *
-     * @param stock the stock to add
+     * @param stock the Stock object  to add
      * @return true on success, otherwise false
      */
     public boolean add(Stock stock) {
@@ -53,7 +55,7 @@ public class Stocks {
     }
 
     /**
-     * Returns the stock with the given list position. If the stock is
+     * Returns the Stock with the given list position. If the stock is
      * not found, null is returned.
      *
      * @param listPosition the list position of the stock
