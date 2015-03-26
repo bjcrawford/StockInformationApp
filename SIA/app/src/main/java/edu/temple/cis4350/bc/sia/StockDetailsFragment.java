@@ -1,17 +1,27 @@
+/*
+  Brett Crawford
+  Stock Information App
+  CIS 4350
+  Spring 2015
+ */
+
 package edu.temple.cis4350.bc.sia;
 
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import edu.temple.cis4350.bc.sia.stock.Stock;
 
 public class StockDetailsFragment extends Fragment {
+
+    private static final String TAG = "StockDetailsFragment";
 
     private static final String ARG_STOCK_SYMBOL = "stockSymbol";
     private static final String ARG_STOCK_NAME = "stockName";
@@ -39,38 +49,25 @@ public class StockDetailsFragment extends Fragment {
     private TextView stockOpenTextView;
     private TextView stockMarketCapTextView;
 
-    private OnFragmentInteractionListener mListener;
+    private OnFragmentInteractionListener listener;
 
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param stockSymbol The symbol of the stock
-     * @param stockName The name of the stock
-     * @param stockPrice The price of the stock
-     * @param stockChange The change of the stock
-     * @param stockPrevClose The previous close of the stock
-     * @param stockOpen The open of the stock
-     * @param stockMarketCap The market cap of the stock
+     * @param stock the stock object
      * @return A new instance of fragment StockDetailsFragment.
      */
-    public static StockDetailsFragment newInstance(
-            String stockSymbol,
-            String stockName,
-            String stockPrice,
-            String stockChange,
-            String stockPrevClose,
-            String stockOpen,
-            String stockMarketCap) {
+    public static StockDetailsFragment newInstance(Stock stock) {
         StockDetailsFragment fragment = new StockDetailsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_STOCK_SYMBOL, stockSymbol);
-        args.putString(ARG_STOCK_NAME, stockName);
-        args.putString(ARG_STOCK_PRICE, stockPrice);
-        args.putString(ARG_STOCK_CHANGE, stockChange);
-        args.putString(ARG_STOCK_PREV_CLOSE, stockPrevClose);
-        args.putString(ARG_STOCK_OPEN, stockOpen);
-        args.putString(ARG_STOCK_MARKET_CAP, stockMarketCap);
+        args.putString(ARG_STOCK_SYMBOL, stock.getStockSymbol());
+        args.putString(ARG_STOCK_NAME, stock.getStockName());
+        args.putString(ARG_STOCK_PRICE, stock.getStockPrice());
+        args.putString(ARG_STOCK_CHANGE, stock.getStockChange());
+        args.putString(ARG_STOCK_PREV_CLOSE, stock.getStockPrevClosePrice());
+        args.putString(ARG_STOCK_OPEN, stock.getStockOpenPrice());
+        args.putString(ARG_STOCK_MARKET_CAP, stock.getStockMarketCap());
         fragment.setArguments(args);
         return fragment;
     }
@@ -82,6 +79,7 @@ public class StockDetailsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate() fired");
         if (getArguments() != null) {
             stockSymbol = getArguments().getString(ARG_STOCK_SYMBOL);
             stockName = getArguments().getString(ARG_STOCK_NAME);
@@ -96,6 +94,7 @@ public class StockDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView() fired");
         view = inflater.inflate(R.layout.fragment_stock_details, container, false);
 
         stockSymbolTextView = (TextView) view.findViewById(R.id.stock_symbol);
@@ -117,29 +116,31 @@ public class StockDetailsFragment extends Fragment {
         return view;
     }
 
-    public void updateView(Stock stock) {
+    public void updateProperties(Stock stock) {
 
-        stockSymbolTextView.setText(stock.getStockSymbol());
-        stockNameTextView.setText(stock.getStockName());
-        stockPriceTextView.setText(stock.getStockPrice());
-        stockChangeTextView.setText(stock.getStockChange());
-        stockPrevCloseTextView.setText(stock.getStockPrevClosePrice());
-        stockOpenTextView.setText(stock.getStockOpenPrice());
-        stockMarketCapTextView.setText(stock.getStockMarketCap());
+        Log.d(TAG, "updateProperties() fired");
+        stockSymbol = stock.getStockSymbol();
+        stockName = stock.getStockName();
+        stockPrice = stock.getStockPrice();
+        stockChange = stock.getStockChange();
+        stockPrevClose = stock.getStockPrevClosePrice();
+        stockOpen = stock.getStockOpenPrice();
+        stockMarketCap = stock.getStockMarketCap();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+        if (listener != null) {
+            listener.onFragmentInteraction(uri);
         }
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        Log.d(TAG, "OnAttach() fired");
         try {
-            mListener = (OnFragmentInteractionListener) activity;
+            listener = (OnFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -149,7 +150,8 @@ public class StockDetailsFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+        Log.d(TAG, "OnDetach() fired");
+        listener = null;
     }
 
     /**

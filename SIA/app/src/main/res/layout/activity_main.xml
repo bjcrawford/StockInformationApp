@@ -35,17 +35,43 @@
     </RelativeLayout>
 
     <!-- The drawer view -->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/drawer_list"
-        android:layout_width="270dp"
+    <RelativeLayout
+        android:id="@+id/drawer"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
-        android:layout_gravity="left|start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#EEE">
+        android:layout_gravity="left|start">
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawer_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:background="#EEE" />
 
+        <edu.temple.cis4350.bc.sia.FloatingActionButton
+            android:id="@+id/drawer_fab"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:elevation="@dimen/fab_elevation"
+            android:background="@drawable/fab_background"
+            android:stateListAnimator="@animator/fab_anim">
+
+            <ImageView
+                android:layout_width="@dimen/fab_icon_size"
+                android:layout_height="@dimen/fab_icon_size"
+                android:src="@drawable/fab_icons"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"/>
+
+        </edu.temple.cis4350.bc.sia.FloatingActionButton>
+
+    </RelativeLayout>
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,3 +1,10 @@
+/*
+  Brett Crawford
+  Stock Information App
+  CIS 4350
+  Spring 2015
+ */
+
 package edu.temple.cis4350.bc.sia;
 
 import android.app.Activity;
@@ -15,29 +22,39 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
+import edu.temple.cis4350.bc.sia.stock.Stock;
+import edu.temple.cis4350.bc.sia.stock.Stocks;
+import edu.temple.cis4350.bc.sia.stocklistitem.StockListItemAdapter;
+import edu.temple.cis4350.bc.sia.apirequest.APIResponseHandler;
+import edu.temple.cis4350.bc.sia.apirequest.APIRequestTask;
 
 
 public class MainActivity extends Activity implements
         StockListItemAdapter.OnItemClickListener,
-        StockDetailsFragment.OnFragmentInteractionListener {
+        StockDetailsFragment.OnFragmentInteractionListener,
+        FloatingActionButton.OnClickListener,
+        AddStockDialogFragment.OnAddStockListener {
 
     private static final String TAG = "MainActivity";
 
     private DrawerLayout drawerLayout;
+    private RelativeLayout drawerView;
     private RecyclerView drawerStockList;
     private ActionBarDrawerToggle drawerToggle;
-    private StockQueryJSONHandler stockQueryJSONHandler;
+    private APIResponseHandler APIResponseHandler;
     private StockDetailsFragment currentStockDetailsFragment;
 
+    private FloatingActionButton fab;
+
     private String[] stockSymbols;
-    private String[] stockNames;
     private int[] stockColors;
 
     private Stocks stocks;
@@ -47,18 +64,22 @@ public class MainActivity extends Activity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerStockList = (RecyclerView) findViewById(R.id.drawer_list);
 
-        stockQueryJSONHandler = new StockQueryJSONHandler(this);
+        fab = (FloatingActionButton) findViewById(R.id.drawer_fab);
+        fab.setOnClickListener(this);
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerView = (RelativeLayout) findViewById(R.id.drawer);
+        drawerStockList = (RecyclerView) findViewById(R.id.drawer_recyclerview);
+
+        APIResponseHandler = new APIResponseHandler(this);
 
         stockSymbols = getResources().getStringArray(R.array.stock_symbols);
-        stockNames = getResources().getStringArray(R.array.stock_names);
         stockColors = getResources().getIntArray(R.array.stock_colors);
 
         stocks = new Stocks();
         for (int i = 0; i < stockSymbols.length; i++) {
-            stocks.add(new Stock(stockSymbols[i], stockNames[i], stockColors[i]));
+            stocks.add(new Stock(stockSymbols[i], stockColors[i], i));
         }
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
@@ -84,6 +105,12 @@ public class MainActivity extends Activity implements
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerClosed(drawerView);
+
+                // This is probably not the best place to make this call. Just testing for now
+                for (int i = 0; i < stocks.size(); i++) {
+                    drawerStockList.getAdapter().notifyItemChanged(i);
+                }
+
                 Log.d(TAG, "Stock list drawer opened");
                 invalidateOptionsMenu();
                 syncState();
@@ -93,6 +120,18 @@ public class MainActivity extends Activity implements
         drawerLayout.setDrawerListener(drawerToggle);
 
         drawerToggle.syncState();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        updateStocks(stocks);
     }
 
 
@@ -105,18 +144,22 @@ public class MainActivity extends Activity implements
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+
         if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
         switch (item.getItemId()) {
             case R.id.action_news_feed:
+                makeToast("News Feed selected");
                 Log.d(TAG, "News Feed selected");
                 return true;
             case R.id.action_settings:
+                makeToast("Settings selected");
                 Log.d(TAG, "Settings selected");
                 return true;
             case R.id.action_help:
+                makeToast("Help selected");
                 Log.d(TAG, "Help selected");
                 return true;
             default:
@@ -127,26 +170,9 @@ public class MainActivity extends Activity implements
     @Override
     public void onClick(View view, int position) {
         Log.d(TAG, "Item " + stocks.get(position).getStockName() + " selected");
-        drawerLayout.closeDrawer(drawerStockList);
+        drawerLayout.closeDrawer(drawerView);
 
-        if (hasConnection()) {
-            new StockQueryJSONTask(stockQueryJSONHandler).execute(stocks.get(position).getStockSymbol());
-        }
-        else {
-            // Notify user of lack of network connection and un-updated stock details
-            makeToast("No network connection");
-        }
-
-        currentStockDetailsFragment = StockDetailsFragment.newInstance(
-                stocks.get(position).getStockSymbol(),
-                stocks.get(position).getStockName(),
-                stocks.get(position).getStockPrice(),
-                stocks.get(position).getStockChange(),
-                stocks.get(position).getStockPrevClosePrice(),
-                stocks.get(position).getStockOpenPrice(),
-                stocks.get(position).getStockMarketCap()
-
-        );
+        currentStockDetailsFragment = StockDetailsFragment.newInstance(stocks.get(position));
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
@@ -160,7 +186,24 @@ public class MainActivity extends Activity implements
         return (networkInfo != null && networkInfo.isConnected());
     }
 
-    protected void parseStockQueryJSONObject(JSONObject stockQueryJSONObject) {
+    protected void updateStocks(Stocks stocks) {
+
+        if (hasConnection()) {
+            try {
+                String apiUrl = APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray());
+                new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            // Notify user of lack of network connection and un-updated stock details
+            makeToast("No network connection");
+        }
+    }
+
+    public void parseStockQueryJSONObject(JSONObject stockQueryJSONObject) {
         try {
             JSONObject query = stockQueryJSONObject.getJSONObject("query");
             int count = query.getInt("count");
@@ -202,8 +245,7 @@ public class MainActivity extends Activity implements
                     stock.setStockPrevClosePrice(prevClosePrice);
                     stock.setStockOpenPrice(openPrice);
                     stock.setStockMarketCap(marketCap);
-
-                    currentStockDetailsFragment.updateView(stock);
+                    drawerStockList.getAdapter().notifyItemChanged(stock.getListPosition());
                 }
             }
         }
@@ -212,12 +254,47 @@ public class MainActivity extends Activity implements
         }
     }
 
-    protected void makeToast(String text) {
+    public void parseNewsQueryJSONObject(JSONObject newsQueryJSONObject) {
+        // Stub
+    }
+
+    public void parseCompanySearchJSONObject(JSONObject companySearchJSONObject) {
+        // Stub
+        Log.d(TAG, companySearchJSONObject.toString());
+    }
+
+    public void makeToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public void onFABClicked(FloatingActionButton fabView) {
+        makeToast("FAB was clicked");
+        new AddStockDialogFragment().show(getFragmentManager(), null);
+    }
+
+    @Override
+    public void onAddStock(String msg) {
+        makeToast("Input received: " + msg);
+        if (!msg.equals("")) {
+            if (hasConnection()) {
+                try {
+                    String apiUrl = APIURLBuilder.getCompanySearchURL(msg);
+                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            else {
+                // Notify user of lack of network connection and un-updated stock details
+                makeToast("No network connection");
+            }
+        }
     }
 }
