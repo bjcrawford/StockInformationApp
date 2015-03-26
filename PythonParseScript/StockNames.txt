@@ -1,0 +1,3295 @@
+<item>Agilent Technologies</item>
+<item>Alcoa Inc</item>
+<item>Alcoa Inc.</item>
+<item>Aac Holdings Inc.</item>
+<item>Aaron's Inc</item>
+<item>Advance Auto Parts Inc</item>
+<item>American Assets Trust</item>
+<item>Advantage Oil & Gas Ltd</item>
+<item>Alliance Capital Management L.P.</item>
+<item>Abb Ltd</item>
+<item>Abbvie Inc. Common Stock</item>
+<item>Amerisourcebergen Corp</item>
+<item>Ambev S.A.</item>
+<item>Asbury Automotive Group Inc</item>
+<item>ABM Industries Incorporated</item>
+<item>Arbor Realty Trust</item>
+<item>Arbor Realty Trust Inc</item>
+<item>Arbor Realty Trust Inc</item>
+<item>Arbor Realty Trust</item>
+<item>Arbor Realty Trust 7.375% Senio</item>
+<item>Abbott Laboratories</item>
+<item>Barrick Gold Corp</item>
+<item>American Campus Communities Inc</item>
+<item>Acco Brands Corp</item>
+<item>Ace Limited</item>
+<item>Alliancebernstein Income Fund Inc</item>
+<item>Aluminum Corporation of China Ltd</item>
+<item>Arch Coal</item>
+<item>Aecom Technology Corp</item>
+<item>Accenture Plc.</item>
+<item>Avenue Income Credit Strategies</item>
+<item>Ares Commercial Real Estate Cor</item>
+<item>Actavis Inc</item>
+<item>Actavis Inc. 5.50% Mandatory C</item>
+<item>Accuride Corporation</item>
+<item>Agree Realty Corp</item>
+<item>Archer Daniels Midland Company</item>
+<item>Adeptus Health Inc.</item>
+<item>Alliance Data Systems Corp</item>
+<item>ADT Corp</item>
+<item>Adams Express Company</item>
+<item>Aegon Nv</item>
+<item>Associated Estates Realty Corp</item>
+<item>Aegon Nv</item>
+<item>Ameren Corp</item>
+<item>Aegon Nv</item>
+<item>Aegon Nv</item>
+<item>Aegon N.V. 8.00%</item>
+<item>American Equity Investment Life</item>
+<item>Agnico-Eagle Mines Limited</item>
+<item>American Eagle Outfitters</item>
+<item>American Electric Power Company</item>
+<item>Aercap Holdings N.V.</item>
+<item>The Aes Corp</item>
+<item>Aes TR III 6.75 Pfd</item>
+<item>Aetna Inc</item>
+<item>Astoria Financial Corp</item>
+<item>Astoria Financial Corp</item>
+<item>American Financial Group Inc</item>
+<item>Alliance National Municipal</item>
+<item>Allied Capital Corp</item>
+<item>American Financial Group</item>
+<item>American Financial Group Inc</item>
+<item>Aflac Incorporated</item>
+<item>Affiliated Managers Group Inc</item>
+<item>American Financial Group</item>
+<item>Amtrust Financial Services Inc.</item>
+<item>Amtrust Financial Services Dep Pfd</item>
+<item>Amtrust Financial Services Series C</item>
+<item>Aflac Incorporated</item>
+<item>Apollo Senior Floating Rate Fund Inc</item>
+<item>American Financial Group Inc</item>
+<item>First Majestic Silver</item>
+<item>Advent Claymore Convertible Securities</item>
+<item>Agco Corp</item>
+<item>Alpine Global Dynamic Dividend Fund</item>
+<item>Alamos Gold Inc</item>
+<item>Federal Agricultural Mortgage Corp</item>
+<item>Federal Agricultural Mortgage</item>
+<item>Federal Ag</item>
+<item>Federal Agricultural Mortgage</item>
+<item>Federal Agricultural Mortgage Corp</item>
+<item>Allergan Inc</item>
+<item>Assured Guaranty Ltd</item>
+<item>Assured Guaranty Ltd [B]</item>
+<item>Assured Guaranty Ltd [E]</item>
+<item>Assured Guaranty Ltd [F]</item>
+<item>Adecoagro S.A.</item>
+<item>Agrium Inc</item>
+<item>Argan Inc</item>
+<item>A.H. Belo Corp</item>
+<item>Armada Hoffler Properties Inc</item>
+<item>Aspen Insurance Holdings</item>
+<item>Aspen Insurance Pfd</item>
+<item>Aspen Insurance Holdings Limit</item>
+<item>Aspen Ins Pfd Inc</item>
+<item>Ashford Hospitality Prime Inc.</item>
+<item>Amn Healthcare Services Inc</item>
+<item>Ashford Hospitality Trust Inc</item>
+<item>Ashford Hsop TR Pfd</item>
+<item>Ashford Hosp D Pfd</item>
+<item>Ashford Hospitality Trust Inc 9</item>
+<item>Arlington Asset Investment Corp</item>
+<item>Apollo Investment Corp</item>
+<item>Arlington Asset Investment Cor</item>
+<item>Apollo Tactical Income Fund Inc</item>
+<item>American International Group</item>
+<item>American International Group</item>
+<item>Albany International Corp</item>
+<item>AAR Corp</item>
+<item>Applied Industrial Technologies</item>
+<item>Apartment Investment and Management</item>
+<item>Apartment Investment and Manag</item>
+<item>Apartment Inv. & Mgt. Co.</item>
+<item>Arlington Asset Investment Cor</item>
+<item>Apollo Investment Corp</item>
+<item>Assurant Inc</item>
+<item>Arthur J. Gallagher & Co.</item>
+<item>Great Ajax Corp.</item>
+<item>Embotell Andina Sa A</item>
+<item>Embotell Andna Sa B</item>
+<item>Alliance California Muni</item>
+<item>Acadia Realty Trust</item>
+<item>AK Steel Holding Corp</item>
+<item>Air Lease Corporation Class A C</item>
+<item>Albemarle Corp</item>
+<item>Alon USA Partners LP</item>
+<item>Allete Inc</item>
+<item>Alexander and Baldwin Inc</item>
+<item>Alamo Group</item>
+<item>Alon USA Energy</item>
+<item>Alaska Air Group</item>
+<item>Allstate Corp</item>
+<item>Allstate Corporation Pfd.</item>
+<item>Ally Financial Inc Fixed Rate F</item>
+<item>The Allstate Corp</item>
+<item>Allstate Corp</item>
+<item>The Allstate Corporation</item>
+<item>The Allstate Corporation</item>
+<item>Allegion Plc Ordinary Shares Wh</item>
+<item>Ally Financial</item>
+<item>Alabama Pwr 5.2A Pfd</item>
+<item>Alabama Pwr 5.83A Pf</item>
+<item>Alabama Power 5.30 A</item>
+<item>Alere Inc</item>
+<item>Alere Inc. Inverness Medical In</item>
+<item>Allison Transmission Holdings</item>
+<item>Alcatel Lucent</item>
+<item>Autoliv Inc</item>
+<item>Alexander's Inc</item>
+<item>Antero Resources Midstream Llc</item>
+<item>Amber Road Inc.</item>
+<item>Amc Entertainment Holdings Inc</item>
+<item>Amtek Inc</item>
+<item>Amec Foster Wheeler Plc.</item>
+<item>Affiliated Managers Group</item>
+<item>American Homes 4 Rent</item>
+<item>American Homes</item>
+<item>American Homes 4 Rent 5% Series</item>
+<item>American Homes</item>
+<item>American Midstreampartners LP</item>
+<item>Ameriprise Financial Services</item>
+<item>Ameresco Inc</item>
+<item>American Tower Corp</item>
+<item>Apollo Residential Preferred</item>
+<item>American Tower Corporation [Rei</item>
+<item>TD Ameritrade Holding Corp</item>
+<item>Apollo Residential Mortgage In</item>
+<item>America Movil S.A.B. De C.V.</item>
+<item>Autonation Inc</item>
+<item>Arista Networks Inc.</item>
+<item>Abercrombie & Fitch Company</item>
+<item>Amira Nature Foods Ltd</item>
+<item>Anworth Mortgage Asset Corp</item>
+<item>Anworth Mtg Pfd A</item>
+<item>Anworth 6.25 Pr S B</item>
+<item>Anworth Mortgage Asset Corpora</item>
+<item>Ann Inc</item>
+<item>Alpha Natural Resources</item>
+<item>Anthem Inc.</item>
+<item>Aegean Marine Petroleum Network</item>
+<item>Alpine Total Dynamic Dividend</item>
+<item>Alliance One International</item>
+<item>AOL Inc</item>
+<item>AON Plc</item>
+<item>Smith [A.O.] Corp</item>
+<item>Ampco-Pittsburgh Corp</item>
+<item>Apache Corp</item>
+<item>Artisan Partners Asset Manageme</item>
+<item>Asia Pacific Fund Inc</item>
+<item>Anadarko Petroleum Corp</item>
+<item>Air Products and Chemicals</item>
+<item>Morgan Stanley Asia Pacific Fund Inc</item>
+<item>Amphenol Corp</item>
+<item>Atlas Pipeline Partners L.P.</item>
+<item>Atlas Pipeline Partners L.P</item>
+<item>Apollo Global Management Llc C</item>
+<item>Amerigas Partners L.P.</item>
+<item>Antero Resources Corp</item>
+<item>American Reprographics Company</item>
+<item>Arcos Dorados Holdings Inc</item>
+<item>Arc Logistics Partners LP</item>
+<item>Ares Dynamic Credit Allocation</item>
+<item>Alexandria Real Estate Equities</item>
+<item>Alexandria Real Estate Equitie</item>
+<item>Ares Management LP</item>
+<item>Airgas Inc</item>
+<item>Arch Capital Group Ltd. 6.75% P</item>
+<item>Apollo Commercial Real Estate</item>
+<item>Apollo Commercial Real Estate</item>
+<item>American Realty Investors</item>
+<item>Ares Multi-Strategy Credit Fund</item>
+<item>Aramark Holdings Corp.</item>
+<item>Ares Capital Corporation 7.00%</item>
+<item>Aeropostale Inc</item>
+<item>Atlas Resource Partners L.P. C</item>
+<item>Atlas Resource Partners L.P.</item>
+<item>American Residential Properties</item>
+<item>Armour Residential R</item>
+<item>Armour Residential REIT Inc</item>
+<item>Armour Residential REIT Inc</item>
+<item>Ares Capital Corp</item>
+<item>Arrow Electronics</item>
+<item>Ares Capital Corp</item>
+<item>ASA Gold and Precious Metals</item>
+<item>Associated Banc-Corp</item>
+<item>Associated Banc-Corp Depositary</item>
+<item>Ardmore Shipping Corp</item>
+<item>Liberty All-Star Growth Fund</item>
+<item>On Assignment</item>
+<item>Ashland Inc</item>
+<item>Aspen Aerogels Inc</item>
+<item>Grupo Aeroportuario Del Sureste</item>
+<item>Advanced Semiconductor Engineering</item>
+<item>Atlantic Power Corp</item>
+<item>Advantest Corporation Ads</item>
+<item>A10 Networks Inc.</item>
+<item>Autohome Inc.</item>
+<item>Allegheny Technologies Inc</item>
+<item>Atlas Energy Llc</item>
+<item>Atmos Energy Corp</item>
+<item>Aptargroup</item>
+<item>Atento S.A.</item>
+<item>Actuant Corp</item>
+<item>Acorn International</item>
+<item>Atwood Oceanics</item>
+<item>Anglogold Ashanti Ltd</item>
+<item>Au Optronics Corp</item>
+<item>Aurico Gold Inc</item>
+<item>Yamana Gold</item>
+<item>Aviva Plc</item>
+<item>Avista Corp</item>
+<item>Grupo Aval Acciones Y Valores S</item>
+<item>Avalonbay Communities</item>
+<item>American Vanguard Corp</item>
+<item>Avg Technologies N.V.</item>
+<item>Avianca Holdings S.A.</item>
+<item>Aviv REIT Inc. Common Stock</item>
+<item>Advent Claymore Convertible Securities</item>
+<item>Avolon Holdings Ltd</item>
+<item>Avon Products</item>
+<item>Avnet Inc</item>
+<item>Aviva Plc</item>
+<item>Avx Corp</item>
+<item>Avery Dennison Corp</item>
+<item>Alliancebernstein Global High Income Fund</item>
+<item>Allied World Assurance Company</item>
+<item>Armstrong World Industries Inc</item>
+<item>American Water Works</item>
+<item>Alpine Global Premier Propertie</item>
+<item>American States Water Company</item>
+<item>Anixter International Inc</item>
+<item>American Axle & Manufacturing</item>
+<item>Georgia Gulf Corp</item>
+<item>American Express Company</item>
+<item>Amrep Corp</item>
+<item>Axis Capital Holdings</item>
+<item>Axis Capital Holdings Limited P</item>
+<item>Axis Capital Holdings Limited</item>
+<item>Axalta Coating Systems Ltd.</item>
+<item>Acuity Brands Inc</item>
+<item>Alliance New York Muni</item>
+<item>Aircastle Limited</item>
+<item>Astrazeneca Plc</item>
+<item>Autozone</item>
+<item>Azz Inc</item>
+<item>Barnes Group</item>
+<item>Boeing Company</item>
+<item>Alibaba Group Holding Ltd.</item>
+<item>Bank of America Corp</item>
+<item>Bac Dep Share D</item>
+<item>Bank Amer Corp Dep R</item>
+<item>Bank Amer Corp Pfd</item>
+<item>Bank Amer Pfd Ser L</item>
+<item>Bank of America Corp</item>
+<item>Bank of America Corporation</item>
+<item>Bac Cap TR ViII</item>
+<item>Bank of America Corporation Bac</item>
+<item>Bank of America Corporation Bac</item>
+<item>Blackrock Income Inv Quality Trust</item>
+<item>Booz Allen Hamilton Holding Corp</item>
+<item>Copene-Petroquimica Do Nordeste</item>
+<item>Baltic Trading Limited</item>
+<item>Brookfield Asset Management Inc</item>
+<item>Banc of California Inc. Deposi</item>
+<item>First Pactrust Bancorp</item>
+<item>Credicorp Ltd</item>
+<item>Basic Energy Services</item>
+<item>Baxter International Inc</item>
+<item>Banco Bradesco Sa</item>
+<item>Banco Bradesco S.A.</item>
+<item>Blackrock Muni Income Trust</item>
+<item>Bill Barrett Corp</item>
+<item>Blackrock Muni Trust</item>
+<item>Bhp Billiton Plc</item>
+<item>Balckrock Build America Trust</item>
+<item>BB&T Corp</item>
+<item>BB&T Corp</item>
+<item>BB&T Corp</item>
+<item>BB&T Corp</item>
+<item>BB&T Corporation Ser G</item>
+<item>Banco Bilbao Viscaya Argentaria S.A.</item>
+<item>Build-A-Bear Workshop</item>
+<item>Bankatlantic Bancorp</item>
+<item>Best Buy Co.</item>
+<item>Brunswick Corp</item>
+<item>Corpbanca</item>
+<item>Boise Cascade L.L.C. Common ST</item>
+<item>BCE Inc</item>
+<item>Bonanza Creek Energy Inc</item>
+<item>Banco De Chile</item>
+<item>Brink's Company</item>
+<item>C.R. Bard</item>
+<item>Blue Capital Reinsurance Holdi</item>
+<item>Barclays Plc</item>
+<item>Barclays Ads</item>
+<item>Barclays Bank 4 Ads</item>
+<item>Barclays Bank Plc</item>
+<item>Barclays Bk ADR Sr 2</item>
+<item>Blackrock Resources Common Shar</item>
+<item>Belden Inc</item>
+<item>Blackrock Enhanced Dividend Achievers</item>
+<item>Brandywine Realty Trust</item>
+<item>Brandywine Realty Trust</item>
+<item>Becton Dickinson and Company</item>
+<item>Strategic Hotels & Resorts Inc</item>
+<item>Belmond Ltd</item>
+<item>Franklin Resources</item>
+<item>Brookfield Renewable</item>
+<item>Berry Plastics Group Inc</item>
+<item>Brown Forman Inc A</item>
+<item>Brown Forman Inc B</item>
+<item>Bright Horizons Family Solutions Inc</item>
+<item>Blackrock Muni Income Trust</item>
+<item>Blackrock Florida Muni 2020 Trust</item>
+<item>Bbva Banco Frances S.A.</item>
+<item>Saul Centers</item>
+<item>Saul Centers Inc</item>
+<item>Blackrock California Muni Trust</item>
+<item>Bunge Limited</item>
+<item>Blackstone / Gso Strategic Cre</item>
+<item>General Cable Corp</item>
+<item>Bgc Partners Inc</item>
+<item>Bge Capital Trust II</item>
+<item>Briggs & Stratton Corp</item>
+<item>Babson Capital Global Short Du</item>
+<item>Blackrock Energy and Resources Trust</item>
+<item>B&G Foods Holdings</item>
+<item>Blackrock Global</item>
+<item>Blackstone Gso Long Short Credit Fund</item>
+<item>Blackrock International</item>
+<item>Biglari Holdings Inc</item>
+<item>Benchmark Electronics</item>
+<item>Baker Hughes Inc</item>
+<item>Blackrock Core Trust</item>
+<item>Blackrock Defined Opportunity Trust</item>
+<item>Berkshire Hills Bancorp</item>
+<item>Bhp Billiton Limited</item>
+<item>Sotheby's Holdings</item>
+<item>Blackrock Muni Bond Investment Trust</item>
+<item>Uslife Income Fund</item>
+<item>Big Lots</item>
+<item>Iesi-Bfc Ltd</item>
+<item>Bio-Rad Laboratories</item>
+<item>Bio Rad Labs Cl B</item>
+<item>Bio-Rad Laboratories Inc.</item>
+<item>Bioamber Inc</item>
+<item>Brookfield Infrastructure Partners LP</item>
+<item>Blackrock Multi-Sector Income T</item>
+<item>Bitauto Holdings Limited</item>
+<item>Blackrock California Muni 2018 Trust</item>
+<item>Bank of New York Mellon Corp</item>
+<item>The Bank of New York Mellon Co</item>
+<item>Brookdale Senior Living Inc</item>
+<item>Buckle Inc</item>
+<item>Black Hills Corp</item>
+<item>Blackrock Muni 2020 Trust</item>
+<item>Blackrock Investment Quality Municipal</item>
+<item>Barnes & Noble</item>
+<item>Blackrock Income Trust Inc</item>
+<item>BankUnited Inc.</item>
+<item>Blackrock New York Muni 2018 Trust</item>
+<item>Blackrock</item>
+<item>Ball Corp</item>
+<item>Infoblox Inc</item>
+<item>Blount International</item>
+<item>Blackrock Limited Duration Income Trust</item>
+<item>Banco Latinoamericano De Comercio</item>
+<item>Banco Macro S.A.</item>
+<item>Blackrock Health Sciences Trust</item>
+<item>Badger Meter</item>
+<item>Bank America Dep G</item>
+<item>Bank America Dep H</item>
+<item>Bank America Dep I</item>
+<item>Bank America Dep J</item>
+<item>Bank America Dep L</item>
+<item>Bank of Montreal</item>
+<item>Biomed Realty Trust</item>
+<item>Bemis Company</item>
+<item>Bristol-Myers Squibb Company</item>
+<item>Blackrock New Jersey Muni Income Trust</item>
+<item>C1 Financial Inc.</item>
+<item>Bank of Nova Scotia</item>
+<item>Blackrock New York Muni Trust Inc</item>
+<item>Banc of California Inc.</item>
+<item>Blackrock Global</item>
+<item>Bank of Hawaii Corp</item>
+<item>Brookfield Mortgage Opportunit</item>
+<item>Boot Barn Holdings Inc.</item>
+<item>China New Borun Corp</item>
+<item>Box Inc</item>
+<item>Brookfield Office Properties C</item>
+<item>BP P.L.C.</item>
+<item>Bridgepoint Education</item>
+<item>Blackrock Muni 2018 Trust</item>
+<item>Buckeye Partners L.P.</item>
+<item>BP Prudhoe Bay Royalty Trust</item>
+<item>Brookfield Property Partners L.</item>
+<item>Bpz Resources Inc</item>
+<item>Blackrock New York Muni Trust</item>
+<item>Broadridge Financial Solutions Llc</item>
+<item>Brady Corp</item>
+<item>Brf-Brasil Foods S.A.</item>
+<item>Berkshire Hath Hld A</item>
+<item>Berkshire Hath Hld B</item>
+<item>Brown & Brown</item>
+<item>Brookfield Residential Propert</item>
+<item>Bristow Group Inc</item>
+<item>Global Brass and Copper Holdin</item>
+<item>BRT Realty Trust</item>
+<item>Brixmor Property Group Inc. Com</item>
+<item>Banco Santander-Chile Ads</item>
+<item>Banco Santander Brasil Sa</item>
+<item>Blackrock Strategic Muni Trust Inc</item>
+<item>Blackrock New York Muni Income Trust</item>
+<item>Alon Holdings - Blue Square Israel Ltd</item>
+<item>Blackstone Gso Senior Floating Rate</item>
+<item>Grupo Financiero Santander Mxi</item>
+<item>Blackrock Science and Technolo</item>
+<item>Boston Scientific Corp</item>
+<item>Bt Group Plc</item>
+<item>Blackrock Long-Term Muni Advantage Trust</item>
+<item>Baytex Energy Corp</item>
+<item>Boulder Total Return Fund</item>
+<item>Blyth Inc</item>
+<item>John Hancock Bank and Thrift Fund</item>
+<item>Blackrock Municipal Target Term</item>
+<item>Peabody Energy Corp</item>
+<item>Blackrock Preferred</item>
+<item>Anheuser-Busch Inbev Sa</item>
+<item>Blackrock Utility and Infrastr</item>
+<item>Burlington Stores Inc</item>
+<item>Compania Mina Buenaventura S.A.</item>
+<item>Borgwarner Inc</item>
+<item>Babcock & Wilcox Company</item>
+<item>Legg Mason Bw Global Income Op</item>
+<item>Boardwalk Pipeline Partners L.P.</item>
+<item>Brown Shoe Company</item>
+<item>The Blackstone Group L.P.</item>
+<item>Bluelinx Holdings Inc</item>
+<item>Bellatrix Exploration Ltd</item>
+<item>Blackstone Mortgage Trust Inc. Cl A</item>
+<item>Nuveen Equity Premium</item>
+<item>Boston Properties</item>
+<item>Boston Properties Inc</item>
+<item>Bancorpsouth Inc</item>
+<item>Boyd Gaming Corp</item>
+<item>Blackrock Muni Income Quality Trust</item>
+<item>Beazer Homes USA</item>
+<item>Beazer Homes USA Inc. 7.50% Tangible Equity</item>
+<item>Citigroup Inc</item>
+<item>Citigroup Inc</item>
+<item>Citigroup Inc</item>
+<item>Citigroup Inc</item>
+<item>Citigroup Inc.</item>
+<item>Citigroup Capital XiII</item>
+<item>Citigroup Pfd Ser Aa</item>
+<item>Citigroup Inc Wrnt 'A'</item>
+<item>Citigroup Inc Wrnt 'B'</item>
+<item>Cabela's Inc</item>
+<item>Caci International</item>
+<item>Cae Inc</item>
+<item>Morgan Stanley China A Share Fund Inc</item>
+<item>Conagra Foods</item>
+<item>Cardinal Health</item>
+<item>Canon Inc</item>
+<item>Calix Inc</item>
+<item>Cameron International Corp</item>
+<item>Cai International</item>
+<item>Crossamerica Partners LP</item>
+<item>Castle [A.M.] & Co.</item>
+<item>Caterpillar Inc</item>
+<item>Cato Corp</item>
+<item>Chubb Corp</item>
+<item>Clearbridge American Energy ML</item>
+<item>Cincinnati Bell Inc</item>
+<item>Cincinnati Bell Pr B</item>
+<item>Companhia Brasileira De Distribuicao</item>
+<item>CBRE Group Inc</item>
+<item>Chicago Bridge & Iron Company N.V.</item>
+<item>Christopher & Banks Corp</item>
+<item>Cbl & Associates Properties</item>
+<item>Cbl Pfd D</item>
+<item>Cbl & Associates Properties I</item>
+<item>Cambrex Corp</item>
+<item>Cbo [Listing Market - NYSE - Ne</item>
+<item>Continental Building Products</item>
+<item>Ciber Inc</item>
+<item>CBS Corp</item>
+<item>CBS Corp</item>
+<item>Cabot Corp</item>
+<item>Community Bank System</item>
+<item>Cbiz Inc</item>
+<item>Calgon Carbon Corp</item>
+<item>Coca-Cola Enterprises</item>
+<item>Campus Crest Communities</item>
+<item>Campus Crest Communities Inc</item>
+<item>Crown Castle International Corp</item>
+<item>Crown Castle International Cor</item>
+<item>Cameco Corp</item>
+<item>Crown Cork & Seal Company</item>
+<item>Carnival Corp</item>
+<item>Concord Medical Services</item>
+<item>Clear Channel Outdoor Holdings</item>
+<item>Century Communities Inc.</item>
+<item>Country Style Cooking</item>
+<item>Compania Cervecerias Unidas S.A.</item>
+<item>Comcast Corp</item>
+<item>Comcast Corp</item>
+<item>Coeur Mining Inc.</item>
+<item>Coeur D'Alene Mines Corporatio</item>
+<item>Cdi Corp</item>
+<item>Cedar Shopping Centers Inc</item>
+<item>Cedar Realty Trust Inc</item>
+<item>Celanese Corp</item>
+<item>China Eastern Airlines Corp Ltd</item>
+<item>The Corporate Executive Board Company</item>
+<item>Central Europe and Russia Fund</item>
+<item>Cellcom Israel</item>
+<item>Cypress Energy Partners L.P.</item>
+<item>Clearbridge Energy MLP Fund Inc</item>
+<item>Center Coast MLP & Infrastructure</item>
+<item>Cnooc Limited</item>
+<item>Crestwood Equity Partners LP</item>
+<item>Cf Industries Holdings</item>
+<item>Countrywide Cap IV</item>
+<item>Countrywide Cap V</item>
+<item>Citizens Financial Group Inc/Ri</item>
+<item>Culp Inc</item>
+<item>Carefusion Corp</item>
+<item>Cullen/Frost Bankers</item>
+<item>Cullen/Frost Bankers Inc</item>
+<item>Colfax Corp</item>
+<item>China Green Agriculture</item>
+<item>Compagnie Generale De Gephysqu</item>
+<item>Celadon Group</item>
+<item>China Telecom Corp Ltd</item>
+<item>Church & Dwight Company</item>
+<item>Chemed Inc</item>
+<item>Chegg Inc</item>
+<item>Choice Hotels International</item>
+<item>Chesapeake Energy Corp</item>
+<item>Chesapeake En Cv Pfd</item>
+<item>Chesapeake Granite Wash Trust</item>
+<item>China Mobile [Hong Kong] Ltd</item>
+<item>Cherry Hill Mortgage Investmen</item>
+<item>Chemtura Corp</item>
+<item>China Fund</item>
+<item>Chico's Fas</item>
+<item>Chesapeake Lodging Trust 7.75%</item>
+<item>Chesapeake Lodging Trust</item>
+<item>Chunghwa Telecom Co Ltd</item>
+<item>China Unicom [Hong Kong] Ltd</item>
+<item>Cigna Corp</item>
+<item>Citizens Inc</item>
+<item>Bancolombia S.A.</item>
+<item>Cobalt International Energy</item>
+<item>Ciena Corp</item>
+<item>Colonial Intermediate High</item>
+<item>Comp En De Mn Cemig Ads</item>
+<item>Comp En De Mn Cemig Ads</item>
+<item>Blackrock Capital and Income Strategies</item>
+<item>Chimera Investment Corp</item>
+<item>City Office REIT Inc.</item>
+<item>Circor International</item>
+<item>Cit Group Inc [Del]</item>
+<item>Civitas Solutions Inc.</item>
+<item>C&J Energy Services Inc</item>
+<item>Seacor Smit Inc</item>
+<item>Checkpoint Systms</item>
+<item>Colgate-Palmolive Company</item>
+<item>Capitala Finance Corp.</item>
+<item>Core Laboratories N.V.</item>
+<item>Clarcor Inc</item>
+<item>Cloud Peak Energy Inc</item>
+<item>Chatham Lodging Trust [Reit]</item>
+<item>Cliffs Natural Resources Inc</item>
+<item>Corelogic</item>
+<item>Clean Harbors</item>
+<item>Mack-Cali Realty Corp</item>
+<item>Colony Financial Inc</item>
+<item>Colony Financial Inc Perp Pfd</item>
+<item>Colony Financial Inc</item>
+<item>Continental Resources</item>
+<item>Celestica Inc</item>
+<item>Cliffs Natural Resources Inc. Dep. Pfd.</item>
+<item>Clearwater Paper Corp</item>
+<item>Clorox Company</item>
+<item>Canadian Imperial Bank of Commerce</item>
+<item>Comerica Inc</item>
+<item>Comerica Inc</item>
+<item>Commercial Metals Company</item>
+<item>Cheetah Mobile Inc.</item>
+<item>Chipotle Mexican Grill</item>
+<item>Cummins Inc</item>
+<item>Colonial Intermarket Income Trust I</item>
+<item>Crestwood Midstream Partners LP</item>
+<item>Cantel Medical</item>
+<item>Capstead Mortgage Corp</item>
+<item>Capstead Mortgage Corp</item>
+<item>Compass Minerals Intl Inc</item>
+<item>Costamare Inc. Perpetual Prefer</item>
+<item>Costamare Inc. Perpetual Prefer</item>
+<item>Costamare Inc</item>
+<item>Cms Energy Corp</item>
+<item>Consumers Engry 4.50</item>
+<item>Colonial Muni Income Trust</item>
+<item>Cna Financial Corp</item>
+<item>Centene Corp</item>
+<item>Cencosud S.A.</item>
+<item>Cnh Industrial N.V.</item>
+<item>Canadian National Railway Company</item>
+<item>Cinemark Holdings Inc</item>
+<item>Cleco Power Llc</item>
+<item>Cone Midstream Partners LP</item>
+<item>Cno Financial Group</item>
+<item>Centerpoint Energy Inc</item>
+<item>Canadian Natural Resources</item>
+<item>Cohn & Steers Inc</item>
+<item>Con-Way Inc</item>
+<item>Consol Energy Inc</item>
+<item>China Cord Blood Corporation.</item>
+<item>Spansion Inc</item>
+<item>Compass Diversified Holdings</item>
+<item>Capital One Financial Corp</item>
+<item>Capital One Financial Corporat</item>
+<item>Capital One Financial Corporat</item>
+<item>Capital One Financial Corp Pfd</item>
+<item>Capital One Financial Corp</item>
+<item>Cabot Oil & Gas Corp</item>
+<item>Coach Inc</item>
+<item>Rockwell Collins</item>
+<item>Cooper Companies</item>
+<item>Conocophillips</item>
+<item>Coresite Realty Corp</item>
+<item>Coresite Realty Corp</item>
+<item>Corenergy Infrastructure Trust Inc</item>
+<item>Cott Corp</item>
+<item>Coty Inc</item>
+<item>Coupons.Com Inc</item>
+<item>Canadian Pacific Railway</item>
+<item>Copa Holdings S.A.</item>
+<item>Cementos Pacasmayo S.A.A.</item>
+<item>Campbell Soup Company</item>
+<item>Callon Petroleum Company</item>
+<item>Callon Petroleum Company Prefer</item>
+<item>Central Pacific Financial Co</item>
+<item>Crescent Pt Energy</item>
+<item>Chesapeake Utilities Corp</item>
+<item>Cpfl Energia S.A.</item>
+<item>Calpine Corp</item>
+<item>Columbia Pipeline Partners LP</item>
+<item>Cooper Std Hldg Inc</item>
+<item>Camden Property Trust</item>
+<item>Crane Company</item>
+<item>California Resources Corporatio</item>
+<item>Care.Com Inc</item>
+<item>Crawford Co Cl A</item>
+<item>Crawford Co Cl B</item>
+<item>CRH Plc</item>
+<item>Carter's Inc</item>
+<item>Comstock Resources</item>
+<item>Charles River Laboratories Intl</item>
+<item>Salesforce.Com Inc</item>
+<item>Carbo Ceramics</item>
+<item>Carpenter Technology Corp</item>
+<item>Cross Timbers Royalty Trust</item>
+<item>Cryolife</item>
+<item>Credit Suisse Group</item>
+<item>Computer Sciences Corp</item>
+<item>Chambers Street Properties</item>
+<item>Cash America International</item>
+<item>Cutwater Select Income Fund</item>
+<item>Carlisle Companies Inc</item>
+<item>Castlight Health Inc.</item>
+<item>Css Industries</item>
+<item>Cst Brands Inc. Common Stock</item>
+<item>Constellium N.V.</item>
+<item>Capital Senior Living Corp</item>
+<item>Carriage Services</item>
+<item>CSX Corp</item>
+<item>Cooper Tire & Rubber Company</item>
+<item>Centurylink</item>
+<item>Catalent Inc.</item>
+<item>Qwest Corp</item>
+<item>Clearbridge Energy MLP Fund In</item>
+<item>Cts Corp</item>
+<item>Catchmark Timber Trust Inc.</item>
+<item>Qwest Corp</item>
+<item>Qwest Corporation</item>
+<item>Qwest Corp</item>
+<item>Qwest Corp</item>
+<item>Qwest Corp</item>
+<item>Cubic Corp</item>
+<item>Cubesmart 7.75% Series A Cumula</item>
+<item>Cubesmart</item>
+<item>Customers Bancorp</item>
+<item>Customers Bancorp Inc</item>
+<item>Barracuda Networks Inc</item>
+<item>Carnival Plc Ads</item>
+<item>Cousins Properties Inc</item>
+<item>Covanta Holding Corp</item>
+<item>Lehman Abs Corp</item>
+<item>Cablevision Systems Corp</item>
+<item>Cenovus Energy Inc</item>
+<item>Civeo Corporation Common Stock</item>
+<item>Convergys Corp</item>
+<item>Cvr Energy Inc</item>
+<item>Cenveo Inc</item>
+<item>Cvr Refining LP</item>
+<item>CVS Corp</item>
+<item>Cvent Inc</item>
+<item>Chevron Corp</item>
+<item>Curtiss-Wright Corp</item>
+<item>Clayton Williams Energy</item>
+<item>California Water Service Group Holding</item>
+<item>Cemex S.A.B. De C.V. Sponsored</item>
+<item>Colonial High Income Muni Trust</item>
+<item>Colonial Investment Grade Muni Trust</item>
+<item>Concho Resources Inc</item>
+<item>Columbia Property Trust Inc</item>
+<item>Corrections Corporation of America</item>
+<item>China Yuchai International</item>
+<item>Community Health Systems</item>
+<item>City National Corp</item>
+<item>City National Corp</item>
+<item>City National Corporation Repr</item>
+<item>Cyan Inc. Common Stock</item>
+<item>Cys Investments Inc</item>
+<item>Cys Investments Inc</item>
+<item>Cys Investments Inc</item>
+<item>Cytec Industries Inc</item>
+<item>Cosan Limited</item>
+<item>Dominion Resources</item>
+<item>Danaos Corp</item>
+<item>Delta Air Lines Inc</item>
+<item>Dana Holding Corp</item>
+<item>E-Commerce China Dangdang Inc</item>
+<item>Darling International Inc</item>
+<item>Tableau Software Inc. Class A</item>
+<item>Deutsche Bank Ag</item>
+<item>Diebold Inc</item>
+<item>Doubleline Opportunistic Credi</item>
+<item>Dca Total Return Fund</item>
+<item>Donaldson Company</item>
+<item>Ntt Docomo Inc</item>
+<item>Ducommun Inc</item>
+<item>Dct Industrial Trust Inc</item>
+<item>Dominion Resources</item>
+<item>Dominion Resources Inc. Un Series B</item>
+<item>Dominion Res Inc Va</item>
+<item>E.I. Du Pont De Nemours and Company</item>
+<item>Du Pont E I 3.50 Pfd</item>
+<item>Du Pont E I 4.50 Pfd</item>
+<item>Dominion Diamond Corp</item>
+<item>3D Systems Corp</item>
+<item>Dover Downs Gaming & Entertainment Inc</item>
+<item>Delaware Dividend & Income</item>
+<item>Ddr Corp</item>
+<item>Ddr Corp</item>
+<item>Ddr Corp</item>
+<item>Dillard's</item>
+<item>Dillard's</item>
+<item>Deere & Company</item>
+<item>Easterly Government Properties</item>
+<item>Deckers Outdoor Corp</item>
+<item>Etablissements Delhaize Freres</item>
+<item>Douglas Emmett</item>
+<item>Deltic Timber Corp</item>
+<item>Diageo Plc</item>
+<item>Delaware Enhanced Global Dividend</item>
+<item>Dean Foods Company</item>
+<item>Flaherty & Crumrine Dynamic</item>
+<item>Discover Financial Services</item>
+<item>Discover Financial Services</item>
+<item>Dupont Fabros Technology</item>
+<item>Dupont Fabros Technology Inc</item>
+<item>Dupont Fabros Technology Inc</item>
+<item>Dollar General Corp</item>
+<item>Digitalglobe Inc</item>
+<item>Quest Diagnostics Inc</item>
+<item>Dreyfus High Yield Strategies Fund</item>
+<item>Dws High Income Opportunities Fund</item>
+<item>D.R. Horton</item>
+<item>Danaher Corp</item>
+<item>Dht Holdings</item>
+<item>Dice Holdings</item>
+<item>Nuveen DOW</item>
+<item>Dineequity Inc</item>
+<item>Walt Disney Company</item>
+<item>Delek US Holdings</item>
+<item>Delek Logistics Partners LP</item>
+<item>Dick's Sporting Goods Inc</item>
+<item>Deutsch Bk Contingent Cap TR V</item>
+<item>China Distance Education Holdings</item>
+<item>Dolby Laboratories</item>
+<item>Dynagas Lng Partners LP</item>
+<item>Delphi Automotive Plc</item>
+<item>Digital Realty Trust</item>
+<item>Digital Realtytrust Inc</item>
+<item>Digital Realty Trust Inc</item>
+<item>Digital Realty Trust Inc</item>
+<item>Digital Realty</item>
+<item>Deluxe Corp</item>
+<item>Dominion Midstream Partners LP</item>
+<item>Dreyfus Municipal Bond Infrastr</item>
+<item>Demand Media Inc</item>
+<item>Western Asset Mortgage Defined Opp</item>
+<item>Dun & Bradstreet Corp</item>
+<item>Chartwell Dividend & Income Fund</item>
+<item>Now Inc. Common Stock When Issu</item>
+<item>Duff & Phelps Utilities Income</item>
+<item>Denbury Resources</item>
+<item>The Denali Fund</item>
+<item>Diamond Offshore Drilling</item>
+<item>Physicians Realty Trust</item>
+<item>Dominion Resources Black Warrior</item>
+<item>Masonite Wrldwde Hld</item>
+<item>Dover Corp</item>
+<item>DOW Chemical Company</item>
+<item>Duff & Phelps Global Utility I</item>
+<item>Dplo</item>
+<item>Dcp Midstream Partners LP</item>
+<item>Dr Pepper Snapple Group Inc</item>
+<item>Domino's Pizza Inc</item>
+<item>Daqq New Energy</item>
+<item>Diversified Real Asset Income</item>
+<item>Dresser-Rand Group Inc</item>
+<item>Drdgold Limited</item>
+<item>Duke Realty Corp</item>
+<item>Diamondrock Hospitality Company</item>
+<item>Darden Restaurants</item>
+<item>Diamond Resorts International</item>
+<item>Doral Financial Corp</item>
+<item>Dril-Quip</item>
+<item>Duff & Phelps Select Energy ML</item>
+<item>Doubleline Income Solutions Fun</item>
+<item>Dreyfus Strategic Muni Bond Fund</item>
+<item>Dst Systems</item>
+<item>Blackrock Debt Strategies Fund</item>
+<item>DSW Inc</item>
+<item>Diana Shipping Inc</item>
+<item>Diana Shipping</item>
+<item>Dte Energy Company</item>
+<item>Duff & Phelps Utilities Tax-Free Income</item>
+<item>Deutsche Bk Contingent Cap TR I</item>
+<item>Datalink Corporation</item>
+<item>Dte Energy Co.</item>
+<item>Dte Energy Co.</item>
+<item>Deutsche Bk Cap Fdg TR ViII 6</item>
+<item>Duff & Phelps Utility & Corporate Trust</item>
+<item>Duke Energy Corp</item>
+<item>Duke Energy Corp</item>
+<item>Devry Inc</item>
+<item>Davita Healthcare Partners Inc</item>
+<item>Dover Downs Entertainment</item>
+<item>Devon Energy Corp</item>
+<item>Drew Industries Inc</item>
+<item>Demandware Inc</item>
+<item>Dynex Capital</item>
+<item>Dynex Capital Inc</item>
+<item>Dynex Capital Inc</item>
+<item>Deutsche Bk Contingent Cap TR I</item>
+<item>Dycom Industries</item>
+<item>Dynegy Inc</item>
+<item>Dynegy Inc.</item>
+<item>Dynegy Inc. Warrants</item>
+<item>Eni S.P.A.</item>
+<item>Entergy Arkansas</item>
+<item>First Mortgage Bonds</item>
+<item>Entergy Arkansas Inc</item>
+<item>Ellington Residential Mortgage</item>
+<item>Brinker International</item>
+<item>Ennis Inc</item>
+<item>Centrais Elc Braz Pfb B Elbras</item>
+<item>Centrais Elc Braz Pfb B Elbras</item>
+<item>Emergent Biosolutions</item>
+<item>Ecopetrol S.A.</item>
+<item>Encana Corp</item>
+<item>Eagle Point Credit Co. Inc.</item>
+<item>Ecolab Inc</item>
+<item>Channeladvisor Corp</item>
+<item>Eclipse Resources Corp</item>
+<item>Eca Marcellus Trust I</item>
+<item>Consolidated Edison Company of New York</item>
+<item>Emerging Markets Domestic Debt Fund</item>
+<item>Empire District Electric Company</item>
+<item>Stone Harbor Emerging Markets</item>
+<item>Stone Harbor Emerging Markets</item>
+<item>Empresa Distribuidora Y Comercializadora</item>
+<item>Education Realty Trust Inc</item>
+<item>New Oriental Education & Technology Group</item>
+<item>El Paso Electric Company</item>
+<item>European Equity Fund</item>
+<item>Enbridge Energy L.P.</item>
+<item>Enbridge Energy Management Llc</item>
+<item>Ellington Financial Llc</item>
+<item>Eaton Vance Floating-Rate Inco</item>
+<item>Entergy Mississippi</item>
+<item>Eaton Vance Senior Floating-Rate Fund</item>
+<item>Eaton Vance Floating Rate Income Trust</item>
+<item>Equifax Inc</item>
+<item>Blackrock Enhanced Government Fund</item>
+<item>Engility Holdings Inc. Common</item>
+<item>Energen Corp</item>
+<item>Eldorado Gold Corp</item>
+<item>Eastgroup Properties</item>
+<item>Vaalco Energy Inc</item>
+<item>Western Asset Global High</item>
+<item>Ehi Car Services Ltd</item>
+<item>Employers Holdings Inc</item>
+<item>Edison International</item>
+<item>E-House [China] Holdings</item>
+<item>Estee Lauder Companies</item>
+<item>Entergy Louisiana Llc</item>
+<item>Entergy Louisiana</item>
+<item>Entergy Louisiana Llc</item>
+<item>Ellie Mae Inc</item>
+<item>Companhia Paranaense De Energia</item>
+<item>Equity Lifestyle Properties</item>
+<item>Eqty Lifestyle Properties Inc</item>
+<item>Entergy Louisiana Llc First M</item>
+<item>Emulex Corp</item>
+<item>Callaway Golf Company</item>
+<item>EMC Corp</item>
+<item>Western Asset Emerging Markets Fund</item>
+<item>Emcor Group</item>
+<item>Emerge Energy Services LP Commo</item>
+<item>Templeton Emerging Markets Fund</item>
+<item>Eastman Chemical Company</item>
+<item>Clearbridge Energy MLP Opportu</item>
+<item>Entergy Mississippi</item>
+<item>Emerson Electric Company</item>
+<item>Entergy Mississippi Inc. First</item>
+<item>Enbridge Inc</item>
+<item>Enable Midstream Partners LP</item>
+<item>Endurance Specialty Holdings Ltd</item>
+<item>Endurance Spec Pfd</item>
+<item>Endurance Specialty Holdings L</item>
+<item>Enersis S A</item>
+<item>Entergy New Orleans Inc</item>
+<item>Reed Elsevier Nv</item>
+<item>Enlink Midstream Llc</item>
+<item>Enlink Midstream Partners LP</item>
+<item>Energizer Holdings</item>
+<item>Enersys Inc</item>
+<item>Envestnet Inc</item>
+<item>Enova International Inc. Commo</item>
+<item>Enzo Biochem</item>
+<item>Empresa Nacional De Electricidad S.A.</item>
+<item>Wells Fargo Global Dividend Opportunity</item>
+<item>Eog Resources</item>
+<item>Eaton Vance Enhance Equity</item>
+<item>Eaton Vance Enhanced Equity II</item>
+<item>Eaton Vance Muni Income Trust</item>
+<item>El Paso Egy Cap I Pr</item>
+<item>Epam Systems Inc</item>
+<item>Enterprise Products Partners L.P.</item>
+<item>Ep Energy Corp</item>
+<item>Entertainment Properties Trust</item>
+<item>Entertainment Prp Pf</item>
+<item>Entertainment Ppty P</item>
+<item>Entertainment Properties Trust</item>
+<item>Equity Commonwealth</item>
+<item>Eqty Commonwealth</item>
+<item>Eqty Commonwealth</item>
+<item>Equity Commonwealth</item>
+<item>Equity Midstream Partners LP</item>
+<item>Equity Residential</item>
+<item>Equus Total Return</item>
+<item>Eqt Corp</item>
+<item>Equity One</item>
+<item>Era Group Inc. Common Stock W</item>
+<item>Enerplus Corp</item>
+<item>Embraer-Empresa Brasileira De Aeronautica</item>
+<item>Eros International Plc</item>
+<item>Eversource Energy</item>
+<item>Western Asset Emerging Markets Debt Fund Inc</item>
+<item>Esco Technologies Inc</item>
+<item>Itt Educational Services</item>
+<item>Esterline Technologies Corp</item>
+<item>Essent Group Ltd</item>
+<item>Empire State Realty Trust Inc</item>
+<item>Essex Property Trust</item>
+<item>Essex Property Trust Inc. 7.12</item>
+<item>Ensco Plc</item>
+<item>Eaton Vance Tax-Managed Buy-Write</item>
+<item>Energy Transfer Equity LP</item>
+<item>Eaton Vance Tax-Advantaged Global Dividend</item>
+<item>Ethan Allen Interiors Inc</item>
+<item>Eaton Vance Risk-Managed Diversified Equity</item>
+<item>Entercom Communications Corp</item>
+<item>Eaton Corp</item>
+<item>Eaton Vance Tax-Advantage Global Dividend Opp</item>
+<item>Energy Transfer Partners</item>
+<item>Entergy Corp</item>
+<item>Eaton Vance Corp</item>
+<item>Eaton Vance Corp</item>
+<item>Eaton Vance Municipal Income T</item>
+<item>Eaton Vance Tax-Managed Diversified Equity</item>
+<item>Euronav Nv</item>
+<item>Eaton Vance Corp</item>
+<item>Entravision Communications Corp</item>
+<item>Everyday Health Inc.</item>
+<item>Everbank Financial Corp. Deposi</item>
+<item>Everbank Financial Corp</item>
+<item>Eaton Vance Senior Income Trust</item>
+<item>Eaton Vance Short Diversified</item>
+<item>Evogene Ltd Ord</item>
+<item>Envision Healthcare Holdings</item>
+<item>Eaton Vance Muni Income Trust</item>
+<item>Evercore Partners Inc</item>
+<item>Eaton Vance Tax Advantaged Dividend</item>
+<item>Evertec Inc. Common Stock</item>
+<item>Edwards Lifesciences Corp</item>
+<item>Examworks Group</item>
+<item>Exar Corp</item>
+<item>Exelon Corp</item>
+<item>Exelon Corp</item>
+<item>Eaton Vance Tax-Advantaged Bond</item>
+<item>Eaton Vance Tax-Managed Global Diversified Equit</item>
+<item>Exterran Holdings</item>
+<item>Endeavour Silver Corp</item>
+<item>Excel Trust</item>
+<item>Excel Trust Inc</item>
+<item>Eagle Materials Inc</item>
+<item>Express Inc</item>
+<item>Extra Space Storage Inc</item>
+<item>First Mortgage Bonds</item>
+<item>Ford Motor Company</item>
+<item>Liberte Investors Inc</item>
+<item>First American Corp</item>
+<item>First Trust/Aberdeen Global Opportunity</item>
+<item>Active Dividend</item>
+<item>Flagstar Bancorp</item>
+<item>Fortune Brands Home & Security</item>
+<item>First Bancorp</item>
+<item>Fibria Celulose S.A.</item>
+<item>First Pfd Cp IV 8.15</item>
+<item>Franklin Covey Company</item>
+<item>Fiat Chrysler Automobiles N.V.</item>
+<item>Fiat Chrysler Automobiles N.V.</item>
+<item>Fcb Financial Holdings Inc.</item>
+<item>Forest City Ent Cl A</item>
+<item>Forest City Ent Cl B</item>
+<item>First Commonwealth Financial Corp</item>
+<item>Felcor Lodging Trust Inc</item>
+<item>Felcor Lodg Pr A</item>
+<item>Felcor Lodging Dep S</item>
+<item>Fti Consulting</item>
+<item>Senior Floating Rate II</item>
+<item>Freeport-Mcmoran Inc.</item>
+<item>Fort Dearborn Income Securities</item>
+<item>Family Dollar Stores</item>
+<item>Fresh Del Monte Produce</item>
+<item>Factset Research Systems Inc</item>
+<item>Fedex Corp</item>
+<item>Firstenergy Corp</item>
+<item>First Trust MLP and Energy Inc</item>
+<item>Foresight Energy LP</item>
+<item>Phoenix New Media Limited</item>
+<item>First Trust/Aberdeen Emerging Opportunity Fund</item>
+<item>Forum Energy Technologies Inc</item>
+<item>Futurefuel Corp</item>
+<item>First Trust Enhanced Equity Income Fund</item>
+<item>Flaherty Crumrine/Claymore Preferred Securities</item>
+<item>Fbl Financial Group</item>
+<item>Specialty Finance and Financial Fund</item>
+<item>Fidelity & Guaranty</item>
+<item>Ferrellgas Partners L.P.</item>
+<item>First Tennessee National Corp</item>
+<item>First Horizon National Corpora</item>
+<item>Strategic High II</item>
+<item>Frank's International N.V.</item>
+<item>Fair Isaac and Company Inc</item>
+<item>First Trust Energy Infrastruct</item>
+<item>Fortress Investment Group</item>
+<item>Federated Investors</item>
+<item>Fidelity National Information Services</item>
+<item>Comfort Systems USA</item>
+<item>Footlocker Inc</item>
+<item>Flaherty & Crumrine/Claymore Total Return</item>
+<item>Flowers Foods</item>
+<item>Fluor Corp</item>
+<item>Flowserve Corp</item>
+<item>Fleetcor Technologies</item>
+<item>Fleetmatics Group Plc</item>
+<item>Fly Leasing Limited</item>
+<item>FMC Corp</item>
+<item>First Marblehead Corp</item>
+<item>Firstmerit Corporation Deposita</item>
+<item>Federated Premier Muni</item>
+<item>Fiduciary/Claymore MLP Opportunity Fund</item>
+<item>Fresenius Medical Care Corp</item>
+<item>Fmsa Holdings Inc</item>
+<item>Fomento Economico Mexicano S.A.B. De C.V.</item>
+<item>First Trust/Fidac Mortgage Income Fund</item>
+<item>Fabrinet</item>
+<item>F.N.B. Corp</item>
+<item>F.N.B. Corporation Representin</item>
+<item>Fidelity National Financial</item>
+<item>First Niagara Financial Group</item>
+<item>Fnfv Group of Fidelity National</item>
+<item>Franco Nev Corp</item>
+<item>Ferro Corp</item>
+<item>Cohen & Steers Closed-End Opportunity Fund</item>
+<item>Forestar Group Inc</item>
+<item>First Trust Intermediate Durat</item>
+<item>First Trust New Opportunities M</item>
+<item>First Potomac Realty Trust</item>
+<item>First Potomac Realty Trust Cumu</item>
+<item>Federated Premier Intermediate Muni</item>
+<item>First Industrial Realty Trust</item>
+<item>Blackrock Floating Rate Income Fund</item>
+<item>First Republic Bank</item>
+<item>First Republic Bank 6.70%</item>
+<item>First Republic Bank</item>
+<item>First Republic Bank</item>
+<item>First Republic Bank San Francis</item>
+<item>First Republic Bank</item>
+<item>Furmanite Corp</item>
+<item>Frontline Ltd</item>
+<item>Federal Realty Investment Trust</item>
+<item>Financial Security Assurance Holdings Ltd</item>
+<item>Fifth Street Finance Corp</item>
+<item>High Income Long Short Fund</item>
+<item>FS Investment Corp</item>
+<item>Freescale Semiconductor Holdin</item>
+<item>Fortuna Silver Mines</item>
+<item>Federal Signal Corp</item>
+<item>Franklin Universal Trust</item>
+<item>FMC Technologies</item>
+<item>Flotek Industries</item>
+<item>Federated Enhanced Treasury Income</item>
+<item>H. B. Fuller Company</item>
+<item>Cedar Fair L.P.</item>
+<item>Winthrop Realty Trust</item>
+<item>Five Star Quality Care</item>
+<item>FXCM Inc</item>
+<item>Genpact Limited</item>
+<item>Gabelli Equity Trust</item>
+<item>Gabelli Eq TR Pfd D</item>
+<item>The Gabelli Equity Trust Inc</item>
+<item>The Gabelli Eqty Trust Inc</item>
+<item>General American Investors</item>
+<item>Genl Amer Invs Pfd</item>
+<item>Agl Resources</item>
+<item>Greatbatch</item>
+<item>Guggenheim Build America Bonds</item>
+<item>Gamco Investors</item>
+<item>Greenbrier Companies</item>
+<item>Global Cash Access Holdings</item>
+<item>Gain Capital Holdings</item>
+<item>Greater China Fund</item>
+<item>Gannett Co.</item>
+<item>Genesco Inc</item>
+<item>Gabelli Convertible and Income Securities</item>
+<item>Gabelli 6.00% Pfd B</item>
+<item>General Dynamics Corp</item>
+<item>Western Asset Global Partners</item>
+<item>The Gdl Fund</item>
+<item>The Gdl Fund Series B Cumulativ</item>
+<item>Western Asset Global Corporate Defined</item>
+<item>Green Dot Corp</item>
+<item>Goodrich Petroleum Corp</item>
+<item>Goodrich Petroleum Corp</item>
+<item>Goodrich Petroleum Coproration</item>
+<item>Gabelli Dividend</item>
+<item>Gabelli Dv</item>
+<item>Gabelli Pref D</item>
+<item>General Electric Company</item>
+<item>General Electric Capital Corpo</item>
+<item>Greif Bros. Corp</item>
+<item>Greif Bros. Corp</item>
+<item>General Electric Capital Corpo</item>
+<item>General Electric Capital Corpo</item>
+<item>Genesis Energy L.P.</item>
+<item>Genesis Healthcare Inc.</item>
+<item>Geo Group Inc</item>
+<item>Guggenheim Equal Weight Enhance</item>
+<item>Goldman Sachs MLP Energy Renai</item>
+<item>Guess Inc</item>
+<item>New Germany Fund</item>
+<item>Gafisa Sa</item>
+<item>Griffon Corp</item>
+<item>Gold Fields Ltd</item>
+<item>Gfi Group Inc</item>
+<item>Western Asset Variable Rate Strategic</item>
+<item>Goldcorp Inc</item>
+<item>Gerdau S.A.</item>
+<item>Claymore Dividend & Income Fund</item>
+<item>Graco Inc</item>
+<item>Guggenheim Credit Allocation F</item>
+<item>General Growth Properties</item>
+<item>General Growth Properties Inc</item>
+<item>Gabelli Global Multi-Media Trust</item>
+<item>Gabelli Global Multi-Media Trus</item>
+<item>Gabelli Global Small and Mid CA</item>
+<item>Graham Holdings Company</item>
+<item>Global High Income Dollar Fund</item>
+<item>Greenhill & Co. Inc</item>
+<item>Graham Corp</item>
+<item>Prudential Global Short Durati</item>
+<item>CGI Group</item>
+<item>Gildan Activewear</item>
+<item>Templeton Global</item>
+<item>Gigamon Inc</item>
+<item>General Mills</item>
+<item>Strats Sm Trust For United States Cellular Corp</item>
+<item>Strats Sm Trust For Wal-Mart Stores Inc Securiti</item>
+<item>Strats Sm Trust For Dominion Resources Inc Secur</item>
+<item>Strats Sm Trust For The Procter & Gamble Co Secu</item>
+<item>Strats Sm Trust For Goldman Sachs Group Securiti</item>
+<item>Strats Sm Trust For Allstate Corp Securities Ser</item>
+<item>Strats Sm Trust For News Corp Securities Series</item>
+<item>Gulfmark Offshore</item>
+<item>Globant S.A.</item>
+<item>Gaslog Ltd</item>
+<item>Gaslog Partners LP</item>
+<item>Global Partners LP</item>
+<item>Global Power Equipment Group Inc</item>
+<item>Glatfelter</item>
+<item>Corning Inc</item>
+<item>General Motors Company</item>
+<item>General Mtrs</item>
+<item>General Mtrs</item>
+<item>General Motors Company</item>
+<item>Gamestop Corp</item>
+<item>Globus Medical Inc</item>
+<item>Gruma S.A. De C.V.</item>
+<item>GATX Corp</item>
+<item>Goldman Sachs MLP Income Oppor</item>
+<item>GNC Holdings Inc</item>
+<item>Genie Energy Ltd. Class B Commo</item>
+<item>Genie Energy Ltd. Series</item>
+<item>Great Northern Iron Ore Properties</item>
+<item>Generac Holdings Inc</item>
+<item>Gabelli Natural Resources Gold</item>
+<item>Genworth Financial Inc</item>
+<item>Claymore/Guggenheim Strategic Fund</item>
+<item>Gol Linhas Aereas Inteligentes S.A.</item>
+<item>Government Properties Income Trust</item>
+<item>Genuine Parts Company</item>
+<item>Ga Pwr Co Cl A Pfd</item>
+<item>Group 1 Automotive</item>
+<item>Graphic Packaging Holding Company</item>
+<item>Guggenheim Enhanced Equity</item>
+<item>Global Payments Inc</item>
+<item>Geopark Hldgs Lmtd</item>
+<item>Gap Inc</item>
+<item>Gramercy Capital Corp.</item>
+<item>Gramercy Property Trust Inc</item>
+<item>Gp Strategies Corp</item>
+<item>W.R. Grace & Company</item>
+<item>Graa Y Montero S.A.A.</item>
+<item>Agria Corp</item>
+<item>Granite Real Estate Investment</item>
+<item>Asia Tigers Fund</item>
+<item>Grubhub Inc.</item>
+<item>The Gabelli Healthcare & Wellness Trust</item>
+<item>The Gabelli Healthcare & Welln</item>
+<item>The Gabelli Healthcare & Welln</item>
+<item>Goldman Sachs Group</item>
+<item>Goldman Sachs Pfd</item>
+<item>Goldman Dep Sh</item>
+<item>Goldman Dep Sh</item>
+<item>Goldman Sachs Dep Sh</item>
+<item>The Goldman Sachs Group Inc</item>
+<item>Goldman Sachs Group Inc</item>
+<item>Goldman Sachs Group Inc. The</item>
+<item>Goldman Sachs Bdc Inc.</item>
+<item>Goldman Sachs Group</item>
+<item>Guangshen Railway Company</item>
+<item>General Steel Holdings</item>
+<item>Goldman Sachs Group Inc. [The]</item>
+<item>Glaxosmithkline Plc</item>
+<item>Global Ship Lease Inc</item>
+<item>Global Ship Lease Inc.</item>
+<item>Graftech International Ltd</item>
+<item>Gray Television</item>
+<item>Gray Television</item>
+<item>Triple-S Management Corp</item>
+<item>Global Telcom & Technology Inc</item>
+<item>Getty Realty Corp</item>
+<item>Gulf Power Company Series 2011A</item>
+<item>Gabelli Utility Trust</item>
+<item>Gabelli Util Pfd A</item>
+<item>Granite Construction Inc</item>
+<item>Great Western Bancorp Inc.</item>
+<item>Genesee & Wyoming</item>
+<item>Guidewire Software Inc. Common</item>
+<item>Genesee & Wyoming</item>
+<item>W.W. Grainger</item>
+<item>Great Plains Energy Inc</item>
+<item>Great Plains Energy 3.8%</item>
+<item>Great Plains Energy 4.35%</item>
+<item>Great Plains Energy 4.5%</item>
+<item>Gencorp Inc</item>
+<item>Cabco Series 2004-101 Trust</item>
+<item>Corporate Asset Backed Corp Cabco</item>
+<item>Gazit-Globe Ltd</item>
+<item>Hyatt Hotels Corp</item>
+<item>Haemonetics Corp</item>
+<item>Halliburton Company</item>
+<item>Harman International Industries Inc</item>
+<item>Hannon Armstrong Sustainable In</item>
+<item>Hanesbrands Inc</item>
+<item>Hudbay Minerals Inc</item>
+<item>Hudbay Minerals Inc.</item>
+<item>Hca Holdings Inc. Common Stock</item>
+<item>Hcc Insurance Holdings</item>
+<item>Homeowners Choice</item>
+<item>Homeowners Choice Inc</item>
+<item>Hi-Crush Partners LP</item>
+<item>Health Care REIT</item>
+<item>Health Care REIT Inc</item>
+<item>Health Care REIT Inc</item>
+<item>HCP Inc</item>
+<item>Home Depot</item>
+<item>Hdfc Bank Limited</item>
+<item>Hyperdynamics Corp</item>
+<item>Hawaiian Electric Industries</item>
+<item>Heco Cap III 6.50</item>
+<item>Heico Corp</item>
+<item>Heico Cp Cl A</item>
+<item>Chc Group Ltd.</item>
+<item>Holly Energy Partners L.P.</item>
+<item>John Hancock Hedged Eqty & Inc</item>
+<item>Hess Corp</item>
+<item>HFF Inc</item>
+<item>Hollyfrontier Corp</item>
+<item>Hhgregg Inc</item>
+<item>The Hartford Financial Srvcs G</item>
+<item>Hanger Orthopedic Group</item>
+<item>Hugoton Royalty Trust</item>
+<item>Howard Hughes Corp</item>
+<item>Harte-Hanks</item>
+<item>Helios High Yield Fund</item>
+<item>Hillenbrand Inc</item>
+<item>Miller/Howard High Income Eqty</item>
+<item>Infrareit Inc.</item>
+<item>Hartford Financial Services Group</item>
+<item>Hartford Financial Services Group</item>
+<item>Huntington Ingalls Industries</item>
+<item>Hill International</item>
+<item>Western Asset High</item>
+<item>Aerohive Networks Inc</item>
+<item>Highwoods Properties</item>
+<item>Western Asset High Income Fund II Inc</item>
+<item>MS S.A.C. Saturns Ge Series 2002-14</item>
+<item>Halcon Resources</item>
+<item>Hecla Mining Company</item>
+<item>Hecla Mining Pfd B</item>
+<item>Herbalife Ltd</item>
+<item>Healthsouth Corp</item>
+<item>Hilton Worldwide Holdings Inc.</item>
+<item>Helix Energy Solutions Group</item>
+<item>Honda Motor Company</item>
+<item>Home Properties</item>
+<item>Hoegh Lng Partners LP</item>
+<item>Horace Mann Educators Corp</item>
+<item>Harmony Gold Mining Co. Ltd</item>
+<item>Hon Industries Inc</item>
+<item>Huaneng Power Intl</item>
+<item>Harvest Natural Resources Inc</item>
+<item>Health Net Inc</item>
+<item>Harley-Davidson Inc</item>
+<item>Honeywell International Inc</item>
+<item>Hornbeck Offshore Services</item>
+<item>Starwood Hotels & Resorts Worldwide</item>
+<item>Hovnanian Enterprises Inc</item>
+<item>Helmerich & Payne</item>
+<item>John Hancock Pfd II</item>
+<item>John Hancock Preferred</item>
+<item>Hudson Pacific Properties</item>
+<item>Hudson Pacific Properties Inc</item>
+<item>Hewlett-Packard Company</item>
+<item>John Hancock Preferred Income Fund III</item>
+<item>Hospitality Properites Trust</item>
+<item>Hospitality Properties Trust</item>
+<item>Heartland Payment Systems</item>
+<item>Tekla Healthcare Investors</item>
+<item>Tekla Life Sciences Investors</item>
+<item>Healthcare Realty Trust Inc</item>
+<item>H&R Block</item>
+<item>Hill-Rom Holdings Inc</item>
+<item>Harbinger Group Inc</item>
+<item>Hormel Foods Corp</item>
+<item>Harris Corp</item>
+<item>Heritage Insurance Holdings</item>
+<item>HSBC Holdings Plc</item>
+<item>HSBC Holdings Plc</item>
+<item>Harsco Corp</item>
+<item>HSBC Holdings Plc. Perpetual S</item>
+<item>HSBC Holdings Plc Perp Sub Cap</item>
+<item>HSBC Finance Corp Dep. Shares R</item>
+<item>Hospira Inc</item>
+<item>Host Marriott Financial Trust</item>
+<item>Hershey Foods Corp</item>
+<item>Hersha Hospitality Trust</item>
+<item>Hersha Hospitality Trust</item>
+<item>Hersha Hospitality Trust</item>
+<item>Healthcare Trust of America I</item>
+<item>John Hancock Tax Advantaged Dividend</item>
+<item>Horizon Technology Finance Cor</item>
+<item>Hercules Technology Growth Capital</item>
+<item>Hercules Technology Growth Cap</item>
+<item>Hercules Technology Growth Cap</item>
+<item>Hercules Technology Growth Capi</item>
+<item>Hilltop Holdings Inc</item>
+<item>Hyperion Brookfield Total Return Fund</item>
+<item>Hatteras Financial Corp</item>
+<item>Hatteras Financial Corp Cum Red</item>
+<item>John Hancock Tax-Advantaged Global</item>
+<item>Hertz Global Holdings Inc</item>
+<item>Hubbell Inc A</item>
+<item>Hubbell Inc B</item>
+<item>Hubspot Inc</item>
+<item>Humana Inc</item>
+<item>Huntsman Corp</item>
+<item>HSBC USA Cum Pfd D</item>
+<item>HSBC USA Pfd F</item>
+<item>HSBC Dep Sh Pfd G</item>
+<item>HSBC USA Dep Sh H</item>
+<item>HSBC USA 2.8575 Pfd</item>
+<item>Hudson Valley Holding Corp. Com</item>
+<item>Haverty Furniture Companies</item>
+<item>Haverty Furn Cl A SC</item>
+<item>Headwaters Inc</item>
+<item>Hexcel Corp</item>
+<item>Hyster-Yale Materials Handling</item>
+<item>New America High</item>
+<item>Managed High Yield Plus Fund</item>
+<item>Halyard Health Inc. Common Sto</item>
+<item>Western Asset High Yield Defined</item>
+<item>Blackrock High Yield Fund Vi Inc</item>
+<item>Marinemax Inc</item>
+<item>Intelsat S.A. Common Shares</item>
+<item>Intelsat S.A.</item>
+<item>ING Asia Pacific High Dividend Equity</item>
+<item>Iamgold Corp</item>
+<item>Industrias Bachoco S.A. De C.V.</item>
+<item>International Business Machines Corp</item>
+<item>Icici Bank Limited</item>
+<item>Installed Building Products I</item>
+<item>Empresas Ica Soc Contrladora</item>
+<item>MS Income Securities</item>
+<item>Independence Contract Drilling Inc.</item>
+<item>Intercontinental Exchange</item>
+<item>Israel Chemicals Ltd.</item>
+<item>Idacorp Inc</item>
+<item>ING Infrastructure Industrial</item>
+<item>ING Group N.V.</item>
+<item>IDT Corp</item>
+<item>Integrys Energy Group Inc</item>
+<item>Idex Corp</item>
+<item>International Flavors & Fragrances</item>
+<item>India Fund</item>
+<item>Imperial Holdings</item>
+<item>ING Global Advantage and Premium</item>
+<item>ING Global Equity Dividend and Premium</item>
+<item>Western Asset Investment Grade Defined</item>
+<item>ING Clarion Global Real Estate</item>
+<item>International Game Technology</item>
+<item>Independence Holding Company</item>
+<item>ING Emerging Markets High Dividend</item>
+<item>Intercontinental Hotels Group</item>
+<item>IHS Inc</item>
+<item>ING International High Dividend Equity</item>
+<item>Morgan Stanley India Investment Fund Inc</item>
+<item>Invesco Insured Muni Income Trust</item>
+<item>Intralinks Holdings</item>
+<item>Ingram Micro Inc</item>
+<item>Imax Corp</item>
+<item>Imation Corp</item>
+<item>Imprivata Inc</item>
+<item>Imperva Inc</item>
+<item>Ims Health Holdings Inc.</item>
+<item>Cohen & Steers Global Income Builder</item>
+<item>ING Group N.V.</item>
+<item>Brookfield Global Listed Infra</item>
+<item>Infosys Limited</item>
+<item>ING Group N.V.</item>
+<item>Ingredion Inc</item>
+<item>Summit Hotel Properties</item>
+<item>Summit Hotel Properties Inc</item>
+<item>Summit Hotel Properties Inc</item>
+<item>Summit Hotel Properties Inc</item>
+<item>World Fuel Services Corp</item>
+<item>Invensense Inc</item>
+<item>Interxion Holding N.V.</item>
+<item>ING Group N.V.</item>
+<item>ION Geophysical Corp</item>
+<item>Interoil Corp</item>
+<item>International Paper Company</item>
+<item>Interpublic Group of Companies</item>
+<item>Inphi Corp</item>
+<item>Intrepid Potash Inc</item>
+<item>Interstate Power and Light Co.</item>
+<item>Invesco Quality Muni Income Trust</item>
+<item>Ingersoll-Rand Plc (Ireland)</item>
+<item>Inland Real Estate Corp</item>
+<item>Inland Real Estate Corp</item>
+<item>Inland Real Estate Corporation</item>
+<item>Investors Real Estate Trust 7.9</item>
+<item>The Governor and Company of The Bank of Ireland</item>
+<item>Investors Real Estate Trust</item>
+<item>Irish Investment Fund</item>
+<item>Iron Mountain Inc</item>
+<item>ING Risk Managed Natural Resources Fund</item>
+<item>Irsa Inversiones Y Representaciones S.A.</item>
+<item>Prudential Short Duration High</item>
+<item>ING Group N.V.</item>
+<item>ING Group N.V.</item>
+<item>International Shipholding Corp</item>
+<item>International Shipholding Copr</item>
+<item>International Shipholding Corp</item>
+<item>ING Group N.V.</item>
+<item>Gartner Inc</item>
+<item>Itc Holdings</item>
+<item>Investment Technology Group</item>
+<item>Itt Industries</item>
+<item>Itau Unibanco Banco Holding Sa</item>
+<item>Illinois Tool Works Inc</item>
+<item>Invacare Corp</item>
+<item>Ivy High Income Opportunities</item>
+<item>Invesco Mortgage Capital Inc</item>
+<item>Invesco Mortgage Capital Inc</item>
+<item>Invesco Mortgage Capital Inc.</item>
+<item>Invesco Plc</item>
+<item>Orix Corp Ads</item>
+<item>Jarden Corp</item>
+<item>Lehman Abs Corp</item>
+<item>Jabil Circuit</item>
+<item>Select Asset Inc</item>
+<item>Select Asset Inc</item>
+<item>John Bean Technologies Corp</item>
+<item>Nuveen Core Equity Alpha Fund</item>
+<item>Johnson Controls</item>
+<item>J.C. Penney Company Inc</item>
+<item>Nuveen Diversified Dividend and</item>
+<item>Just Energy Group Inc</item>
+<item>Jacobs Engineering Group Inc</item>
+<item>Japan Equity Fund</item>
+<item>Jf China Region Fund</item>
+<item>Nuveen Floating Rate</item>
+<item>Nuveen Global High Income Fund</item>
+<item>Nuveen Global Value Opportunities Fund</item>
+<item>Jgwpt Holdings Inc</item>
+<item>John Hancock Investors Trust</item>
+<item>Nuveen Quality Preferred Income Fund 3</item>
+<item>John Hancock Income Securities Trust</item>
+<item>James Hardie Industries Se</item>
+<item>Jinkosolar Holding Company Limited</item>
+<item>Jones Lang Lasalle Inc</item>
+<item>Nuveen Mortgage Opportunity Term Fund</item>
+<item>Jumei International Holding Ltd</item>
+<item>Nuveen Energy MLP Total Return Fund</item>
+<item>Javelin Mortgage Investment Co</item>
+<item>Nuveen All Cap Energy MLP Oppo</item>
+<item>Nuveen Multi-Market Income Fund Inc.</item>
+<item>JMP Group Inc</item>
+<item>JMP Group Inc</item>
+<item>JMP Group Inc.</item>
+<item>Nuven Mortgage Opportunity Term Fund 2</item>
+<item>Johnson & Johnson</item>
+<item>Juniper Networks</item>
+<item>Janus Capital Group Inc</item>
+<item>St. Joe Company</item>
+<item>Japan Smaller Capitalization Fund Inc</item>
+<item>Jones Energy Inc</item>
+<item>Joy Global Inc</item>
+<item>Nuveen Preferred and Convertible</item>
+<item>JP Energy Partners LP</item>
+<item>Nuveen Preferred and Income Term Fund</item>
+<item>JP Morgan Chase & Co</item>
+<item>JP Morgan Chase & Co.</item>
+<item>Jpmorgan Chase & Co. 6.70%</item>
+<item>JP Morgan Chase Capital Xxix 6.7</item>
+<item>JP Morgan Chase & Co.</item>
+<item>Jpmorgan Chase & Co.</item>
+<item>J P Morgan Chase & Co Depositar</item>
+<item>JP Morgan Chase & Co</item>
+<item>Nuveen Quality Preferred 2</item>
+<item>Nuveen Flexible Investment Inc</item>
+<item>Nuveen Preferred and Convertible 2</item>
+<item>Nuveen Real Asset Income and Gr</item>
+<item>Journal Communications</item>
+<item>Nuveen Floating Rate Income Opportuntiy</item>
+<item>Nuveen Short Duration Credit O</item>
+<item>Nuveen Tax-Advantaged Total Return</item>
+<item>Nuveen Tax-Advantaged Dividend Growth</item>
+<item>Nuveen Quality Preferred</item>
+<item>John Wiley Sons Cl A</item>
+<item>John Wiley Sons Cl B</item>
+<item>Nordstrom</item>
+<item>Kellogg Company</item>
+<item>Kadant Inc</item>
+<item>Kaman Corp</item>
+<item>Kcap Financial Inc</item>
+<item>Kar Auction Services Inc</item>
+<item>Kate Spade & Company</item>
+<item>KB Financial Group Inc</item>
+<item>KB Home</item>
+<item>KBR Inc</item>
+<item>Lehman Abs Corp</item>
+<item>Kcg Holdings Inc</item>
+<item>Kayne Anderson Energy Development Company</item>
+<item>Korea Equity Fund</item>
+<item>Key Energy Services</item>
+<item>Kemet Corp</item>
+<item>Kenon Holdings Ltd. Ordinary Sh</item>
+<item>Korea Electric Power Corp</item>
+<item>Kirby Corp</item>
+<item>Keycorp</item>
+<item>Keycorp Pfd Ser A</item>
+<item>Keysight Technologies Inc. Comm</item>
+<item>Korea Fund</item>
+<item>KKR Financial Holdings Llc</item>
+<item>KKR Financial Holdings Llc</item>
+<item>KKR Financial Holdings Llc Pfd</item>
+<item>Kingsway Financial Services</item>
+<item>Korn/Ferry International</item>
+<item>Kinross Gold Corp</item>
+<item>Scudder High Income Trust</item>
+<item>Kimco Realty Corp</item>
+<item>Kimco Realty Corporation Deposi</item>
+<item>Kimco Realty Corporation Deposi</item>
+<item>Kimco Realty Corporation Class</item>
+<item>Kimco Realty Corporation Class</item>
+<item>King Digital Entertainment Plc</item>
+<item>KKR Income Opportunities Fund</item>
+<item>Krispy Kreme Doughnuts</item>
+<item>KKR & Co. L.P.</item>
+<item>Kimberly-Clark Corp</item>
+<item>Kayne Anderson Midstream Energy Fund</item>
+<item>KMG Chemicals</item>
+<item>Kinder Morgan</item>
+<item>Kinder Morgan Inc. W/I</item>
+<item>Scudder Multi-Market Income Trust</item>
+<item>Kemper Corporation 7.375% Subor</item>
+<item>Unitrin</item>
+<item>Kennametal Inc</item>
+<item>Carmax Inc</item>
+<item>Knowles Corporation Common Stoc</item>
+<item>Kindred Healthcare</item>
+<item>Knoll Inc</item>
+<item>Konami Corp</item>
+<item>Knot Offshore Partners LP Commo</item>
+<item>Knight Transportation</item>
+<item>Coca-Cola Company</item>
+<item>Eastman Kodak Co. Wt</item>
+<item>Eastman Kodak</item>
+<item>Coca Cola Femsa S.A.B. De C.V.</item>
+<item>Koppers Holdings Inc</item>
+<item>Michael Kors Holdings Limited</item>
+<item>Kosmos Energy Ltd</item>
+<item>Kroger Company</item>
+<item>Kraton Performance Polymers Inc</item>
+<item>Kilroy Realty Corp</item>
+<item>Kilroy Realty Corp</item>
+<item>Kilroy Realty Corp</item>
+<item>Kite Realty Group Trust</item>
+<item>Kite Realty Group Trust</item>
+<item>Kronos Worldwide Inc</item>
+<item>Kapstone Paper and Packaging Corp</item>
+<item>Scudder Strategic Municiple Income Trust</item>
+<item>Kohl's Corp</item>
+<item>Scudder Strategic Income Trust</item>
+<item>Kansas City Southern</item>
+<item>Kansas Cty Sthn 4%</item>
+<item>Korea Telecom Corp</item>
+<item>Scudder Municiple Income Trust</item>
+<item>Lehman Abs Corp</item>
+<item>Lehman Abs Corp</item>
+<item>Lehman Abs Corp</item>
+<item>Kennedy-Wilson Holdings Inc</item>
+<item>Kennedy-Wilson Holdings Inc</item>
+<item>Quaker Chemical Corp</item>
+<item>Kayne Anderson Energy Total Return Fund</item>
+<item>Kayne Anderson MLP Investment Company</item>
+<item>Kayne Anderson MLP Investment</item>
+<item>Kayne Anderson MLP Investment</item>
+<item>Kayne Anderson MLP Investment</item>
+<item>Kyocera Corp</item>
+<item>Loews Corp</item>
+<item>Lithia Motors</item>
+<item>Ladder Capital Corp</item>
+<item>Lentuo International Inc</item>
+<item>Lazard Ltd</item>
+<item>L Brands Inc</item>
+<item>Scudder Global High</item>
+<item>Lendingclub Corp</item>
+<item>Lannett Co Inc</item>
+<item>Advent/Claymore Enhanced Growth &</item>
+<item>Latin American Discovery Fund</item>
+<item>Lydall Inc</item>
+<item>Leidos Holdings Inc</item>
+<item>Cohen & Steers Ltd Duration Preferred Income Fun</item>
+<item>Landauer Inc</item>
+<item>Lear Corp</item>
+<item>Springleaf Holdings Inc</item>
+<item>Lee Enterprises Inc</item>
+<item>Leggett & Platt Inc</item>
+<item>Leju Holdings Ltd</item>
+<item>Lennar Corp</item>
+<item>Lennar Corp</item>
+<item>Dreyfus Strategic Municipals</item>
+<item>Centrus Energy Corp</item>
+<item>Leapfrog Enterprises Inc</item>
+<item>China Life Insurance Company Limited</item>
+<item>Latam Airlines Group Sa</item>
+<item>Laclede Group</item>
+<item>Lions Gate Entertainment Corp</item>
+<item>Lazard Global Total Return and</item>
+<item>Laboratory Corporation of America Holdings</item>
+<item>Lasalle Hotel Properties</item>
+<item>Lasalle Hotl 8.375 B</item>
+<item>Lasalle Hotel Properties</item>
+<item>Lennox International</item>
+<item>Lightinthebox Holding Co. Ltd</item>
+<item>Lumber Liquidators Holdings Inc</item>
+<item>L-3 Communications Holdings</item>
+<item>Eli Lilly and Company</item>
+<item>Legg Mason Inc</item>
+<item>Lockheed Martin Corp</item>
+<item>Lincoln National Corp</item>
+<item>Lincoln National Corp</item>
+<item>Brasilagro Brazi ADR</item>
+<item>Linkedin</item>
+<item>Lindsay Corp</item>
+<item>Alliant Energy Corp</item>
+<item>Lorillard Inc</item>
+<item>Lifelock Inc</item>
+<item>Lazard World Dividend &</item>
+<item>Lowe's Companies</item>
+<item>Dorian Lpg Ltd.</item>
+<item>Laredo Petroleum Holdings Inc</item>
+<item>Lg Display Co. Limited American</item>
+<item>Liberty Property Trust</item>
+<item>Louisiana-Pacific Corp</item>
+<item>La Quinta Holdings Inc.</item>
+<item>Lrr Energy L.P.</item>
+<item>K12 Inc</item>
+<item>Ltc Properties</item>
+<item>Life Time Fitness</item>
+<item>Luby's Inc</item>
+<item>Leucadia National Corp</item>
+<item>Southwest Airlines Company</item>
+<item>Luxottica Group S.P.A.</item>
+<item>Level 3 Communications</item>
+<item>Las Vegas Sands</item>
+<item>Luxfer Holdings Plc</item>
+<item>Luxoft Holding Inc</item>
+<item>Lexmark International</item>
+<item>Lexington Realty Trust</item>
+<item>Lexington Realty Tru</item>
+<item>Lsb Industries Inc</item>
+<item>Lyondellbasell Industries Nv</item>
+<item>Lloyds Banking Group Plc</item>
+<item>Lloyds Banking Group Plc</item>
+<item>Live Nation Entertainment</item>
+<item>La-Z-Boy Inc</item>
+<item>Macy's Inc</item>
+<item>Mastercard Inc</item>
+<item>Mid-America Apartment Communities</item>
+<item>Macerich Company</item>
+<item>Main Street Capital Corp</item>
+<item>Manpower Inc</item>
+<item>Manchester United Ltd</item>
+<item>Masco Corp</item>
+<item>Matson Inc</item>
+<item>Pioneer Muni High Income Advantage Trust</item>
+<item>MBIA Inc</item>
+<item>Mobileye N.V.</item>
+<item>Mobile Telesystems</item>
+<item>Moelis</item>
+<item>Blackrock Muniyield California Insured Fund</item>
+<item>Medley Capital Corp</item>
+<item>McDonald's Corp</item>
+<item>Massmutual Corporate Investors</item>
+<item>Mckesson Corp</item>
+<item>Madison/Claymore Covered Call & Equity Strategy</item>
+<item>Moody's Corp</item>
+<item>Molycorp Inc</item>
+<item>Medley Capital Corporation 7.12</item>
+<item>MFS Charter Income Trust</item>
+<item>Marcus Corp</item>
+<item>Medley Capital Corp</item>
+<item>Mercury General Corp</item>
+<item>Mednax Inc</item>
+<item>M.D.C. Holdings</item>
+<item>Medley Management Inc.</item>
+<item>Meredith Corp</item>
+<item>McDermott International</item>
+<item>Medtronic Inc</item>
+<item>Mdu Res Group Inc</item>
+<item>Medifast Inc</item>
+<item>Media General</item>
+<item>Methode Electronics</item>
+<item>Blackrock Munienhanced Fund</item>
+<item>Midcoast Energy Partners L.P.</item>
+<item>Merrill Lyn 7.0 Topr</item>
+<item>M L Cap TR 7.12</item>
+<item>Merrill Ly Cap V7.28</item>
+<item>ML 6.45% Trust Pfd</item>
+<item>ML Cap TR II 6.45% P</item>
+<item>ML Cap TR III 7.375%</item>
+<item>Metlife Inc</item>
+<item>Metlife Pfd A Fltg</item>
+<item>Metlife Inc Pfd B</item>
+<item>MFA Financial Inc</item>
+<item>MFA Financial Inc</item>
+<item>Manulife Financial Corp</item>
+<item>Macquarie/First Trust Global</item>
+<item>Mizuho Financial Group</item>
+<item>Blackrock Muniholdings Investment Quality Fund</item>
+<item>MFS Muni Income Trust</item>
+<item>MFA Financial Inc</item>
+<item>Blackrock Muniyield Investment Qualityfund</item>
+<item>MFS Special Value Trust</item>
+<item>Mistras Group Inc</item>
+<item>Magna International</item>
+<item>MFS Government Markets Income Trust</item>
+<item>MGM Resorts International</item>
+<item>Affiliated Managers Group Inc</item>
+<item>Macquarie Global Infrastructure Total Return Fun</item>
+<item>Maiden Holdings Ltd. 8.25%</item>
+<item>Blackrock Muniholdings Fund</item>
+<item>Western Asset Muni High</item>
+<item>The McGraw-Hill Companies Inc</item>
+<item>Marine Harvest ASA Sponsored Ad</item>
+<item>Pioneer Muni High Income Trust</item>
+<item>Mohawk Industries</item>
+<item>Blackrock Muniholdings New York Quality Fund</item>
+<item>Maiden Holdings North America</item>
+<item>Maiden Holdings North America</item>
+<item>Maiden Holdings North America</item>
+<item>M/I Homes</item>
+<item>M/I Homes Sr A Pf Ds</item>
+<item>Magnum Hunter Resources Corp</item>
+<item>Western Asset Managed High</item>
+<item>Macquarie Infrastructure Company Trust</item>
+<item>Cohen & Steers MLP Income and</item>
+<item>Meadowbrook Insurance Group</item>
+<item>Mfc Industrial Ltd</item>
+<item>Mfc Industrial Ltd</item>
+<item>Mfc Industrial Ltd</item>
+<item>Miller Petroleum</item>
+<item>MFS Intermediate Income Trust</item>
+<item>Ag Mortgage Investment Trust</item>
+<item>Ag Mortgage Investment Trust I</item>
+<item>Ag Mortgage Investment Trust</item>
+<item>Mix Telematics Limited</item>
+<item>Blackrock Muniyield Michigan Quality Fund</item>
+<item>Blackrock Muniyield New Jersey Quality Fund</item>
+<item>Mead Johnson Nutrition Company</item>
+<item>Mccormick & Company Inc</item>
+<item>Mccormick & Company Inc</item>
+<item>Markel Corp</item>
+<item>Mueller Industries</item>
+<item>Martin Marietta Materials</item>
+<item>Maui Land & Pineapple Company</item>
+<item>Miller Industries</item>
+<item>Millennial Media Inc</item>
+<item>Marsh & Mclennan Companies</item>
+<item>Mainstay Defined Muni Opp Fund</item>
+<item>Marcus & Millichap</item>
+<item>3M Company</item>
+<item>Magellan Midstream Partners L.P.</item>
+<item>Maximus Inc</item>
+<item>MFS Multimarket Income Trust</item>
+<item>Western Asset Managed Municipals Fund</item>
+<item>Manning & Napier Inc</item>
+<item>Blackrock Muni New York Intermediate Duration Fu</item>
+<item>Mcclatchy Company</item>
+<item>Mallinckrodt Plc Ordinary Share</item>
+<item>Western Asset Muni Partners Fund</item>
+<item>Monmouth Real Estate Investment Corp</item>
+<item>Monmouth Real Estate Inv</item>
+<item>Monmouth Real Estate Investmen</item>
+<item>Altria Group</item>
+<item>Modine Manufacturing Company</item>
+<item>Model N Inc. Common Stock</item>
+<item>Moog Inc</item>
+<item>Moog Inc</item>
+<item>Molina Healthcare Inc</item>
+<item>Monsanto Company</item>
+<item>Monogram Residential Trust In</item>
+<item>Mosaic Company</item>
+<item>Movado Group Inc</item>
+<item>Mississippi Pr 5.25</item>
+<item>Blackrock Muniyield Pennsylvania Quality Fund</item>
+<item>Marathon Petroleum Corp</item>
+<item>Metaldyne Performance Group Inc</item>
+<item>Mplx LP</item>
+<item>Midstates Petroleum Company I</item>
+<item>Massmutual Participation Investors</item>
+<item>Medical Properties Trust</item>
+<item>Marine Products Corp</item>
+<item>Blackrock Muniyield Quality Fund II</item>
+<item>Blackrock Muniyield Quality Fund</item>
+<item>Mindray Medical International Limited</item>
+<item>Mrc Global Inc</item>
+<item>Montpelier Re Holdings Ltd</item>
+<item>Montpelier Re Holdings Ltd</item>
+<item>Marin Sotfware Incorporated</item>
+<item>Merck & Company</item>
+<item>Marathon Oil Corp</item>
+<item>Morgan Stanley</item>
+<item>Morgan Stanley Prfd 'A'</item>
+<item>Morgan Stanley</item>
+<item>Morgan Stanley</item>
+<item>Morgan Stanley  6.625%</item>
+<item>Morgan Stanley</item>
+<item>Msa Safety Inc.</item>
+<item>Mesabi Trust</item>
+<item>Main Street Capital Corporatio</item>
+<item>MSCI Inc</item>
+<item>Morgan Stanley Emerging Markets Debt</item>
+<item>Morgan Stanley Emerging Markets Fund Inc</item>
+<item>Motorola Solutions</item>
+<item>Morgan Stanley Cap Trust Vi Cap Securities</item>
+<item>Morgan Stanley Cap TR ViII Gdt Cap Securities</item>
+<item>Midsouth Bancorp</item>
+<item>Msc Industrial Direct Company</item>
+<item>Martha Stewart Living Omnimedia</item>
+<item>Madison Strategic Sector Premium Fund</item>
+<item>Morgan Stanley Capital Trust Vii Cap Secs</item>
+<item>Arcelormittal</item>
+<item>M&T Bank Corp</item>
+<item>M&T Bank Corporation Fixed Rate</item>
+<item>M&T Bank Corporation Fixed Rate</item>
+<item>M&T Bank Corporation Warrants</item>
+<item>Arcelormittal</item>
+<item>Mettler-Toledo International</item>
+<item>Matador Resources Company</item>
+<item>Mgic Investment Corp</item>
+<item>Meritage Corp</item>
+<item>Mechel Steel Group Oao</item>
+<item>Mechel Steel Group Oao American</item>
+<item>Vail Resorts</item>
+<item>Arvinmeritor</item>
+<item>Mesa Royalty Trust</item>
+<item>Brush Wellman Inc</item>
+<item>Montgomery Street Income Securities</item>
+<item>Western Asset Muni Defined Opportunity Trust Inc</item>
+<item>Mitsubishi Ufj Financial Group Inc</item>
+<item>Manitowoc Company</item>
+<item>Minerals Technologies Inc</item>
+<item>Mastec Inc</item>
+<item>Blackrock Muniassets Fund</item>
+<item>Blackrock Muniholdings California Quality Fund</item>
+<item>Blackrock Muniholdings Quality Fund II</item>
+<item>Blackrock Muniholdings Fund II</item>
+<item>Blackrock Muni Intermediate Duration Fund Inc</item>
+<item>Blackrock Muniholdings New Jersey Insured Fund</item>
+<item>Murphy Oil Corp</item>
+<item>Blackrock Muniholdings Quality Fund</item>
+<item>Murphy USA Inc. Common Stock Wh</item>
+<item>Mcewen Mining Inc</item>
+<item>MVC Capital</item>
+<item>MVC Capital Inc</item>
+<item>Mavenir Systems Inc. Common ST</item>
+<item>Mv Oil Trust</item>
+<item>Blackrock Munivest Fund II</item>
+<item>Men's Wearhouse</item>
+<item>Mueller Water Products</item>
+<item>Markwest Energy Partners LP</item>
+<item>Morgan Stanley Cap TR IV Gtd Cap Secs</item>
+<item>Morgan Stanley Cap TR V Gtd Cap Secs</item>
+<item>Morgan Stanley Cap TR III Capital Trust Securiti</item>
+<item>Meadwestvaco Corp</item>
+<item>Monster Worldwide</item>
+<item>Magnachip Semiconductor Corp</item>
+<item>Mexico Equity and</item>
+<item>Mexico Fund</item>
+<item>Maxlinear Inc</item>
+<item>Maxpoint Interactive Inc.</item>
+<item>China Ming Yang Wind Power Group Limited</item>
+<item>Blackrock Muniyield California Fund</item>
+<item>Clubcorp Holdings Inc</item>
+<item>Blackrock Muniyield Fund</item>
+<item>Myers Industries</item>
+<item>Blackrock Muniyield Investment Fund</item>
+<item>Blackrock Muniyield Quality Fund III</item>
+<item>Blackrock Muniyield New Jersey Fund</item>
+<item>Blackrock Muniyield Michigan Quality Fund II</item>
+<item>Blackrock Muniyield New York Quality Fund</item>
+<item>Managed Duration Investment Grade Fund</item>
+<item>Netsuite Inc</item>
+<item>Nuveen California Divadv Fund</item>
+<item>Nuveen Divadv Fund</item>
+<item>North Atlantic Drilling Ltd. Co</item>
+<item>Nuveen New York Divadv Fund</item>
+<item>Nordic American Offshore Ltd.</item>
+<item>Navios Maritime Midstream Partn</item>
+<item>Nordic American Tanker Shipping Limited</item>
+<item>Navistar International Corp</item>
+<item>Navistar Intl Pfd D</item>
+<item>Nuveen Arizona Premium Fund</item>
+<item>Nuveen Build America Bond Fund</item>
+<item>Nuveen Build America Bond Opportunity Fund</item>
+<item>National Bank of Greece Sa</item>
+<item>Natl Bk of Gr Pfd Ad</item>
+<item>National Bank Holdings Corp</item>
+<item>Noble Energy Inc</item>
+<item>Nabors Industries</item>
+<item>Nacco Industries</item>
+<item>Nuveen California Muni Value Fund</item>
+<item>Norcraft Companies Inc</item>
+<item>Navigant Consulting</item>
+<item>NCR Corp</item>
+<item>NCI Building Systems</item>
+<item>Newcastle Investment Corp</item>
+<item>Newcastle Inv Pfd B</item>
+<item>Newcastle Investment Corporatio</item>
+<item>Newcastle Invt Corp</item>
+<item>Agic Convertible &</item>
+<item>Agic Convertible & II</item>
+<item>Tortoise Energy Independence F</item>
+<item>Enduro Royalty Trust</item>
+<item>Noble Corp</item>
+<item>Nuveen Insured Tax-Free Advantage Fund</item>
+<item>Nextera Energy</item>
+<item>Fpl Group Inc. 5 7/8% Preferre</item>
+<item>Nextera Energy Capital Holding</item>
+<item>Nextera Energy Capital Holding</item>
+<item>Nextera Energy Capital Holding</item>
+<item>Nextera Energy Capital Holding</item>
+<item>Nextera Energy Inc</item>
+<item>Nextera Energy Inc</item>
+<item>Neff Corp</item>
+<item>Newmont Mining Corp</item>
+<item>Nextera Energy Partners LP</item>
+<item>Nuverra Environmental Solutions Inc</item>
+<item>Newmarket Corp</item>
+<item>Nuveen Enhanced Muni Value Fund</item>
+<item>New Media Investment Group Inc.</item>
+<item>New Relic Inc</item>
+<item>National Fuel Gas Company</item>
+<item>Nfj Dividend Interest & Premium Strategy Fund</item>
+<item>Newfield Exploration Company</item>
+<item>National Grid Transco Plc</item>
+<item>Ngl Energy Partners LP</item>
+<item>Targa Resources Partners LP</item>
+<item>Natural Gas Services Group</item>
+<item>Natural Grocers By Vitamin Cottage Inc</item>
+<item>Nexpoint Credit Strategies Fund</item>
+<item>National Health Investors</item>
+<item>NiSource Inc</item>
+<item>Nuveen Intermediate Duration M</item>
+<item>Agic Equity & Convertible</item>
+<item>Nuveen Maturities Fund</item>
+<item>Nuveen Insured Muni Opportunity Fund</item>
+<item>Nuveen Intermediate Duration Q</item>
+<item>Nidec Corp</item>
+<item>Newjersey Resources Corp</item>
+<item>Niska Gas Storage Partners Llc</item>
+<item>Nike Inc</item>
+<item>Nuveen Georgia Divadv Fund 2</item>
+<item>Nuveen Insured California Tax-Free</item>
+<item>NL Industries</item>
+<item>Nautilus Group</item>
+<item>Nielsen Holdings N.V.</item>
+<item>Annaly Capital Management Inc</item>
+<item>Annaly Capital Manag</item>
+<item>Annaly Capital Management Inc</item>
+<item>Annaly Capital Management Inc</item>
+<item>Navios Maritime Holdings Inc</item>
+<item>Navios Maritime</item>
+<item>Navios Maritime Holdngs Inc.</item>
+<item>Nuveen Muni Advantage Fund</item>
+<item>Nimble Storage Inc.</item>
+<item>New Mountain Finance Corporati</item>
+<item>Nuveen Muni</item>
+<item>Niagara Mohawk Holdings Inc. P</item>
+<item>Niagara Mohawk 3.60</item>
+<item>Navios Maritime Partners LP</item>
+<item>Nuveen Muni Market Opportunity Fund</item>
+<item>Nomura Holdings Inc ADR</item>
+<item>Nuveen Minnesota Municipal Inco</item>
+<item>Nuveen Massachusetts Premium Fund</item>
+<item>Nuveen Maryland Premium Fund</item>
+<item>Navios Maritime Acquisition Corp</item>
+<item>Nuveen North Carolina Premium Fund</item>
+<item>Nelnet Inc</item>
+<item>National Retail Properties</item>
+<item>National Retail Properties In</item>
+<item>National Retail Properties Depo</item>
+<item>Nuveen New York Performance Plus Fund</item>
+<item>Nuveen New York Muni Value Fund</item>
+<item>North American Energy Partners</item>
+<item>Noah Holdings Ltd</item>
+<item>Northrop Grumman Corp</item>
+<item>Nokia Corp</item>
+<item>Noranda Aluminum Holding Corp</item>
+<item>Nord Anglia Education Inc.</item>
+<item>National-Oilwell</item>
+<item>Servicenow Inc</item>
+<item>Neenah Paper</item>
+<item>China Nepstar Chain Drugstore Ltd</item>
+<item>Nuveen Premier Muni</item>
+<item>Nuveen Premium Fund</item>
+<item>National Presto Industries</item>
+<item>Nuveen Premium Fund II</item>
+<item>Enpro Industries</item>
+<item>Nuveen Performance Plus Fund</item>
+<item>Nuveen Premium Fund IV</item>
+<item>Neophotonics Corp</item>
+<item>Nuveen Virginia Premium Fund</item>
+<item>Netqin Mobile Inc</item>
+<item>Nuveen Insured Quality Fund</item>
+<item>Nuveen Investment Quality Fund</item>
+<item>Nuveen Pennsylvania Investment</item>
+<item>Nuveen Quality Fund</item>
+<item>Nuveen Quality</item>
+<item>Newpark Resources</item>
+<item>Northstar Realty Finance</item>
+<item>Northstar Realty Pfd</item>
+<item>Northstar Rlty Ser B</item>
+<item>Northstar Realty Finance Corp</item>
+<item>Northstar Realty Finance Corp</item>
+<item>Northstar Realty Finance Corp</item>
+<item>NRG Energy</item>
+<item>Nuveen Insured New York Tax-Free</item>
+<item>Natural Resource Partners LP</item>
+<item>North European Oil Royality Trust</item>
+<item>New Residential Investment Corp</item>
+<item>Nustar Energy L.P.</item>
+<item>Northstar Asset Management Grou</item>
+<item>Norfolk Southern Corp</item>
+<item>Nustar Gp Holdings Llc</item>
+<item>Nuveen Senior</item>
+<item>New Source Energy Partners L.P</item>
+<item>Nationstar Mortgage Holdngs I</item>
+<item>Insperity Inc</item>
+<item>Neustar Inc</item>
+<item>Nustar Logistics L.P.</item>
+<item>Nuveen Connecticut Premium Fund</item>
+<item>Tortoise MLP Fund</item>
+<item>Northern Tier Energy LP</item>
+<item>Nortel Inversora Sa ADR</item>
+<item>Nam Tai Electronics</item>
+<item>Nippon Telegraph and Telephone Corp</item>
+<item>Nuveen Texas Quality</item>
+<item>Nuveen Texas Quality Income Mu</item>
+<item>Natuzzi S.P.A.</item>
+<item>Nucor Corp</item>
+<item>Nuveen Michigan Quality</item>
+<item>Nuveen Ohio Quality</item>
+<item>Nu Skin Enterprises</item>
+<item>Nuveen Muni Value Fund</item>
+<item>Nuveen Muni Value Fund</item>
+<item>Navigator Holdings</item>
+<item>Novo Nordisk A/S</item>
+<item>NVR Inc</item>
+<item>Nevro Corp</item>
+<item>Novartis Ag</item>
+<item>Invitae Corp</item>
+<item>Natl Wstmst Ads 19C3</item>
+<item>Northwestern Corp</item>
+<item>New Home Co Llc</item>
+<item>Newell Rubbermaid Inc</item>
+<item>Northwest Natural Gas Company</item>
+<item>New York & Company</item>
+<item>Quanex Building Products Corp</item>
+<item>Nuveen California Tax-Free Income</item>
+<item>Nuveen New Jersey Divadv Fund</item>
+<item>Nuveen Insured New York Tax-Free</item>
+<item>Nuveen Tax Free Income Portfolio</item>
+<item>Nuveen Tax Free Income Portfolio II</item>
+<item>Nuveen Tax Free Income Portfolio III</item>
+<item>New York Community Bancorp Inc</item>
+<item>New York Community Bancorp</item>
+<item>NRG Yield Inc</item>
+<item>New York REIT Inc.</item>
+<item>New York Times Company</item>
+<item>Realty Income Corp</item>
+<item>Realty Income Corp</item>
+<item>Alliant Techsystems Inc. Common</item>
+<item>Oaktree Capital Group Llc</item>
+<item>Five Oaks Investment Corp. 8.75</item>
+<item>Five Oaks Investment Corp</item>
+<item>Oasis Petroleum Inc</item>
+<item>Onebeacon Insurance Group</item>
+<item>Owens Corning Inc</item>
+<item>Oci Partners LP</item>
+<item>Oci Resources LP</item>
+<item>Ocwen Financial Corp</item>
+<item>Omnicare</item>
+<item>Omnicare Cap TR II</item>
+<item>Oil-Dri Corporation of America</item>
+<item>Orion Engineered Carbons S.A R.</item>
+<item>Corporate Office Properties</item>
+<item>Corp Office Properties Trust</item>
+<item>Oriental Financial Group</item>
+<item>Oriental Fin Mips A</item>
+<item>Oriental Finl Pfd B</item>
+<item>Oriental Financial Group Inc</item>
+<item>Oge Energy Corp</item>
+<item>One Gas Inc.</item>
+<item>Omega Healthcare Investors</item>
+<item>Owens-Illinois</item>
+<item>Invesco Muni Income Trust</item>
+<item>Oi Sa</item>
+<item>Oi S.A. Ads</item>
+<item>Oceaneering International</item>
+<item>Oil States International</item>
+<item>Oneok Inc</item>
+<item>Oneok Partners L.P.</item>
+<item>Olin Corp</item>
+<item>One Liberty Properties</item>
+<item>Om Asset Management Ltd</item>
+<item>Omnicom Group Inc</item>
+<item>Omega Protein Corp</item>
+<item>Om Group</item>
+<item>Owens & Minor</item>
+<item>Omnova Solutions Inc</item>
+<item>On Deck Capital Inc</item>
+<item>Higher One Holdings</item>
+<item>Opko Health Inc</item>
+<item>Opower Inc.</item>
+<item>Oppenheimer Holdings</item>
+<item>Ormat Technologies</item>
+<item>Orange Ads</item>
+<item>Orchid Island Capital Inc. Com</item>
+<item>Oracle Corp</item>
+<item>Old Republic International Corp</item>
+<item>Orion Marine Group Inc</item>
+<item>Oshkosh Truck Corp</item>
+<item>Outfront Media Inc.</item>
+<item>Orbitz Worldwide</item>
+<item>Oxford Industries</item>
+<item>Occidental Petroleum Corp</item>
+<item>Och-Ziff Capital Management</item>
+<item>Pandora Media Inc</item>
+<item>Plains All American Pipeline L.P.</item>
+<item>Grupo Aeroportuario Del Pacifico</item>
+<item>Pacific Drilling S.A.</item>
+<item>Penske Automotive Group</item>
+<item>Plains Gp Holdings L.P.</item>
+<item>Platform Specialty Products Corp.</item>
+<item>Pacific American Income Shares</item>
+<item>Pampa Energia S.A.</item>
+<item>Palo Alto Networks Inc</item>
+<item>Par Technology Corp</item>
+<item>Verifone Systems</item>
+<item>Paycom Software Inc.</item>
+<item>Prosperity Bancshares</item>
+<item>Pembina Pipeline Cor</item>
+<item>PBF Energy Inc</item>
+<item>PBF Logistics LP</item>
+<item>Prestige Brand Holdings</item>
+<item>Pitney Bowes Inc</item>
+<item>Pitney Bowes Inc</item>
+<item>Pitney Bowes Inc .6.70% Notes</item>
+<item>Petroleo Brasileiro S.A.- Petrobras</item>
+<item>Petroleo Brasileiro S.A.- Petrobras</item>
+<item>Permian Basin Royalty Trust</item>
+<item>Pep Boys-Manny Moe & Jack</item>
+<item>Puma Biotechnology</item>
+<item>Putnam High Income Bond Fund</item>
+<item>Pacific Gas & Electric Co.</item>
+<item>Pimco Dynamic Credit Income Fun</item>
+<item>Pimco California Muni II</item>
+<item>Plum Creek Timber Company</item>
+<item>Pimco Commercial Mortgage Securities</item>
+<item>Pimco Corporate</item>
+<item>Precision Castparts Corp</item>
+<item>Pimco California Muni</item>
+<item>Pimco Dynamic Income Fund</item>
+<item>Piedmont Office Realty Trust</item>
+<item>Precision Drilling Corp</item>
+<item>John Hancock Premium Dividend Fund</item>
+<item>Parsley Energy</item>
+<item>Pebblebrook Hotel Trust</item>
+<item>Pebblebrook Hotel Trust Pfd Ser</item>
+<item>Pebblebrook Hotel Trust</item>
+<item>Pebblebrook Hotel Trust</item>
+<item>Public Service Enterprise Group Inc</item>
+<item>Pennsylvania Real Estate Investment</item>
+<item>Penn Real Estate Invest Trust</item>
+<item>Pennsylvania Real Estate Inves</item>
+<item>Petroleum Resources Corp</item>
+<item>Pepsico Inc</item>
+<item>Sandridge Permian Trust</item>
+<item>Pioneer Energy Services Corp</item>
+<item>Pinnacle Foods Inc. Common Sto</item>
+<item>Flaherty & Crumrine Preferred Inc</item>
+<item>Pfizer Inc</item>
+<item>Principal Financial Group Inc</item>
+<item>Prin Fin Grp Ser B</item>
+<item>Cabco TR Jcp 7.625</item>
+<item>Prudential Financial Inflation-Linked</item>
+<item>Pimco Income Strategy Fund</item>
+<item>Pimco Income Strategy Fund II</item>
+<item>Flaherty & Crumrine Preferred Fund</item>
+<item>Provident Financial Services</item>
+<item>Pennymac Financial Services In</item>
+<item>Phoenix Companies</item>
+<item>Procter & Gamble Company</item>
+<item>Ply Gem Holdings Inc</item>
+<item>Pengrowth Energy Corp</item>
+<item>Ptek Holdings</item>
+<item>Paragon Offshore Plc Ordinary S</item>
+<item>Pimco Global Stocksplus & Income</item>
+<item>Progressive Corp</item>
+<item>Paramount Group Inc.</item>
+<item>Principal Real Estate Income F</item>
+<item>Parker-Hannifin Corp</item>
+<item>Pioneer Floating Rate Trust</item>
+<item>Koninklijke Philips Electronics</item>
+<item>Phh Corp</item>
+<item>Philippine Long Distance Telephone</item>
+<item>Pimco High</item>
+<item>Pultegroup</item>
+<item>Pioneer High Income Trust</item>
+<item>Panhandle Royalty Company</item>
+<item>Polaris Industries Inc</item>
+<item>Putnam Master Intermediate Income</item>
+<item>Pier 1 Imports</item>
+<item>Merrill Lynch Depositor</item>
+<item>Piper Jaffray Companies</item>
+<item>Prudential Financial Inc</item>
+<item>Preferredplus Trust</item>
+<item>Parker Drilling Company</item>
+<item>Park Electrochemical Corp</item>
+<item>Packaging Corporation of America</item>
+<item>Perkinelmer</item>
+<item>Pimco Income Opportunity Fund</item>
+<item>Pohang Iron & Steel Co.</item>
+<item>Parkway Properties</item>
+<item>Plc Cap TR V</item>
+<item>Protective Life Corp</item>
+<item>Protective Life Corporation 6.0</item>
+<item>Prologis Inc</item>
+<item>Pall Corp</item>
+<item>Douglas Dynamics</item>
+<item>Plantronics</item>
+<item>Philip Morris International Inc</item>
+<item>Pharmerica Corp</item>
+<item>Pimco Muni</item>
+<item>Pimco Muni II</item>
+<item>Putnam Managed Muni Income Trust</item>
+<item>Putnam Muni Opportunities Trust</item>
+<item>Pennymac Mortgage Investment Trust</item>
+<item>Pimco Muni Income Fund III</item>
+<item>Patriot National Inc.</item>
+<item>PNC Bank</item>
+<item>PNC Financial Services Group I</item>
+<item>The PNC Financial Services Gro</item>
+<item>The PNC Financial Services Group</item>
+<item>Pimco New York Muni</item>
+<item>Pimco New York Muni II</item>
+<item>Pinnacle Entertainment</item>
+<item>PNM Resources Inc</item>
+<item>Pentair Ltd</item>
+<item>Pennantpark Investment Corpora</item>
+<item>Pinnacle West Capital Corp</item>
+<item>Phoenix Companies</item>
+<item>Piedmont Natural Gas Company</item>
+<item>Polyone Corp</item>
+<item>Potomac Electric Power Company</item>
+<item>Portland General Electric Company</item>
+<item>Post Holdings Inc.</item>
+<item>Potash Corp. of Saskatchewan Inc</item>
+<item>Powersecure International Inc</item>
+<item>PPG Industries</item>
+<item>PPL Corp</item>
+<item>Polypore International Inc</item>
+<item>Primero Mining Corp</item>
+<item>ING Prime Rate Trust</item>
+<item>Post Properties</item>
+<item>Post Prop. 8.5 Pra</item>
+<item>Putnam Premier Income Trust</item>
+<item>PPL Capital Funding Inc</item>
+<item>Petroquest Energy Inc</item>
+<item>Pro-Assurance Corp</item>
+<item>Partnerre Ltd</item>
+<item>Partnerre Ltd Pfd D</item>
+<item>Partnerre Ltd</item>
+<item>Partnerre Ltd</item>
+<item>Perrigo Company</item>
+<item>Prudential Financial Inc</item>
+<item>Primerica Inc</item>
+<item>Proto Labs Inc</item>
+<item>Pros Holdings</item>
+<item>Prudential Financial Inflation Retail</item>
+<item>Prospect Capital Corp</item>
+<item>Public Storage</item>
+<item>Public Storage 5.875%</item>
+<item>Public Storage Depositary Share</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Depositary Shares Each Represe</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Public Storage</item>
+<item>Public Storagedepositary Share</item>
+<item>Public Storage</item>
+<item>Business Parks</item>
+<item>PS Business Parks Inc. 6.875%</item>
+<item>PS Business Parks Inc</item>
+<item>PS Business Parks Inc</item>
+<item>PS Business Parks Inc</item>
+<item>PS Business Pks Inc Calif Dep</item>
+<item>Cohen & Steers Preferred Fund</item>
+<item>Performance Sports Group Ltd.</item>
+<item>Pearson Plc</item>
+<item>Phillips 66 Common Stock</item>
+<item>Phillips 66 Partners LP</item>
+<item>Portugal Telecom Sgps S.A .</item>
+<item>Platinum Underwriters Holdings Ltd</item>
+<item>Petrochina Company Limited</item>
+<item>Pimco Corporate Opportunity Fund</item>
+<item>Prudential Public Limited Company</item>
+<item>Pru Plc Perp Sub Cap</item>
+<item>Prudential 6.75%</item>
+<item>Penn Virginia Corp</item>
+<item>Pretium Res Inc</item>
+<item>Phillips-Van Heusen Corp</item>
+<item>Privatebancorp Inc</item>
+<item>Penn West Petroleum Ltd</item>
+<item>Quanta Services</item>
+<item>Praxair</item>
+<item>Pioneer Natural Resources Company</item>
+<item>Pplus Trust</item>
+<item>Pimco New York Muni Income Fund III</item>
+<item>Pplus Trust</item>
+<item>Pplus Trust</item>
+<item>Merrill Lynch Depositor</item>
+<item>Pimco California Muni Income Fund III</item>
+<item>Petrobras Argentina S.A.</item>
+<item>Pzena Investment Management Inc</item>
+<item>Quintiles Transitional Holdings</item>
+<item>Qep Resources</item>
+<item>Qep Midstream Partners LP</item>
+<item>Qihoo 360 Technology Co. Ltd</item>
+<item>Restaurant Brands International</item>
+<item>Quantum Corp</item>
+<item>Qts Realty Trust Inc</item>
+<item>Q2 Holdings Inc</item>
+<item>Quad Graphics Inc</item>
+<item>Ryder System</item>
+<item>Rite Aid Corp</item>
+<item>Reynolds American Inc</item>
+<item>Rally Software</item>
+<item>Rait Financial Trust</item>
+<item>Rait Financial TR Pf</item>
+<item>Rait Financial TR Pf</item>
+<item>Rait Fin TR Pfd C</item>
+<item>Bankrate Inc</item>
+<item>Rackspace Hosting Inc</item>
+<item>Ritchie Bros. Auctioneers Inc</item>
+<item>Regal-Beloit Corp</item>
+<item>Royal Bank Scotland Group Plc</item>
+<item>RBS Cap Fndg TR V</item>
+<item>Royal Bank Scotland F</item>
+<item>RBS Capital Trustvii</item>
+<item>Royal Bank Scot Hadssc</item>
+<item>RBS Cap Fdg TR Vi</item>
+<item>Royal Bank Scotland</item>
+<item>Royal Bank Scotland M</item>
+<item>RBS Series N Ads Pfd</item>
+<item>Royal Bank Scotland</item>
+<item>Royal Bank ADR</item>
+<item>Royal Bank Scotland</item>
+<item>Royal Bank Scotland</item>
+<item>Royal Bank Pfd</item>
+<item>RCS Capital Corp</item>
+<item>Rogers Communication</item>
+<item>Royal Caribbean Cruises Ltd</item>
+<item>Rcm Strategic Global Government Fund</item>
+<item>Rowan Companies</item>
+<item>Radian Group Inc</item>
+<item>Royal Dutch Shell Plc</item>
+<item>Royal Dutch Shell</item>
+<item>Dr. Reddy's Laboratories Ltd</item>
+<item>Everest Re Group</item>
+<item>Regency Centers Corp</item>
+<item>Regency Centers Corp</item>
+<item>Regency Centers Corporation Pfd</item>
+<item>Resolute Energy Corp</item>
+<item>Renren Inc</item>
+<item>RPC Inc</item>
+<item>Altisource Residential Corporat</item>
+<item>Revlon Inc</item>
+<item>Rex American Resources Corporation</item>
+<item>Rexford Industrial Realty Inc</item>
+<item>Regions Financial Corp</item>
+<item>Regions Financial Corp</item>
+<item>Regions Financial Corporation</item>
+<item>Cohen & Steers Total Return Realty Fund</item>
+<item>Resolute Forest Products Inc</item>
+<item>Rait Financial Trust</item>
+<item>Rait Financial Trust</item>
+<item>Reinsurance Group of America Inc</item>
+<item>Regal Entertainment Group</item>
+<item>Ross Group Plc</item>
+<item>Sturm Ruger & Company</item>
+<item>Regis Corp</item>
+<item>Royce Global Value Trust Inc</item>
+<item>Restoration Hardware Holdings</item>
+<item>Robert Half International Inc</item>
+<item>Gaylord Entertainment Company</item>
+<item>Red Hat Inc</item>
+<item>Rice Energy Inc.</item>
+<item>Transocean Inc</item>
+<item>Transocean Partners Llc</item>
+<item>Rio Tinto Plc</item>
+<item>Rio Alto Mining Limited</item>
+<item>Lmp Real Estate</item>
+<item>Raymond James Financial Inc</item>
+<item>Raymond James Financial</item>
+<item>Rock-Tenn Company</item>
+<item>Ruckus Wireless Inc</item>
+<item>Ralph Lauren Corp</item>
+<item>Reald Inc</item>
+<item>Realogy Holdings Corp</item>
+<item>Westcoast Hospitality Corp</item>
+<item>Red Lion Htls Cap TR</item>
+<item>Rli Corp</item>
+<item>Rlj Lodging Trust</item>
+<item>Regional Managment Corp</item>
+<item>Re/Max Holdings Inc</item>
+<item>Resmed Inc</item>
+<item>Rice Midstream Partners LP</item>
+<item>Royce Micro-Cap Trust</item>
+<item>Roundy's Inc. Common Stock</item>
+<item>Morgan Stanley East. Euro</item>
+<item>Rentech Nitrogen Partners L.P</item>
+<item>Ringcentral Inc</item>
+<item>Rhino Resource Partners LP</item>
+<item>Cohen & Steers REIT and Preferred</item>
+<item>Renaissancere Holdings Ltd</item>
+<item>Renaissancere 6.08 C</item>
+<item>Renaissancere Holdings Ltd</item>
+<item>Rogers Corp</item>
+<item>Rockwell Automation Inc</item>
+<item>Rollins Inc.</item>
+<item>Roper Industries</item>
+<item>Pacific Coast Oil Trust</item>
+<item>Retail Properties of America I</item>
+<item>Retail Properties of America</item>
+<item>RPM International Inc</item>
+<item>Ramco-Gershenson Properties Trust</item>
+<item>Ramco-Gershenson Properties Tru</item>
+<item>Cohen & Steers Quality Income Realty Fund Inc</item>
+<item>Range Resources Corp</item>
+<item>Rose Rock Midstream L.P.</item>
+<item>Roadrunner Transportation Systems Inc</item>
+<item>Reliance Steel & Aluminum Company</item>
+<item>Rouse Properties Inc. Common S</item>
+<item>Republic Services</item>
+<item>Resource Capital</item>
+<item>Resource Capital Corp</item>
+<item>Resource Capital Corp.8.25% Se</item>
+<item>Resource Capital Corp. Preferre</item>
+<item>Rsp Permian Inc.</item>
+<item>Rosetta Stone</item>
+<item>Ruby Tuesday</item>
+<item>Rudolph Technologies</item>
+<item>Rti International Metals</item>
+<item>Raytheon Company</item>
+<item>The Rubicon Project Inc.</item>
+<item>Reed Elsevier Plc</item>
+<item>Royce Value Trust</item>
+<item>Redwood Trust</item>
+<item>Rexnord Corp</item>
+<item>Royal Bank of Canada</item>
+<item>Rayonier Advanced Materials Inc</item>
+<item>Ryerson Holding Corp.</item>
+<item>Ryland Group</item>
+<item>Rayonier Inc. REIT</item>
+<item>Reinsurance Group of America I</item>
+<item>Sprint Corporation</item>
+<item>Seabridge Gold</item>
+<item>Sonic Automotive</item>
+<item>Science Applications Internatio</item>
+<item>Scorpio Bulkers Inc. Common Sto</item>
+<item>Boston Beer Company</item>
+<item>Banco Santander</item>
+<item>Banco Santander S.A. 6.80% Non</item>
+<item>Santander Finance Preferred Sa</item>
+<item>Banco Santander S.A. 6.50% Non</item>
+<item>Banco Santander Central Hispano</item>
+<item>SAP Ag</item>
+<item>Saratoga Investment Corp</item>
+<item>Saratoga Investment Corp</item>
+<item>Safe Bulkers Inc</item>
+<item>Safe Bulkers Inc</item>
+<item>Safe Bulkers Inc.</item>
+<item>Safe Bulkers Inc.</item>
+<item>Sibanye Gold Limited American D</item>
+<item>Sally Beauty Holdings</item>
+<item>Scorpio Tankers Inc.</item>
+<item>Scorpio Tankers Inc.</item>
+<item>Sabine Royalty Trust</item>
+<item>Cia De Saneamento Basico Do Estado</item>
+<item>Western Asset Worldwide Income Fund Inc</item>
+<item>Silver Bay Realty Trust Corp</item>
+<item>Santander Consumer USA Holdings</item>
+<item>Southern Peru Copper Corp</item>
+<item>Lmp Capital and Income Fund Inc</item>
+<item>Sce Trust I</item>
+<item>Sce Trust II</item>
+<item>Sce Trust III 5.75%</item>
+<item>Scana Corp</item>
+<item>Schwab Charles Corporation Depo</item>
+<item>The Charles Schwab Corp</item>
+<item>Service Corporation International</item>
+<item>Stepan Company</item>
+<item>Stellus Capital Investment Cor</item>
+<item>Stellus Capital Investment Cor</item>
+<item>Steelcase Inc</item>
+<item>L.S. Starrett Company</item>
+<item>Sandridge Energy Inc</item>
+<item>Seadrill Partners Llc</item>
+<item>Sandridge Mississippian Trust</item>
+<item>Seadrill Limited</item>
+<item>Sandridge Mississippian Trust I</item>
+<item>Spectra Energy Corp</item>
+<item>Seaworld Entertainment Inc. Co</item>
+<item>Sealed Air Corp</item>
+<item>Select Medical Holdings Corp</item>
+<item>Semgroup Corp</item>
+<item>Spectra Energy Partners LP</item>
+<item>Servicemaster Global Holdings I</item>
+<item>Stifel Financial Corp</item>
+<item>Safeguard Scientifics</item>
+<item>Stancorp Financial Group</item>
+<item>Ship Finance International</item>
+<item>Stifel Financial Corp</item>
+<item>Smart</item>
+<item>Soufun Holdings</item>
+<item>Swift Energy Company</item>
+<item>Singapore Fund</item>
+<item>Strategic Global</item>
+<item>Stonegate Mortgage Corp</item>
+<item>Star Gas Partners L.P.</item>
+<item>Stone Energy Corp</item>
+<item>Selective Insurance Group Inc</item>
+<item>Shake Shack Inc.</item>
+<item>Shinhan Financial Group Co Ltd</item>
+<item>Sinopec Shangai Petrochemical Company Ltd</item>
+<item>Shell Midstream Partners L.P.</item>
+<item>Sunstone Hotel Investors</item>
+<item>Sunstone Hotel Investors Inc</item>
+<item>Sherwin-Williams Company</item>
+<item>National Steel Corp</item>
+<item>Signet Jewelers Limited</item>
+<item>Select Income REIT Common Share</item>
+<item>Six Flags Entertainment Corp</item>
+<item>South Jersey Industries</item>
+<item>J.M. Smucker Company</item>
+<item>Shaw Communications Inc</item>
+<item>San Juan Basin Royalty Trust</item>
+<item>SJW Corp</item>
+<item>Sk Telecom Corp</item>
+<item>Tanger Factory Outlet Centers</item>
+<item>Skechers U.S.A.</item>
+<item>Schlumberger N.V.</item>
+<item>U.S. Silica Holdings Inc</item>
+<item>Sun Life Financial Inc</item>
+<item>SL Green Realty Corp</item>
+<item>SL Green Realty Corp</item>
+<item>Solera Holdings</item>
+<item>Solar Capital Ltd</item>
+<item>Scorpio Bulkers Inc. 7.50% Seni</item>
+<item>Silver Wheaton Corp</item>
+<item>Sm Energy Company</item>
+<item>Sumitomo Mitsui Financial Group Inc</item>
+<item>Scotts Miracle-Gro Company</item>
+<item>Semiconductor Manufacturing International</item>
+<item>Summit Midstream Partners LP</item>
+<item>Salient Midstream & MLP Fund</item>
+<item>Standard Motor Products</item>
+<item>Sanchez Energy Corp</item>
+<item>Snap-On Inc</item>
+<item>Sony Corp</item>
+<item>Senior Housing Properties Trust</item>
+<item>Senior Housing Properties Trus</item>
+<item>Scripps Networks Interactive Inc</item>
+<item>Smith & Nephew Snats</item>
+<item>Intrawest Resorts Holdings Inc</item>
+<item>China Petroleum & Chemical Corp</item>
+<item>New Senior Investment Group Inc</item>
+<item>Synovus Financial Corp</item>
+<item>Synovus Financial Corp. Fixed-</item>
+<item>Synnex Corp</item>
+<item>Sanofi-Aventis Sa</item>
+<item>Southern Company</item>
+<item>Renesola Ltd</item>
+<item>Sonoco Products Company</item>
+<item>Source Capital</item>
+<item>Sovereign Banc Dep S</item>
+<item>Sparton Corp</item>
+<item>Spectrum Brands Holdings</item>
+<item>Special Opportunities Fund Inc</item>
+<item>Standard Pacific LP</item>
+<item>Simon Property Group</item>
+<item>Simon Prop Grp Pfd J</item>
+<item>Suburban Propane Partners L.P.</item>
+<item>Steel Partners Hldgs</item>
+<item>Superior Energy Services</item>
+<item>Spirit Aerosystems Holdings</item>
+<item>SPX Corp</item>
+<item>Nuveen Equity Premium and Growth Fund</item>
+<item>Sociedad Quimica Y Minera S.A.</item>
+<item>Sequans Communications S A</item>
+<item>Standard Register Company</item>
+<item>Spirit Realty Capital Inc</item>
+<item>Sempra Energy</item>
+<item>The Cushing Royalty & Income Fund</item>
+<item>Stoneridge Inc</item>
+<item>Sprague Resources LP</item>
+<item>Startek Inc</item>
+<item>The Cushing MLP Total Return Fund</item>
+<item>Simpson Manufacturing Company</item>
+<item>Seventy Seven Energy Inc.</item>
+<item>Stage Stores</item>
+<item>Sasol Ltd</item>
+<item>Sesa Goa Limited</item>
+<item>Silver Spring Networks Inc. Co</item>
+<item>E.W. Scripps Company</item>
+<item>Sovran Self Storage</item>
+<item>Shutterstock Inc</item>
+<item>Seaspan Corp</item>
+<item>Seaspan Corp</item>
+<item>Seaspan Corp</item>
+<item>Seaspan Corporation</item>
+<item>Seaspan Corporation</item>
+<item>Sensata Technologies Holding N.V.</item>
+<item>Stag Industrial Inc. Preferred</item>
+<item>Stag Industrial Inc. Cum Pfd S</item>
+<item>Istar Financial Inc. Preferred</item>
+<item>Istar Financial Inc. 7.875% Pre</item>
+<item>Istar Financial Inc. Series F P</item>
+<item>Istar Financial Inc. Preferred</item>
+<item>Istar Financial Inc. Preferred</item>
+<item>STI Inc</item>
+<item>Istar Financial Inc</item>
+<item>Extended Stay America Inc</item>
+<item>Stewart Information Services Corp</item>
+<item>Steris Corp</item>
+<item>Suntrust Banks</item>
+<item>Suntrust Bks Dep Sh</item>
+<item>Suntrust Banks Inc. Series E</item>
+<item>Suntrust Banks Inc Class A</item>
+<item>Suntrust Banks Inc Class B</item>
+<item>St. Jude Medical</item>
+<item>Columbia Seligman Premium Technology</item>
+<item>Sterling Bancorp</item>
+<item>Stmicroelectronics N.V.</item>
+<item>Stantec Inc</item>
+<item>Scorpio Tankers Inc</item>
+<item>Statoil ASA</item>
+<item>Stonemor Partners L.P.</item>
+<item>Store Capital Corpstore Capital</item>
+<item>Questar Corp</item>
+<item>Str Holdings Inc</item>
+<item>State Street Corp</item>
+<item>State Street Corporation Dep Sh</item>
+<item>State Street Corporation Serie</item>
+<item>State Street Corporation Depos</item>
+<item>China Digital TV Holding Co.</item>
+<item>Starwood Property Trust</item>
+<item>Constellation Brands Inc</item>
+<item>Constellation Brd B</item>
+<item>Suncor Energy Inc</item>
+<item>Sun Communities</item>
+<item>Sun Communities Inc</item>
+<item>Summit Materials Inc.</item>
+<item>Sunoco L.P.</item>
+<item>Sunedison Inc</item>
+<item>Superior Industries International</item>
+<item>Silvercorp Metals Inc</item>
+<item>Supervalu Inc</item>
+<item>Starwood Waypoint Residential T</item>
+<item>Stillwater Mining Company</item>
+<item>Swift Transportation Company</item>
+<item>Stanley Black & Decker Inc.</item>
+<item>Solarwinds Inc</item>
+<item>Stanley Black & Decker Inc</item>
+<item>Stanley Black & Decker Inc</item>
+<item>Schweitzer-Mauduit International</item>
+<item>Southwestern Energy Company</item>
+<item>Southwestern Energy Co</item>
+<item>Stanley Black & Decker Inc</item>
+<item>Southwest Gas Corp</item>
+<item>Swiss Helvetia Fund</item>
+<item>Suncoke Energy Inc</item>
+<item>Suncoke Energy Partners L.P.</item>
+<item>Southcross Energy Partners L.</item>
+<item>Standex International Corp</item>
+<item>Sunoco Logistics Partners LP</item>
+<item>Sensient Technologies Corp</item>
+<item>Symetra Financial Corp</item>
+<item>Synchrony Financial</item>
+<item>Stryker Corp</item>
+<item>Syngenta Ag</item>
+<item>Systemax Inc</item>
+<item>Sysco Corp</item>
+<item>The Cushing Renaissance Fund</item>
+<item>AT&T Inc</item>
+<item>Travelcenters of America Llc</item>
+<item>Transalta Corp</item>
+<item>Tahoe Res Inc</item>
+<item>Transamerica Income Shares</item>
+<item>Tal International Group</item>
+<item>Travelcenters of America Llc 8.</item>
+<item>Travel Centers of America Llc</item>
+<item>Taomee Holdings Limited</item>
+<item>Molson Coors Brewing Company</item>
+<item>Molson Coors Brewing Company</item>
+<item>Taro Pharm Inds</item>
+<item>Trueblue Inc</item>
+<item>Thompson Creek Metals Company Inc</item>
+<item>Triangle Capital Corp</item>
+<item>TCF Financial Corp</item>
+<item>TCF Financial Corp</item>
+<item>TCF Financial Corp</item>
+<item>TCF Financial Corp</item>
+<item>Triangle Capital Coproration</item>
+<item>Triangle Capital Corp</item>
+<item>Triangle Capital Corporation</item>
+<item>Transcontinental Realty Investors</item>
+<item>Teck Resources Ltd</item>
+<item>Taubman Centers</item>
+<item>Taubman Centers Inc Preferred</item>
+<item>Taubman Centers Inc</item>
+<item>TCP Pipelines</item>
+<item>TCP International Holdings Ltd.</item>
+<item>THL Credit Inc.</item>
+<item>The Container Store Group Inc</item>
+<item>Toronto Dominion Bank</item>
+<item>Telephone and Data Systems Inc</item>
+<item>Teradata Corp</item>
+<item>Telephone and Data Systems</item>
+<item>Templeton Dragon Fund</item>
+<item>Transdigm Group Inc</item>
+<item>Telephone and Data Systems</item>
+<item>Telephone and Data Systems Inc</item>
+<item>Telephone and Data Systems</item>
+<item>Tidewater Inc</item>
+<item>Teledyne Technologies Inc</item>
+<item>Teco Energy</item>
+<item>Telefonica Sa</item>
+<item>Integrys Energy Group</item>
+<item>Templeton Emerging Markets</item>
+<item>Te Connectivity Ltd</item>
+<item>Tenneco Automotive</item>
+<item>Telecom Argentina Stet - France Telecom S.A.</item>
+<item>Tallgrass Energy Partners LP</item>
+<item>Teradyne Inc</item>
+<item>Box Ships Inc</item>
+<item>Box Ships Inc</item>
+<item>Teva Pharmaceutical Industries Ltd</item>
+<item>Terex Corp</item>
+<item>Fixed Income Trust For Goldman</item>
+<item>Teleflex Inc</item>
+<item>Tredegar Corp</item>
+<item>Textainer Group Holdings</item>
+<item>Triumph Group</item>
+<item>Teekay Lng Partners L.P.</item>
+<item>Transportadora De Gas Sa Ord B</item>
+<item>Target Corp</item>
+<item>Tenet Healthcare Corp</item>
+<item>The Hanover Insurance Group</item>
+<item>The Hanover Insurance Group I</item>
+<item>Thor Industries</item>
+<item>Tekla Healthcare Opportunities</item>
+<item>Thermon Group Holdings Inc</item>
+<item>Treehouse Foods</item>
+<item>Telecom Italia S.P.A.</item>
+<item>Telecom Italia S.P.A.</item>
+<item>Tiffany & Co.</item>
+<item>Time Inc. Common Stock When Iss</item>
+<item>Team Inc</item>
+<item>Tjx Companies</item>
+<item>Teekay Shipping Corp</item>
+<item>Turkcell Iletisim Hizmetleri As</item>
+<item>Turkish Investment Fund</item>
+<item>Timken Company</item>
+<item>Lmp Corporate Loan Fund Inc</item>
+<item>P.T. Telekomunikasi Indonesia Tbk.</item>
+<item>Tesoro Logistics LP Common Unit</item>
+<item>Talisman Energy Inc</item>
+<item>Transmontaigne Partners L.P.</item>
+<item>Tilly's Inc</item>
+<item>Toyota Motor Corp Ltd Ord</item>
+<item>Team Health Holdings</item>
+<item>Taylor Morrison Home Corporatio</item>
+<item>Torchmark Corp</item>
+<item>Torchmark Corp</item>
+<item>Thermo Fisher Scientific Inc</item>
+<item>Timken Steel Corporation Common</item>
+<item>T-Mobile US Inc. 5.50% Mandatory</item>
+<item>T-Mobile US Inc</item>
+<item>Tennant Company</item>
+<item>Trinet Group Inc</item>
+<item>Terra Nitrogen Company L.P.</item>
+<item>Teekay Tankers Ltd</item>
+<item>Tsakos Energy Navigation Ltd</item>
+<item>Tsakos Energy Navigation Limit</item>
+<item>Tsakos Energy Navigation Limit</item>
+<item>Toll Brothers Inc</item>
+<item>Teekay Offshore Partners L.P.</item>
+<item>Teekay Offshore Partners L.P.</item>
+<item>Totalfinaelf S.A.</item>
+<item>Tower International</item>
+<item>Tutor Perini Corp</item>
+<item>Tri Pointe Homes Inc. Common S</item>
+<item>Texas Pacific Land Trust</item>
+<item>Third Point Reinsurance Ltd. Co</item>
+<item>Tribune Publishing Company Comm</item>
+<item>Triplepoint Venture Growth Bdc</item>
+<item>Tempur-Pedic International Inc</item>
+<item>Tortoise Power and Energy</item>
+<item>Tootsie Roll Industries</item>
+<item>Tejon Ranch Company</item>
+<item>Tribune Media Corp.</item>
+<item>Trecora Resources</item>
+<item>Trex Company</item>
+<item>Templeton Russia Fund</item>
+<item>Targa Resources</item>
+<item>Thomson Reuters Corp</item>
+<item>Speedway Motorsports</item>
+<item>Tremor Video Inc</item>
+<item>Trinity Industries</item>
+<item>Terreno Realty Corporation Pref</item>
+<item>Terreno Realty Corp</item>
+<item>Tronox Inc</item>
+<item>Transcananda Pipelines</item>
+<item>Turquoise Hill Resources Ltd</item>
+<item>Trc Companies</item>
+<item>Trupanion Inc.</item>
+<item>The Travelers Companies Inc</item>
+<item>Trw Automotive Holdings Corp</item>
+<item>Tenaris S.A.</item>
+<item>Trinseo S.A.</item>
+<item>Tcw Strategic</item>
+<item>Trina Solar Limited</item>
+<item>THL Credit Senior Loan Fund</item>
+<item>Tpg Specialty Lending Inc</item>
+<item>Taiwan Semiconductor Manufacturing</item>
+<item>Tyson Foods</item>
+<item>Tyson Foods Inc</item>
+<item>Tesoro Petroleum Corp</item>
+<item>Townsquare Media Llc</item>
+<item>Total System Services</item>
+<item>Tim Participacoes S.A.</item>
+<item>Toro Company</item>
+<item>Thai Fund</item>
+<item>Tetra Technologies</item>
+<item>Tata Motors Ltd</item>
+<item>Tortoise Pipeline & Energy Fund</item>
+<item>Telus Corp. Non Voting Shares</item>
+<item>Tumi Holdings Inc</item>
+<item>Tupperware Corp</item>
+<item>Grupo Televisa S.A.</item>
+<item>Tennessee Valley Authority</item>
+<item>Tennessee Valley Authority</item>
+<item>Travelport Worldwide Ltd</item>
+<item>Towers Watson & Co</item>
+<item>Time Warner Cable Inc</item>
+<item>Titan International</item>
+<item>Taiwan Fund</item>
+<item>Two Harbors Investments Corp</item>
+<item>Twitter Inc</item>
+<item>Time Warner Inc</item>
+<item>Ternium S.A.</item>
+<item>Textron Inc</item>
+<item>Textura Corp</item>
+<item>Tri Continental Corp</item>
+<item>Tri Contl Cp 2.50 Pr</item>
+<item>Tyco International Ltd</item>
+<item>Tortoise Energy Infrastructure Corp</item>
+<item>Tortoise Energy Infrastructure</item>
+<item>Tortoise Energy Infrastructure</item>
+<item>Tyler Technologies</item>
+<item>Bear Stearns Depositor</item>
+<item>Under Armour</item>
+<item>United Continental Holdings</item>
+<item>Universal American Financial</item>
+<item>Cvr Partners LP Common Units R</item>
+<item>Urstadt Biddle Properties Inc</item>
+<item>Urstadt Biddle Properties Inc</item>
+<item>Privatebancorp Inc</item>
+<item>Urstadt Biddle Properties Inc.</item>
+<item>UBS Ag Ordinary Shares When Iss</item>
+<item>UBS Pfd Fndg TR IV</item>
+<item>Ucp. Inc</item>
+<item>United Dominion Realty Trust</item>
+<item>Urban Edge Properties Common Sh</item>
+<item>Unifi Inc</item>
+<item>Domtar Corp</item>
+<item>Ugi Corp</item>
+<item>Ultrapar Participacoes S.A.</item>
+<item>Universal Health Services</item>
+<item>Universal Health Realty Income Trust</item>
+<item>Uil Holdings Corp</item>
+<item>Unisys Corp</item>
+<item>Unilever Plc</item>
+<item>United Microelectronics Corp</item>
+<item>Umh Properties</item>
+<item>Umh Properties Inc. 8.25% Seri</item>
+<item>Unilever Nv</item>
+<item>Unifirst Corp</item>
+<item>Unitedhealth Group Inc</item>
+<item>Unumprovident Corp</item>
+<item>Union Pacific Corp</item>
+<item>Unit Corp</item>
+<item>Ultra Petroleum</item>
+<item>United Parcel Service</item>
+<item>United Rentals</item>
+<item>Liberty All-Star Equity Fund</item>
+<item>USA Compression Partners LP</item>
+<item>U.S. Bancorp</item>
+<item>U.S. Bancorp Depositary Shares</item>
+<item>U.S. Bancorp Dep Sh</item>
+<item>U.S. Bancorp</item>
+<item>U.S. Bancorp</item>
+<item>U.S. Bancorp</item>
+<item>USD Partners LP</item>
+<item>USG Corp</item>
+<item>United States Cellular Corp</item>
+<item>Usana Health Sciences Inc</item>
+<item>U.S. Physical Therapy</item>
+<item>Cohen & Steers Infrastructure Fund</item>
+<item>Universal Technical Institute Inc</item>
+<item>Unitil Corp</item>
+<item>United Technologies Corp</item>
+<item>United Technologies Corporatio</item>
+<item>Universal Insurance Holdings Inc</item>
+<item>Universal Corp</item>
+<item>United States Cellular Corp</item>
+<item>United States Cellular Corpora</item>
+<item>Visa Inc</item>
+<item>Marriot Vacations Worldwide Cor</item>
+<item>Valspar Corp</item>
+<item>Vale S.A.</item>
+<item>Vale S.A.</item>
+<item>Varian Medical Systems</item>
+<item>Invesco Van Kampen Bond Fund</item>
+<item>Visteon Corp</item>
+<item>Vina Concha Y Toro</item>
+<item>Vocera Communications Inc</item>
+<item>Invesco California Value Muni Income Trust</item>
+<item>Vectrus Inc. Common Stock</item>
+<item>Veeva Systems Inc</item>
+<item>Vermilion Energy Inc</item>
+<item>V.F. Corp</item>
+<item>Vonage Holdings</item>
+<item>Virtus Global Multi-Sector Inc</item>
+<item>Invesco Trust For Investment Grade Municipals</item>
+<item>Vector Group Ltd</item>
+<item>Valhi Inc</item>
+<item>Vipshop Holdings Limited</item>
+<item>Telecomunicacoes De Sao Paulo S/A Ads</item>
+<item>Voxeljet Ag</item>
+<item>Invesco Muni Trust</item>
+<item>Valero Energy Corp</item>
+<item>Valero Energy Partners LP</item>
+<item>Controladora Vuela Compaia De</item>
+<item>Invesco High</item>
+<item>Valley National Bancorp</item>
+<item>Valley National Bancorp</item>
+<item>Vulcan Materials Company</item>
+<item>Violin Memory Inc</item>
+<item>Valmont Industries</item>
+<item>Invesco Muni Opportunity Trust</item>
+<item>Vmware Inc</item>
+<item>Vince Holding Corp. Common Stoc</item>
+<item>Vornado Realty Trust</item>
+<item>Vornado Rlty Pfd G</item>
+<item>Vornado Rlty Pfd I</item>
+<item>Vornado Realty Trust Pfd Cumula</item>
+<item>Vornado Realty Trust</item>
+<item>Vornado Realty Trust</item>
+<item>Vantiv Inc</item>
+<item>Voc Energy Trust</item>
+<item>ING US Inc</item>
+<item>Vishay Precision Group</item>
+<item>Invesco Pennsylvania Muni</item>
+<item>Validus Holdings</item>
+<item>Verso Paper</item>
+<item>Veritiv Corporation Common Stoc</item>
+<item>Valeant Pharmaceuticals International</item>
+<item>Vishay Intertechnology</item>
+<item>Vitamin Shoppe Inc</item>
+<item>Vivint Solar Inc.</item>
+<item>Vista Outdoor Inc. Common Stock</item>
+<item>Invesco Dynamic Credit Fund</item>
+<item>Invesco Trust New York Muni</item>
+<item>Ventas Inc</item>
+<item>Ventas Realty Limited Partner</item>
+<item>Vtti Energy Partners LP</item>
+<item>Vectren Corp</item>
+<item>Viad Corp</item>
+<item>Invesco Senior Income Trust</item>
+<item>Verizon Communications Inc</item>
+<item>Verizon Communications Inc. 5.9</item>
+<item>Wayfair Inc.</item>
+<item>Wabtec Corp</item>
+<item>Walter Investment Management Corp</item>
+<item>Wageworks Inc</item>
+<item>Wesco Aircraft Holdings Inc</item>
+<item>Western Alliance Bancorporation</item>
+<item>Waters Corp</item>
+<item>500Wan.Com Limited</item>
+<item>Wabco Holdings Inc</item>
+<item>Westpac Banking Corp</item>
+<item>Webster Financial Corp</item>
+<item>Webster Financial Corp</item>
+<item>Webster Financial Corp</item>
+<item>Wesco International</item>
+<item>Wellcare Group</item>
+<item>Wci Communities Inc</item>
+<item>Waste Connections Inc</item>
+<item>Walker & Dunlop</item>
+<item>Workday Inc</item>
+<item>Waddell & Reed Financial</item>
+<item>Western Asset Bond Fund</item>
+<item>Wisconsin Energy Corp</item>
+<item>Western Gas Partners LP</item>
+<item>Wex Inc</item>
+<item>Woori Finance Holdings Co Ltd</item>
+<item>Wells Fargo & Company</item>
+<item>Wells Fargo Pfd J</item>
+<item>Wells Fargo Pfd L</item>
+<item>Wells Fargo & Company Dep Shs R</item>
+<item>Wells Fargo & Company</item>
+<item>Wells Fargo & Company Ser P</item>
+<item>Wells Fargo & Co.</item>
+<item>Wells Fargo</item>
+<item>Wells Fargo & Company Series T</item>
+<item>Wells Fargo and Co</item>
+<item>Wells Fargo Real Estate Invest</item>
+<item>Weatherford International Ltd</item>
+<item>Willbros Group</item>
+<item>WGL Holdings Inc</item>
+<item>Winnebago Industries</item>
+<item>Western Gas Eqty Partners LP</item>
+<item>Westwood Holdings Group Inc</item>
+<item>Whirlpool Corp</item>
+<item>Whiting USA Trust II</item>
+<item>U.S. Treasury Inflation Prot Secs Fd</item>
+<item>Wipro Limited</item>
+<item>U.S Treasury Inflation Prot Secs Fd 2</item>
+<item>Workiva Llc</item>
+<item>William Lyon Homes</item>
+<item>Westlake Chemical Corp</item>
+<item>Westlake Chemical Partners LP</item>
+<item>Whiting Petroleum Corp</item>
+<item>Walter Energy</item>
+<item>Waste Management</item>
+<item>Williams Companies</item>
+<item>Western Asset Mortgage Capital</item>
+<item>Weis Markets</item>
+<item>Westmoreland Resource Partners LP</item>
+<item>Advanced Drainage Systems Inc.</item>
+<item>Wal-Mart Stores</item>
+<item>Wabash National Corp</item>
+<item>Western Refining</item>
+<item>Western Refining Logistics LP</item>
+<item>Wns Limited</item>
+<item>Worthington Industries</item>
+<item>W.P. Carey & Co. Llc</item>
+<item>Washington Prime Group Inc. Com</item>
+<item>Wp Glimcher Inc.</item>
+<item>Washington Prime Group Inc. 7.5</item>
+<item>Wp Glimcher Inc.</item>
+<item>Wausau-Mosinee Paper Corp</item>
+<item>World Point Terminals LP</item>
+<item>Wpx Energy Inc. Common Stock W</item>
+<item>Williams Partners L.P.</item>
+<item>Westar Energy</item>
+<item>W.R. Berkley Corp</item>
+<item>W.R. Berkley Corp</item>
+<item>Washington Real Estate Investment</item>
+<item>Weingarten Realty Investors</item>
+<item>Weingarten Dep Shs</item>
+<item>Winthrop Realty Trust 7.75% Sen</item>
+<item>Willis Group Holdings</item>
+<item>Williams-Sonoma</item>
+<item>Watsco Inc</item>
+<item>Watsco Inc Cl B</item>
+<item>Whitestone REIT</item>
+<item>West Pharmaceutical Services</item>
+<item>W&T Offshore</item>
+<item>White Mountains Insurance Group</item>
+<item>Aqua America</item>
+<item>Watts Water Technologies</item>
+<item>Weight Watchers International Inc</item>
+<item>Western Union Company</item>
+<item>58.Com Inc</item>
+<item>The Whitewave Foods Company</item>
+<item>World Wrestling Entertainment</item>
+<item>Wolverine World Wide</item>
+<item>Wuxi Pharmatech [Cayman] Inc</item>
+<item>Weyerhaeuser Company</item>
+<item>Weyerhaeuser Co.</item>
+<item>Wyndham Worldwide Corp</item>
+<item>United States Steel Corp</item>
+<item>Exco Resources NL</item>
+<item>Cimarex Energy Co</item>
+<item>Xcel Energy Inc</item>
+<item>Xenia Hotels & Resorts Inc.</item>
+<item>Xinyuan Real Estate Co Ltd</item>
+<item>Lehman Abs Corp</item>
+<item>XL Company Switzerland Gmbh</item>
+<item>Exelis Inc. Common Stock New Wh</item>
+<item>China Xiniya Fashion</item>
+<item>Exxon Mobil Corp</item>
+<item>Intrexon Corp</item>
+<item>Xoxo Group Inc</item>
+<item>Express-1 Expedited Solutions</item>
+<item>Xerium Technologies</item>
+<item>Tal Education Group</item>
+<item>Xerox Corp</item>
+<item>Xueda Education Group</item>
+<item>Xylem Inc. Common Stock New Whe</item>
+<item>Alleghany Corp</item>
+<item>Yadkin Valley Financial Corp</item>
+<item>Yelp Inc</item>
+<item>Yingli Green Energy Holding Company</item>
+<item>Youku.Com Inc</item>
+<item>Ypf Sociedad Anonima</item>
+<item>Yum! Brands</item>
+<item>Yume Inc</item>
+<item>Yanzhou Coal Mining Company</item>
+<item>Zuoan Fashion Limited American</item>
+<item>Zayo Group Holdings Inc.</item>
+<item>Zions Bc Dp Shs A</item>
+<item>Zions Bancorporation</item>
+<item>Zions Bancorporation</item>
+<item>Zions Bancorporation</item>
+<item>Zion Bancorporation</item>
+<item>Zendesk Inc.</item>
+<item>Zep Inc</item>
+<item>Zweig Fund</item>
+<item>Zais Financial Corp. Common Sto</item>
+<item>Zimmer Holdings</item>
+<item>China Southern Airlines Company</item>
+<item>Zoe&#39S Kitchen Inc.</item>
+<item>Zhaopin Ltd</item>
+<item>Quiksilver</item>
+<item>Zweig Total Return Fund</item>
+<item>Zoetis Inc. Class A Common Stoc</item>
+<item>China Zenix Auto International</item>
