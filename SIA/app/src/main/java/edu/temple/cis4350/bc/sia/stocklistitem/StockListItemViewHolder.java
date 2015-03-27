@@ -7,9 +7,14 @@
 
 package edu.temple.cis4350.bc.sia.stocklistitem;
 
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import edu.temple.cis4350.bc.sia.R;
@@ -25,8 +30,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
     private FrameLayout stockColorBox;
     private TextView stockSymbol;
     private TextView stockPrice;
-    // TODO: Find/Create stock change image and incorporate
-    //private ImageView stockChangeImg;
+    private ImageView stockChangeImg;
     private TextView stockChange;
 
     /**
@@ -41,7 +45,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         stockColorBox = (FrameLayout) stockListItemView.findViewById(R.id.sli_stock_color_box);
         stockSymbol = (TextView) stockListItemView.findViewById(R.id.sli_stock_symbol);
         stockPrice = (TextView) stockListItemView.findViewById(R.id.sli_stock_price);
-        //stockChangeImg = (ImageView) stockListItemView.findViewById(R.id.sli_stock_change_img);
+        stockChangeImg = (ImageView) stockListItemView.findViewById(R.id.sli_stock_change_img);
         stockChange = (TextView) stockListItemView.findViewById(R.id.sli_stock_change);
     }
 
@@ -54,9 +58,22 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
 
         stockColorBox.setBackgroundColor(sli.getStockColorCode());
         stockSymbol.setText(sli.getStockSymbol());
-        stockPrice.setText(sli.getStockPrice());
-        //stockChangeImg.setImageDrawable(sli.getStockChangeImg());
+        stockPrice.setText("$" + sli.getStockPrice());
+        int resID;
+        if (sli.getStockChange().startsWith("+")) {
+            stockChange.setTextColor(Color.parseColor("#99CC00"));
+            resID = R.drawable.plus_change;
+        }
+        else if (sli.getStockChange().startsWith("-")) {
+            stockChange.setTextColor(Color.parseColor("#FF4444"));
+            resID = R.drawable.minus_change;
+        }
+        else {
+            stockChange.setTextColor(Color.parseColor("#AAAAAA"));
+            resID = R.drawable.no_change;
+        }
         stockChange.setText(sli.getStockChange());
+        stockChangeImg.setImageResource(resID);
     }
 
     /**

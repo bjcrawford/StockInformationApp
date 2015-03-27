@@ -274,26 +274,20 @@ public class MainActivity extends Activity implements
 
     @Override
     public void onFABClicked(FloatingActionButton fabView) {
-        makeToast("FAB was clicked");
         new AddStockDialogFragment().show(getFragmentManager(), null);
     }
 
     @Override
     public void onAddStock(String msg) {
-        makeToast("Input received: " + msg);
         if (!msg.equals("")) {
-            if (hasConnection()) {
-                try {
-                    String apiUrl = APIURLBuilder.getCompanySearchURL(msg);
-                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
+            if (msg.startsWith("[")) { // Input from auto complete, parse out stock symbol
+                msg = msg.replace("[", "");
+                msg = msg.substring(0, msg.indexOf("]"));
+                makeToast("Selected: " + msg);
+
             }
             else {
-                // Notify user of lack of network connection and un-updated stock details
-                makeToast("No network connection");
+                makeToast("Please make selection from the auto complete suggestions.");
             }
         }
     }

@@ -21,7 +21,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:text="SYMB"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textColor="#FFFFFFFF"/>
 
     </FrameLayout>
@@ -33,17 +33,17 @@
         android:layout_toRightOf="@+id/sli_stock_color_box"
         android:paddingLeft="10dp"
         android:text="Stock Price"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColor="#FF000000"/>
 
     <ImageView
         android:id="@+id/sli_stock_change_img"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_below="@+id/sli_stock_price"
         android:layout_toRightOf="@+id/sli_stock_color_box"
-        android:layout_marginLeft="10dp"
-        android:background="#FFAAAAAA"/>
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="17dp"/>
 
     <TextView
         android:id="@+id/sli_stock_change"
@@ -51,7 +51,7 @@
         android:layout_height="20dp"
         android:layout_below="@+id/sli_stock_price"
         android:layout_toRightOf="@+id/sli_stock_change_img"
-        android:paddingLeft="10dp"
+        android:paddingLeft="3dp"
         android:text="Stock Change"/>
 
 

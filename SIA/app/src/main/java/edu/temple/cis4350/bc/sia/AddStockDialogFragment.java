@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
@@ -30,7 +31,15 @@ public class AddStockDialogFragment extends DialogFragment {
         // Inflate the DialogFragment's view using the layout
         View dialogView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_add_stock, null);
 
+        // Set up the auto complete text field
         stockName = (AutoCompleteTextView) dialogView.findViewById(R.id.stock_name_input);
+        stockName.setAdapter(
+                new ArrayAdapter<String>(
+                        getActivity(),
+                        android.R.layout.simple_list_item_1,
+                        getResources().getStringArray(R.array.stocks)
+                )
+        );
 
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
