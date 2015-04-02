@@ -7,10 +7,8 @@
 
 package edu.temple.cis4350.bc.sia.stocklistitem;
 
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -27,7 +25,7 @@ import edu.temple.cis4350.bc.sia.stock.Stock;
 public class StockListItemViewHolder extends RecyclerView.ViewHolder {
 
     private View stockListItemView;
-    private FrameLayout stockColorBox;
+    private CardView stockColorBox;
     private TextView stockSymbol;
     private TextView stockPrice;
     private ImageView stockChangeImg;
@@ -42,7 +40,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         super(v);
 
         stockListItemView = v;
-        stockColorBox = (FrameLayout) stockListItemView.findViewById(R.id.sli_stock_color_box);
+        stockColorBox = (CardView) stockListItemView.findViewById(R.id.sli_stock_color_box);
         stockSymbol = (TextView) stockListItemView.findViewById(R.id.sli_stock_symbol);
         stockPrice = (TextView) stockListItemView.findViewById(R.id.sli_stock_price);
         stockChangeImg = (ImageView) stockListItemView.findViewById(R.id.sli_stock_change_img);
@@ -56,7 +54,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
      */
     public void bindStockListItem(Stock sli) {
 
-        stockColorBox.setBackgroundColor(sli.getStockColorCode());
+        stockColorBox.setCardBackgroundColor(sli.getStockColorCode());
         stockSymbol.setText(sli.getStockSymbol());
         stockPrice.setText("$" + sli.getStockPrice());
         int resID;
