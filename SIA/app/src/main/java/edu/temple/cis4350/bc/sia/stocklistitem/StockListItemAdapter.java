@@ -25,7 +25,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
     private Stocks stocks;
 
     /* A listener for click events */
-    private OnItemClickListener listener;
+    private OnStockListItemClickListener listener;
 
     /**
      * A constructor for the StockListItemAdapter.
@@ -33,7 +33,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
      * @param stocks the Stocks object
      * @param listener the listener for click events
      */
-    public StockListItemAdapter(Stocks stocks, OnItemClickListener listener) {
+    public StockListItemAdapter(Stocks stocks, OnStockListItemClickListener listener) {
         this.stocks = stocks;
         this.listener = listener;
     }
@@ -50,7 +50,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
         viewHolder.getView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onClick(view, position);
+                listener.onStockListItemClick(view, position);
             }
         });
     }
@@ -64,7 +64,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
      * This interface must be implemented by activities using this adapter.
      * This allows for interaction between the adapter and the activity.
      */
-    public interface OnItemClickListener {
-        public void onClick(View view, int position);
+    public interface OnStockListItemClickListener {
+        public void onStockListItemClick(View view, int position);
     }
 }

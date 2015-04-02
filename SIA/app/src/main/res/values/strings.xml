@@ -3,6 +3,7 @@
     <string name="app_name">SIA</string>
 
     <!-- Action bar menu item strings -->
+    <string name="action_refresh">Refresh</string>
     <string name="action_news_feed">News Feed</string>
     <string name="action_settings">Settings</string>
     <string name="action_help">Help</string>
@@ -25,4 +26,18 @@
     <string name="add_stock_dialog_title">Add Stock</string>
     <string name="add_stock_button">Add</string>
     <string name="cancel_button">Cancel</string>
+
+    <!-- Stock list item test strings -->
+    <string name="stock_symbol">SYMB</string>
+    <string name="stock_price">XXX.XX</string>
+    <string name="stock_change">+X.XX</string>
+
+    <!-- News list item test strings -->
+    <string name="news_title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</string>
+    <string name="news_desc">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+    </string>
+
+
 </resources>

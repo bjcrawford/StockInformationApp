@@ -9,7 +9,12 @@ package edu.temple.cis4350.bc.sia.stock;
 
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.temple.cis4350.bc.sia.stock.Stock;
 
@@ -21,7 +26,7 @@ public class Stocks {
     private static final String TAG = "Stocks";
 
     /* The list of stocks */
-    private ArrayList<Stock> stocks;
+    private List<Stock> stocks;
 
     /**
      * Creates a stocks object.
@@ -29,6 +34,46 @@ public class Stocks {
     public Stocks() {
 
         stocks = new ArrayList<Stock>();
+    }
+
+    /**
+     * Creates a stocks object from a JSON representation.
+     * @param stockJSONArray An array of stock JSONObjects
+     */
+    public Stocks(JSONArray stockJSONArray) {
+
+        this();
+        try {
+            for (int i = 0; i < stockJSONArray.length(); i++) {
+                JSONObject stockJSONObject = stockJSONArray.getJSONObject(i);
+                stocks.add(new Stock(
+                        stockJSONObject.getString("symbol"),
+                        stockJSONObject.getInt("colorCode"),
+                        stockJSONObject.getInt("listPosition")
+                ));
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Returns a JSON representation of the list of stocks.
+     * @return A JSONArray of stock JSONObjects
+     */
+    public JSONArray getStockJSONArray() {
+        JSONArray stockJSONArray = new JSONArray();
+        try {
+            for (int i = 0; i < stocks.size(); i++) {
+                stockJSONArray.put(i, stocks.get(i).getStockJSONObject());
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return stockJSONArray;
     }
 
     /**
@@ -91,11 +136,11 @@ public class Stocks {
     }
 
     /**
-     * Returns the ArrayList of stock objects.
+     * Returns the List of stock objects.
      *
-     * @return the ArrayList of stocks
+     * @return the List of stocks
      */
-    public ArrayList<Stock> getArrayList() {
+    public List<Stock> getList() {
 
         return stocks;
     }

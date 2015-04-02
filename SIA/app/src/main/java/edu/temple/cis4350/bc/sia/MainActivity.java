@@ -30,6 +30,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
+import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
+import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
 import edu.temple.cis4350.bc.sia.stock.Stocks;
 import edu.temple.cis4350.bc.sia.stocklistitem.StockListItemAdapter;
@@ -38,19 +40,23 @@ import edu.temple.cis4350.bc.sia.apirequest.APIRequestTask;
 
 
 public class MainActivity extends Activity implements
-        StockListItemAdapter.OnItemClickListener,
-        StockDetailsFragment.OnFragmentInteractionListener,
-        FloatingActionButton.OnClickListener,
-        AddStockDialogFragment.OnAddStockListener {
+        StockListItemAdapter.OnStockListItemClickListener,
+        FloatingActionButton.OnFABClickListener,
+        AddStockDialogFragment.OnAddStockListener,
+        StockDetailsFragment.OnStockDetailsFragmentInteractionListener,
+        NewsFeedFragment.OnNewsFeedFragmentInteractionListener {
 
     private static final String TAG = "MainActivity";
+    private static final String PREF_STOCKS_JSON = "PrefStocksJson";
 
     private DrawerLayout drawerLayout;
     private RelativeLayout drawerView;
     private RecyclerView drawerStockList;
     private ActionBarDrawerToggle drawerToggle;
     private APIResponseHandler APIResponseHandler;
+
     private StockDetailsFragment currentStockDetailsFragment;
+    private NewsFeedFragment newsFeedFragment;
 
     private FloatingActionButton fab;
 
@@ -58,15 +64,19 @@ public class MainActivity extends Activity implements
     private int[] stockColors;
 
     private Stocks stocks;
+    private NewsArticles newsArticles;
+
+/*====================================== Lifecycle Methods =======================================*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate() fired");
         setContentView(R.layout.activity_main);
 
 
         fab = (FloatingActionButton) findViewById(R.id.drawer_fab);
-        fab.setOnClickListener(this);
+        fab.setOnFABClickListener(this);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerView = (RelativeLayout) findViewById(R.id.drawer);
@@ -74,13 +84,23 @@ public class MainActivity extends Activity implements
 
         APIResponseHandler = new APIResponseHandler(this);
 
-        stockSymbols = getResources().getStringArray(R.array.stock_symbols);
         stockColors = getResources().getIntArray(R.array.stock_colors);
 
-        stocks = new Stocks();
-        for (int i = 0; i < stockSymbols.length; i++) {
-            stocks.add(new Stock(stockSymbols[i], stockColors[i], i));
+        String strStocksJSONArray = this.getPreferences(Context.MODE_PRIVATE).getString(PREF_STOCKS_JSON, "");
+        if (strStocksJSONArray.length() == 0) {
+            stocks = new Stocks();
         }
+        else {
+            try {
+                stocks = new Stocks(new JSONArray(strStocksJSONArray));
+            }
+            catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        newsArticles = new NewsArticles();
+        newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
@@ -99,7 +119,7 @@ public class MainActivity extends Activity implements
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 Log.d(TAG, "Stock list drawer closed");
-                invalidateOptionsMenu();
+                //invalidateOptionsMenu();
                 syncState();
             }
 
@@ -112,47 +132,87 @@ public class MainActivity extends Activity implements
                 }
 
                 Log.d(TAG, "Stock list drawer opened");
-                invalidateOptionsMenu();
+                //invalidateOptionsMenu();
                 syncState();
             }
         };
 
         drawerLayout.setDrawerListener(drawerToggle);
-
         drawerToggle.syncState();
 
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart() fired");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        updateStocks(stocks);
+        Log.d(TAG, "onStart() fired");
+        updateStocks();
+        updateNews();
+        getFragmentManager().beginTransaction()
+                .replace(R.id.main_content_fragment_container, newsFeedFragment)
+                .commit();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume() fired");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause() fired");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop() fired");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() fired");
+        this.getPreferences(Context.MODE_PRIVATE).edit()
+                .putString(PREF_STOCKS_JSON, stocks.getStockJSONArray().toString())
+                .commit();
+    }
+
+/*==================================== Options Menu Methods ======================================*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
 
         if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
         switch (item.getItemId()) {
+            case R.id.action_refresh:
+                Log.d(TAG, "Refresh selected");
+                updateStocks();
+                updateNews();
+                return true;
             case R.id.action_news_feed:
                 makeToast("News Feed selected");
                 Log.d(TAG, "News Feed selected");
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.main_content_fragment_container, newsFeedFragment)
+                        .commit();
                 return true;
             case R.id.action_settings:
                 makeToast("Settings selected");
@@ -167,8 +227,10 @@ public class MainActivity extends Activity implements
         }
     }
 
+/*====================================== Listener Methods ========================================*/
+
     @Override
-    public void onClick(View view, int position) {
+    public void onStockListItemClick(View view, int position) {
         Log.d(TAG, "Item " + stocks.get(position).getStockName() + " selected");
         drawerLayout.closeDrawer(drawerView);
 
@@ -179,6 +241,45 @@ public class MainActivity extends Activity implements
                 .commit();
     }
 
+    @Override
+    public void onFABClick(FloatingActionButton fabView) {
+        new AddStockDialogFragment().show(getFragmentManager(), null);
+    }
+
+    @Override
+    public void onAddStock(String msg) {
+        if (!msg.equals("")) {
+            if (msg.startsWith("[")) { // Input from auto complete, parse out stock symbol
+                msg = msg.replace("[", "");
+                msg = msg.substring(0, msg.indexOf("]"));
+                makeToast("Selected: " + msg);
+                stocks.add(new Stock(msg, stockColors[stocks.size() % 10], stocks.size()));
+                updateStocks();
+                updateNews();
+            }
+            else {
+                makeToast("Please make selection from the auto complete suggestions.");
+            }
+        }
+    }
+
+    @Override
+    public void onStockDetailsFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onNewsFeedFragmentInteraction(Uri uri) {
+
+    }
+
+/*====================================== General Methods =========================================*/
+
+    /**
+     * Checks for an internet connection.
+     *
+     * @return true if connection is found, otherwise false
+     */
     private boolean hasConnection() {
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -186,7 +287,11 @@ public class MainActivity extends Activity implements
         return (networkInfo != null && networkInfo.isConnected());
     }
 
-    protected void updateStocks(Stocks stocks) {
+    /**
+     * Updates the stock list information. Launches an AsyncTask to retrieve a JSON stock query.
+     * The response is returned to the parseStockQueryJSONObject() method.
+     */
+    protected void updateStocks() {
 
         if (hasConnection()) {
             try {
@@ -203,6 +308,33 @@ public class MainActivity extends Activity implements
         }
     }
 
+    /**
+     * Updates the news list information. Launches an AsyncTask to retrieve a JSON news query.
+     * The response is returned to the parseNewsQueryJSONObject() method.
+     */
+    protected void updateNews() {
+
+        if (hasConnection()) {
+            try {
+                String apiUrl = APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray());
+                new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            // Notify user of lack of network connection and un-updated stock details
+            makeToast("No network connection");
+        }
+    }
+
+    /**
+     * Parses a JSON stock query response. Individual JSON stock quotes are passed to the
+     * parseStockQuoteJSONObject() method. On finish, the current stock details fragment is
+     * updated.
+     * @param stockQueryJSONObject
+     */
     public void parseStockQueryJSONObject(JSONObject stockQueryJSONObject) {
         try {
             JSONObject query = stockQueryJSONObject.getJSONObject("query");
@@ -213,11 +345,15 @@ public class MainActivity extends Activity implements
                 JSONArray quotes = results.getJSONArray("quote");
                 for (int i = 0; i < count; i++) {
                     parseStockQuoteJSONObject(quotes.getJSONObject(i));
-                    JSONObject quote = quotes.getJSONObject(i);
+                    //JSONObject quote = quotes.getJSONObject(i);
                 }
             }
             else {
                 parseStockQuoteJSONObject(results.getJSONObject("quote"));
+            }
+
+            if (currentStockDetailsFragment != null) {
+                currentStockDetailsFragment.update();
             }
         }
         catch (JSONException e) {
@@ -226,6 +362,10 @@ public class MainActivity extends Activity implements
 
     }
 
+    /**
+     * Parses a JSON stock quote response.
+     * @param stockQuoteJSONObject
+     */
     protected void parseStockQuoteJSONObject(JSONObject stockQuoteJSONObject) {
         try {
             String symbol = stockQuoteJSONObject.getString("symbol");
@@ -236,7 +376,7 @@ public class MainActivity extends Activity implements
             String openPrice = stockQuoteJSONObject.getString("Open");
             String marketCap = stockQuoteJSONObject.getString("MarketCapitalization");
 
-            for (Stock stock : stocks.getArrayList()) {
+            for (Stock stock : stocks.getList()) {
                 if (stock.getStockSymbol().equals(symbol)) {
                     stock.setStockSymbol(symbol);
                     stock.setStockName(name);
@@ -255,7 +395,23 @@ public class MainActivity extends Activity implements
     }
 
     public void parseNewsQueryJSONObject(JSONObject newsQueryJSONObject) {
-        // Stub
+        try {
+            JSONArray item = newsQueryJSONObject.getJSONObject("query")
+                    .getJSONObject("results")
+                    .getJSONObject("rss")
+                    .getJSONObject("channel")
+                    .getJSONArray("item");
+
+            newsArticles.clear();
+            for (int i = 0; i < item.length(); i++) {
+                newsArticles.add(new NewsArticle(item.getJSONObject(i)));
+            }
+            newsFeedFragment.updateRecyclerView();
+
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void parseCompanySearchJSONObject(JSONObject companySearchJSONObject) {
@@ -267,28 +423,4 @@ public class MainActivity extends Activity implements
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
-    @Override
-    public void onFABClicked(FloatingActionButton fabView) {
-        new AddStockDialogFragment().show(getFragmentManager(), null);
-    }
-
-    @Override
-    public void onAddStock(String msg) {
-        if (!msg.equals("")) {
-            if (msg.startsWith("[")) { // Input from auto complete, parse out stock symbol
-                msg = msg.replace("[", "");
-                msg = msg.substring(0, msg.indexOf("]"));
-                makeToast("Selected: " + msg);
-
-            }
-            else {
-                makeToast("Please make selection from the auto complete suggestions.");
-            }
-        }
-    }
 }

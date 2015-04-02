@@ -62,12 +62,12 @@ public class Stock {
             this.listPosition = stockJSONObject.getInt("listPosition");
 
             // These may not be necessary, as they should be populated during run-time
-            this.stockName = stockJSONObject.getString("name");
-            this.stockPrice = stockJSONObject.getString("price");
-            this.stockChange = stockJSONObject.getString("change");
-            this.stockPrevClosePrice = stockJSONObject.getString("prevClosePrice");
-            this.stockOpenPrice = stockJSONObject.getString("openPrice");
-            this.stockMarketCap = stockJSONObject.getString("marketCap");
+            //this.stockName = stockJSONObject.getString("name");
+            //this.stockPrice = stockJSONObject.getString("price");
+            //this.stockChange = stockJSONObject.getString("change");
+            //this.stockPrevClosePrice = stockJSONObject.getString("prevClosePrice");
+            //this.stockOpenPrice = stockJSONObject.getString("openPrice");
+            //this.stockMarketCap = stockJSONObject.getString("marketCap");
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -88,12 +88,12 @@ public class Stock {
             stockJSONObject.put("listPosition", listPosition);
 
             // These change too often to warrant persisting the data
-            stockJSONObject.put("name", stockName);
-            stockJSONObject.put("price", stockPrice);
-            stockJSONObject.put("change", stockChange);
-            stockJSONObject.put("prevClosePrice", stockPrevClosePrice);
-            stockJSONObject.put("openPrice", stockOpenPrice);
-            stockJSONObject.put("marketCap", stockMarketCap);
+            //stockJSONObject.put("name", stockName);
+            //stockJSONObject.put("price", stockPrice);
+            //stockJSONObject.put("change", stockChange);
+            //stockJSONObject.put("prevClosePrice", stockPrevClosePrice);
+            //stockJSONObject.put("openPrice", stockOpenPrice);
+            //stockJSONObject.put("marketCap", stockMarketCap);
         }
         catch (JSONException e) {
             e.printStackTrace();

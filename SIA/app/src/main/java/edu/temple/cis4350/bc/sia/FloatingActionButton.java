@@ -34,20 +34,20 @@ public class FloatingActionButton extends FrameLayout {
      * Interface definition for a callback to be invoked when the checked state
      * of a compound button changes.
      */
-    public static interface OnClickListener {
+    public static interface OnFABClickListener {
 
         /**
          * Called when the FAB button has been clicked.
          *
          * @param fabView   The FAB view that has been clicked.
          */
-        void onFABClicked(FloatingActionButton fabView);
+        void onFABClick(FloatingActionButton fabView);
     }
 
     private static final String TAG = "FloatingActionButton";
 
-    // A listener to communicate that the FAB has changed it's state
-    private OnClickListener mOnClickListener;
+    // A listener to communicate that the FAB has been clicked
+    private OnFABClickListener onFABClickListener;
 
     public FloatingActionButton(Context context) {
         this(context, null, 0, 0);
@@ -89,8 +89,8 @@ public class FloatingActionButton extends FrameLayout {
      *
      * @param listener the callback to call on checked state change
      */
-    public void setOnClickListener(OnClickListener listener) {
-        mOnClickListener = listener;
+    public void setOnFABClickListener(OnFABClickListener listener) {
+        onFABClickListener = listener;
     }
 
     /**
@@ -99,8 +99,8 @@ public class FloatingActionButton extends FrameLayout {
     @Override
     public boolean performClick() {
 
-        if (mOnClickListener != null) {
-            mOnClickListener.onFABClicked(this);
+        if (onFABClickListener != null) {
+            onFABClickListener.onFABClick(this);
         }
         return super.performClick();
     }

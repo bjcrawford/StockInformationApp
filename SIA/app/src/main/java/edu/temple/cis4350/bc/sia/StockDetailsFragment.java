@@ -31,6 +31,8 @@ public class StockDetailsFragment extends Fragment {
     private static final String ARG_STOCK_OPEN = "stockOpen";
     private static final String ARG_STOCK_MARKET_CAP = "stockMarketCap";
 
+    private Stock stock;
+
     private String stockSymbol;
     private String stockName;
     private String stockPrice;
@@ -49,7 +51,7 @@ public class StockDetailsFragment extends Fragment {
     private TextView stockOpenTextView;
     private TextView stockMarketCapTextView;
 
-    private OnFragmentInteractionListener listener;
+    private OnStockDetailsFragmentInteractionListener listener;
 
     /**
      * Use this factory method to create a new instance of
@@ -60,6 +62,7 @@ public class StockDetailsFragment extends Fragment {
      */
     public static StockDetailsFragment newInstance(Stock stock) {
         StockDetailsFragment fragment = new StockDetailsFragment();
+        fragment.stock = stock;
         Bundle args = new Bundle();
         args.putString(ARG_STOCK_SYMBOL, stock.getStockSymbol());
         args.putString(ARG_STOCK_NAME, stock.getStockName());
@@ -105,20 +108,14 @@ public class StockDetailsFragment extends Fragment {
         stockOpenTextView = (TextView) view.findViewById(R.id.stock_open);
         stockMarketCapTextView = (TextView) view.findViewById(R.id.stock_market_cap);
 
-        stockSymbolTextView.setText(stockSymbol);
-        stockNameTextView.setText(stockName);
-        stockPriceTextView.setText(stockPrice);
-        stockChangeTextView.setText(stockChange);
-        stockPrevCloseTextView.setText(stockPrevClose);
-        stockOpenTextView.setText(stockOpen);
-        stockMarketCapTextView.setText(stockMarketCap);
+        updateView();
 
         return view;
     }
 
-    public void updateProperties(Stock stock) {
+    public void update() {
 
-        Log.d(TAG, "updateProperties() fired");
+        Log.d(TAG, "update() fired");
         stockSymbol = stock.getStockSymbol();
         stockName = stock.getStockName();
         stockPrice = stock.getStockPrice();
@@ -126,12 +123,26 @@ public class StockDetailsFragment extends Fragment {
         stockPrevClose = stock.getStockPrevClosePrice();
         stockOpen = stock.getStockOpenPrice();
         stockMarketCap = stock.getStockMarketCap();
+
+        updateView();
+    }
+
+    public void updateView() {
+
+        Log.d(TAG, "updateView() fired");
+        stockSymbolTextView.setText(stockSymbol);
+        stockNameTextView.setText(stockName);
+        stockPriceTextView.setText(stockPrice);
+        stockChangeTextView.setText(stockChange);
+        stockPrevCloseTextView.setText(stockPrevClose);
+        stockOpenTextView.setText(stockOpen);
+        stockMarketCapTextView.setText(stockMarketCap);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (listener != null) {
-            listener.onFragmentInteraction(uri);
+            listener.onStockDetailsFragmentInteraction(uri);
         }
     }
 
@@ -140,7 +151,7 @@ public class StockDetailsFragment extends Fragment {
         super.onAttach(activity);
         Log.d(TAG, "OnAttach() fired");
         try {
-            listener = (OnFragmentInteractionListener) activity;
+            listener = (OnStockDetailsFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -164,9 +175,8 @@ public class StockDetailsFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+    public interface OnStockDetailsFragmentInteractionListener {
+        public void onStockDetailsFragmentInteraction(Uri uri);
     }
 
 }
