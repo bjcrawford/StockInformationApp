@@ -28,12 +28,16 @@ public class Stocks {
     /* The list of stocks */
     private List<Stock> stocks;
 
+    /* Designates the selectable state of the stocks list */
+    private boolean isSelectable;
+
     /**
      * Creates a stocks object.
      */
     public Stocks() {
 
-        stocks = new ArrayList<Stock>();
+        this.stocks = new ArrayList<Stock>();
+        this.isSelectable = false;
     }
 
     /**
@@ -88,7 +92,7 @@ public class Stocks {
     public boolean add(Stock stock) {
         for (Stock s : stocks) {
             if (s.getStockSymbol().equals(stock.getStockSymbol())) {
-                Log.d(TAG, "Stock " + stock.getStockSymbol() + " already exists in collection");
+                Log.d(TAG, "Stock " + stock.getStockSymbol() + " already exists in list");
 
                 return false;
             }
@@ -97,6 +101,20 @@ public class Stocks {
         Log.d(TAG, "Successfully added " + stock.getStockSymbol() + " to list");
 
         return true;
+    }
+
+    public boolean remove(Stock stock) {
+        for (Stock s : stocks) {
+            if (stock.getStockSymbol().equals(s.getStockSymbol())) {
+                stocks.remove(stock.getListPosition());
+                updateStockListPositions();
+
+                return true;
+            }
+        }
+        Log.d(TAG, "Stock " + stock.getStockSymbol() + " was not found in list");
+
+        return false;
     }
 
     /**
@@ -135,6 +153,12 @@ public class Stocks {
         return null;
     }
 
+    public void updateStockListPositions() {
+        for (int i = 0; i < stocks.size(); i++) {
+            stocks.get(i).setListPosition(i);
+        }
+    }
+
     /**
      * Returns the List of stock objects.
      *
@@ -168,5 +192,40 @@ public class Stocks {
         }
 
         return stockSymbols;
+    }
+
+    public boolean isSelectable() {
+        return isSelectable;
+    }
+
+    public void setSelectable(boolean selectable) {
+        isSelectable = selectable;
+    }
+
+    public boolean areAnyChecked() {
+        for (int i = 0; i < stocks.size(); i++) {
+            if (stocks.get(i).isItemChecked()) {
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void setAllChecked(boolean isChecked) {
+        for (int i = 0; i < stocks.size(); i++) {
+            stocks.get(i).setItemChecked(isChecked);
+        }
+    }
+
+    public List<Stock> getCheckedItems() {
+        ArrayList<Stock> checked = new ArrayList<Stock>();
+        for (int i = 0; i < stocks.size(); i++) {
+            if (stocks.get(i).isItemChecked())
+            checked.add(stocks.get(i));
+        }
+
+        return checked;
     }
 }

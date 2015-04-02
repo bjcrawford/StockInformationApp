@@ -10,6 +10,7 @@ package edu.temple.cis4350.bc.sia.stocklistitem;
 import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -24,7 +25,10 @@ import edu.temple.cis4350.bc.sia.stock.Stock;
  */
 public class StockListItemViewHolder extends RecyclerView.ViewHolder {
 
+    private static final String TAG = "StockListItemViewHolder";
+
     private View stockListItemView;
+    private CardView stockCard;
     private CardView stockColorBox;
     private TextView stockSymbol;
     private TextView stockPrice;
@@ -40,6 +44,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         super(v);
 
         stockListItemView = v;
+        stockCard = (CardView) stockListItemView.findViewById(R.id.sli_card);
         stockColorBox = (CardView) stockListItemView.findViewById(R.id.sli_stock_color_box);
         stockSymbol = (TextView) stockListItemView.findViewById(R.id.sli_stock_symbol);
         stockPrice = (TextView) stockListItemView.findViewById(R.id.sli_stock_price);
@@ -72,6 +77,10 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         }
         stockChange.setText(sli.getStockChange());
         stockChangeImg.setImageResource(resID);
+
+        boolean isSelected = sli.isItemChecked();
+        Log.d(TAG, "Item " + sli.getStockSymbol() + " is selected: " + isSelected);
+        stockCard.setCardBackgroundColor(isSelected ? 0xFFCCCCCC : 0xFFFFFFFF);
     }
 
     /**

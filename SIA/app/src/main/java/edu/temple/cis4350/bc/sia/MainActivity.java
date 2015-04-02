@@ -29,6 +29,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
@@ -51,19 +53,22 @@ public class MainActivity extends Activity implements
 
     private DrawerLayout drawerLayout;
     private RelativeLayout drawerView;
-    private RecyclerView drawerStockList;
     private ActionBarDrawerToggle drawerToggle;
+    private FloatingActionButton drawerFab;
+
+
     private APIResponseHandler APIResponseHandler;
+
 
     private StockDetailsFragment currentStockDetailsFragment;
     private NewsFeedFragment newsFeedFragment;
 
-    private FloatingActionButton fab;
 
-    private String[] stockSymbols;
+    private RecyclerView drawerStockList;
+    private Stocks stocks;
     private int[] stockColors;
 
-    private Stocks stocks;
+
     private NewsArticles newsArticles;
 
 /*====================================== Lifecycle Methods =======================================*/
@@ -75,8 +80,8 @@ public class MainActivity extends Activity implements
         setContentView(R.layout.activity_main);
 
 
-        fab = (FloatingActionButton) findViewById(R.id.drawer_fab);
-        fab.setOnFABClickListener(this);
+        drawerFab = (FloatingActionButton) findViewById(R.id.drawer_fab);
+        drawerFab.setOnFABClickListener(this);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerView = (RelativeLayout) findViewById(R.id.drawer);
@@ -104,6 +109,8 @@ public class MainActivity extends Activity implements
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
+
+
         drawerStockList.setLayoutManager(new LinearLayoutManager(this));
         drawerStockList.setAdapter(new StockListItemAdapter(stocks, this));
 
@@ -119,19 +126,27 @@ public class MainActivity extends Activity implements
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 Log.d(TAG, "Stock list drawer closed");
-                //invalidateOptionsMenu();
+
+                stocks.setSelectable(false);
+                stocks.setAllChecked(false);
+                // This is probably not the best place to make this call. Just testing for now
+                for (int i = 0; i < stocks.size(); i++) {
+                    drawerStockList.getAdapter().notifyItemChanged(i);
+                }
+
+                invalidateOptionsMenu();
                 syncState();
             }
 
             public void onDrawerOpened(View drawerView) {
-                super.onDrawerClosed(drawerView);
+                super.onDrawerOpened(drawerView);
+                Log.d(TAG, "Stock list drawer opened");
 
                 // This is probably not the best place to make this call. Just testing for now
                 for (int i = 0; i < stocks.size(); i++) {
                     drawerStockList.getAdapter().notifyItemChanged(i);
                 }
 
-                Log.d(TAG, "Stock list drawer opened");
                 //invalidateOptionsMenu();
                 syncState();
             }
@@ -194,6 +209,17 @@ public class MainActivity extends Activity implements
         return super.onCreateOptionsMenu(menu);
     }
 
+    /* Called whenever we call invalidateOptionsMenu() */
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        boolean anyChecked = stocks.areAnyChecked();
+        menu.findItem(R.id.action_refresh).setVisible(!anyChecked);
+        menu.findItem(R.id.action_discard).setVisible(anyChecked);
+
+        return super.onPrepareOptionsMenu(menu);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -206,6 +232,18 @@ public class MainActivity extends Activity implements
                 Log.d(TAG, "Refresh selected");
                 updateStocks();
                 updateNews();
+                return true;
+            case R.id.action_discard:
+                Log.d(TAG, "Discard selected");
+                List<Stock> checked = stocks.getCheckedItems();
+                for (Stock s : checked) {
+                    int listPosition = s.getListPosition();
+                    stocks.remove(s);
+                    //drawerStockList.getAdapter().notifyItemChanged(listPosition);
+                }
+                updateNews();
+                updateStocks();
+                invalidateOptionsMenu();
                 return true;
             case R.id.action_news_feed:
                 makeToast("News Feed selected");
@@ -231,14 +269,33 @@ public class MainActivity extends Activity implements
 
     @Override
     public void onStockListItemClick(View view, int position) {
-        Log.d(TAG, "Item " + stocks.get(position).getStockName() + " selected");
-        drawerLayout.closeDrawer(drawerView);
 
-        currentStockDetailsFragment = StockDetailsFragment.newInstance(stocks.get(position));
+        if (stocks.isSelectable()) {
+            onStockListItemLongClick(view, position);
+        }
+        else {
+            Log.d(TAG, "Item " + stocks.get(position).getStockName() + " clicked");
+            drawerLayout.closeDrawer(drawerView);
 
-        getFragmentManager().beginTransaction()
-                .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
-                .commit();
+            currentStockDetailsFragment = StockDetailsFragment.newInstance(stocks.get(position));
+
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
+                    .commit();
+        }
+    }
+
+    @Override
+    public boolean onStockListItemLongClick(View view, int position) {
+        Log.d(TAG, "Item " + stocks.get(position).getStockName() + " long clicked");
+
+        boolean isChecked = stocks.get(position).isItemChecked();
+        stocks.get(position).setItemChecked(!isChecked);
+        drawerStockList.getAdapter().notifyItemChanged(position);
+        stocks.setSelectable(stocks.areAnyChecked());
+
+        invalidateOptionsMenu();
+        return true;
     }
 
     @Override
@@ -293,18 +350,21 @@ public class MainActivity extends Activity implements
      */
     protected void updateStocks() {
 
-        if (hasConnection()) {
-            try {
-                String apiUrl = APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray());
-                new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
-            }
-            catch (Exception e) {
-                e.printStackTrace();
+        if (stocks.size() > 0) {
+            if (hasConnection()) {
+                try {
+                    String apiUrl = APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray());
+                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                // Notify user of lack of network connection and un-updated stock details
+                makeToast("No network connection");
             }
         }
         else {
-            // Notify user of lack of network connection and un-updated stock details
-            makeToast("No network connection");
+            drawerStockList.getAdapter().notifyDataSetChanged();
         }
     }
 
@@ -314,18 +374,22 @@ public class MainActivity extends Activity implements
      */
     protected void updateNews() {
 
-        if (hasConnection()) {
-            try {
-                String apiUrl = APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray());
-                new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
-            }
-            catch (Exception e) {
-                e.printStackTrace();
+        if (stocks.size() > 0) {
+            if (hasConnection()) {
+                try {
+                    String apiUrl = APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray());
+                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                // Notify user of lack of network connection and un-updated stock details
+                makeToast("No network connection");
             }
         }
         else {
-            // Notify user of lack of network connection and un-updated stock details
-            makeToast("No network connection");
+            newsArticles.clear();
+            newsFeedFragment.updateRecyclerView();
         }
     }
 

@@ -28,6 +28,9 @@ public class Stock {
     private String stockOpenPrice;
     private String stockMarketCap;
 
+    // Other stuff
+    private boolean isChecked;
+
     /**
      * Creates a Stock object.
      *
@@ -47,6 +50,8 @@ public class Stock {
         this.stockPrevClosePrice = "null";
         this.stockOpenPrice = "null";
         this.stockMarketCap = "null";
+
+        this.isChecked = false;
     }
 
     /**
@@ -68,6 +73,8 @@ public class Stock {
             //this.stockPrevClosePrice = stockJSONObject.getString("prevClosePrice");
             //this.stockOpenPrice = stockJSONObject.getString("openPrice");
             //this.stockMarketCap = stockJSONObject.getString("marketCap");
+
+            this.isChecked = false;
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -262,6 +269,14 @@ public class Stock {
      */
     public void setStockMarketCap(String stockMarketCap) {
         this.stockMarketCap = stockMarketCap;
+    }
+
+    public boolean isItemChecked() {
+        return this.isChecked;
+    }
+
+    public void setItemChecked(boolean isChecked) {
+        this.isChecked = isChecked;
     }
 
 }

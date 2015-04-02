@@ -53,6 +53,12 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
                 listener.onStockListItemClick(view, position);
             }
         });
+        viewHolder.getView().setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                return listener.onStockListItemLongClick(view, position);
+            }
+        });
     }
 
     @Override
@@ -66,5 +72,6 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
      */
     public interface OnStockListItemClickListener {
         public void onStockListItemClick(View view, int position);
+        public boolean onStockListItemLongClick(View view, int position);
     }
 }

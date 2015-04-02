@@ -11,6 +11,13 @@
         android:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_discard"
+        android:title="@string/action_discard"
+        android:icon="@drawable/ic_action_discard"
+        android:orderInCategory="110"
+        android:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_news_feed"
         android:title="@string/action_news_feed"
         android:orderInCategory="200"

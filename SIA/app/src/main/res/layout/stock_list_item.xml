@@ -7,6 +7,7 @@
     android:focusable="true">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/sli_card"
         style="@style/Widget.Card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
