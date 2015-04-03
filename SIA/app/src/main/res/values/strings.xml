@@ -17,6 +17,11 @@
     <string name="news_feed_ab_title">News Feed</string>
 
     <!-- Stock details fragment strings -->
+    <string name="stock_chart_control_1d">1d</string>
+    <string name="stock_chart_control_5d">5d</string>
+    <string name="stock_chart_control_1m">1m</string>
+    <string name="stock_chart_control_6m">6m</string>
+    <string name="stock_chart_control_1y">1y</string>
     <string name="stock_name_title">Name:</string>
     <string name="stock_symbol_title">Symbol:</string>
     <string name="stock_price_title">Price:</string>
