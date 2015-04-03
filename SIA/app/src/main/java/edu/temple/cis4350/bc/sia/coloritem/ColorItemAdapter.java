@@ -1,6 +1,7 @@
 package edu.temple.cis4350.bc.sia.coloritem;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,10 +32,10 @@ public class ColorItemAdapter extends ArrayAdapter<ColorItem> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.color_item, parent, false);
         }
 
-        FrameLayout fl = (FrameLayout) convertView.findViewById(R.id.itemColorBox);
+        CardView cv = (CardView) convertView.findViewById(R.id.itemColorBox);
         TextView tv = (TextView) convertView.findViewById(R.id.itemText);
 
-        fl.setBackgroundColor(ci.getItemColorCode());
+        cv.setCardBackgroundColor(ci.getItemColorCode());
         tv.setText(ci.getItemText());
 
         return convertView;

@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <FrameLayout
+    <android.support.v7.widget.CardView
+        style="@style/Widget.CardColorBox"
         android:id="@+id/itemColorBox"
         android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="#FFAAAAAA">
+        android:layout_height="25dp">
 
-    </FrameLayout>
+    </android.support.v7.widget.CardView>
 
     <TextView
         android:id="@+id/itemText"
@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
+        android:paddingTop="5dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/itemColorBox"
         android:layout_toEndOf="@+id/itemColorBox" />

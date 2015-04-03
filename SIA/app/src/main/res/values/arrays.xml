@@ -3,33 +3,48 @@
 
     <integer-array name="stock_colors">
 
-        <item>0xFFCC0000</item>
-        <item>0xFFFF6347</item>
+        <item>0xFFD40000</item>
+        <item>0xFFF3501D</item>
         <item>0xFFFF8800</item>
-        <item>0xFFFFBB33</item>
-        <item>0xFFFFE135</item>
-        <item>0xFF669900</item>
+        <item>0xFFF5BE25</item>
+
+        <item>0xFF33B679</item>
         <item>0xFF009E60</item>
-        <item>0xFF0099CC</item>
+        <item>0xFF0A7F42</item>
+
+        <item>0xFF029AE4</item>
+        <item>0xFF3F5CA9</item>
         <item>0xFF191970</item>
-        <item>0xFF9933CC</item>
+
+        <item>0xFF7885CA</item>
+        <item>0xFF8D23A9</item>
         <item>0xFF69359C</item>
+
+
+        <item>0xFF636363</item>
 
     </integer-array>
 
     <string-array name="stock_colors_text">
 
-        <item>Red</item>
         <item>Tomato</item>
-        <item>Orange</item>
         <item>Tangerine</item>
+        <item>Orange</item>
         <item>Banana</item>
-        <item>Green</item>
+
+        <item>Sage</item>
         <item>Shamrock</item>
-        <item>Blue</item>
-        <item>Midnight Blue</item>
-        <item>Purple</item>
-        <item>Purple Heart</item>
+        <item>Basil</item>
+
+        <item>Peacock</item>
+        <item>Blueberry</item>
+        <item>Midnight</item>
+
+        <item>Lavender</item>
+        <item>Grape</item>
+        <item>Eggplant</item>
+
+        <item>Graphite</item>
 
     </string-array>
 
