@@ -1,11 +1,10 @@
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +15,9 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-import edu.temple.cis4350.bc.sia.addstock.ColorItem;
-import edu.temple.cis4350.bc.sia.addstock.ColorItemAdapter;
+import edu.temple.cis4350.bc.sia.R;
+import edu.temple.cis4350.bc.sia.coloritem.ColorItem;
+import edu.temple.cis4350.bc.sia.coloritem.ColorItemAdapter;
 
 public class AddStockDialogFragment extends DialogFragment {
 

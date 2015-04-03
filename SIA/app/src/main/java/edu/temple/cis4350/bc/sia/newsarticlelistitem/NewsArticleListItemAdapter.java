@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.newslistitem;
+package edu.temple.cis4350.bc.sia.newsarticlelistitem;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,13 +14,12 @@ import android.view.ViewGroup;
 
 import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
-import edu.temple.cis4350.bc.sia.stock.Stocks;
 
 /**
  * This class is an Adapter for populating the RecyclerView used in
  * the news feed fragment.
  */
-public class NewsListItemAdapter extends RecyclerView.Adapter<NewsListItemViewHolder> {
+public class NewsArticleListItemAdapter extends RecyclerView.Adapter<NewsArticleListItemViewHolder> {
 
     /* A reference to the NewsArticles object */
     private NewsArticles newsArticles;
@@ -34,19 +33,19 @@ public class NewsListItemAdapter extends RecyclerView.Adapter<NewsListItemViewHo
      * @param newsArticles the NewsArticles object
      * @param listener the listener for click events
      */
-    public NewsListItemAdapter(NewsArticles newsArticles, OnNewsItemClickListener listener) {
+    public NewsArticleListItemAdapter(NewsArticles newsArticles, OnNewsItemClickListener listener) {
         this.newsArticles = newsArticles;
         this.listener = listener;
     }
 
     @Override
-    public NewsListItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NewsArticleListItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_item, parent, false);
-        return new NewsListItemViewHolder(v);
+        return new NewsArticleListItemViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(NewsListItemViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(NewsArticleListItemViewHolder viewHolder, final int position) {
         viewHolder.bindStockListItem(newsArticles.get(position));
         viewHolder.getView().setOnClickListener(new View.OnClickListener() {
             @Override

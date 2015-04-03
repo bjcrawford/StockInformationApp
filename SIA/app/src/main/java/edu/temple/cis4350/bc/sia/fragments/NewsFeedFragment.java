@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.fragments;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -17,15 +17,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import edu.temple.cis4350.bc.sia.MainActivity;
+import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
-import edu.temple.cis4350.bc.sia.newslistitem.NewsListItemAdapter;
-import edu.temple.cis4350.bc.sia.stocklistitem.StockListItemAdapter;
+import edu.temple.cis4350.bc.sia.newsarticlelistitem.NewsArticleListItemAdapter;
 
 /**
  * A fragment to hold the news feed page.
  */
 public class NewsFeedFragment extends Fragment implements
-        NewsListItemAdapter.OnNewsItemClickListener {
+        NewsArticleListItemAdapter.OnNewsItemClickListener {
 
     private static final String TAG = "NewsFeedFragment";
 
@@ -74,7 +75,7 @@ public class NewsFeedFragment extends Fragment implements
 
 
         newsList.setLayoutManager(new LinearLayoutManager(getActivity()));
-        newsList.setAdapter(new NewsListItemAdapter(newsArticles, this));
+        newsList.setAdapter(new NewsArticleListItemAdapter(newsArticles, this));
 
         return view;
     }

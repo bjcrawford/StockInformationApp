@@ -5,26 +5,20 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.newslistitem;
+package edu.temple.cis4350.bc.sia.newsarticlelistitem;
 
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
-import edu.temple.cis4350.bc.sia.stock.Stock;
 
 /**
  * This class is a ViewHolder for populating the item within the
  * RecyclerView used in the news feed fragment.
  */
-public class NewsListItemViewHolder extends RecyclerView.ViewHolder {
+public class NewsArticleListItemViewHolder extends RecyclerView.ViewHolder {
 
     private static final String TAG = "NewsListItemViewHolder";
 
@@ -37,7 +31,7 @@ public class NewsListItemViewHolder extends RecyclerView.ViewHolder {
      *
      * @param v the View of the list item
      */
-    public NewsListItemViewHolder(View v) {
+    public NewsArticleListItemViewHolder(View v) {
         super(v);
 
         newsListItemView = v;

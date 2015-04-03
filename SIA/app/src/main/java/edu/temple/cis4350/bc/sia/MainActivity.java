@@ -32,6 +32,10 @@ import org.json.JSONObject;
 import java.util.List;
 
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
+import edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton;
+import edu.temple.cis4350.bc.sia.fragments.AddStockDialogFragment;
+import edu.temple.cis4350.bc.sia.fragments.NewsFeedFragment;
+import edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;

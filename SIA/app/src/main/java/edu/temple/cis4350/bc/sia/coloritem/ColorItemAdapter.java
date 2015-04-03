@@ -1,4 +1,4 @@
-package edu.temple.cis4350.bc.sia.addstock;
+package edu.temple.cis4350.bc.sia.coloritem;
 
 import android.content.Context;
 import android.util.Log;

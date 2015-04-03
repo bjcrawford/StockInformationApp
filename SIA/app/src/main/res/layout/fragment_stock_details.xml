@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.temple.cis4350.bc.sia.StockDetailsFragment">
+    tools:context="edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment">
 
     <ScrollView
         android:layout_width="match_parent"

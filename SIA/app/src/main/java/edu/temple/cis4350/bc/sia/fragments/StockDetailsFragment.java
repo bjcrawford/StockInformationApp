@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.fragments;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.stock.Stock;
 
 public class StockDetailsFragment extends Fragment {

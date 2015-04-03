@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-package edu.temple.cis4350.bc.sia;
+package edu.temple.cis4350.bc.sia.floatingactionbutton;
 
 import android.content.Context;
 import android.graphics.Outline;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewOutlineProvider;
-import android.widget.Checkable;
 import android.widget.FrameLayout;
 
 /**
