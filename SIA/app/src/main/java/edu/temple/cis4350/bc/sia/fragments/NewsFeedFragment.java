@@ -97,7 +97,7 @@ public class NewsFeedFragment extends Fragment implements
             mListener = (OnNewsFeedFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
+                    + " must implement OnNewsFeedFragmentInteractionListener");
         }
     }
 
