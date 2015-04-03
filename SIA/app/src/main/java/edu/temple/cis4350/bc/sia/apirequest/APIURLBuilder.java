@@ -19,10 +19,8 @@ public class APIURLBuilder {
                 "select%20*%20from%20yahoo.finance.quotes%20" +
                 "where%20symbol%20in%20(";
 
-        yqlUrl += "%22" + stockSymbols[0] + "%22";
-
-        for (int i = 1; i < stockSymbols.length; i++) {
-            yqlUrl += "%2C%22" + stockSymbols[i] + "%22";
+        for (int i = 0; i < stockSymbols.length; i++) {
+            yqlUrl += (i > 0 ? "%2C" : "") + "%22" + stockSymbols[i] + "%22";
         }
         yqlUrl += ")%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
 
@@ -37,10 +35,7 @@ public class APIURLBuilder {
                 "where%20url%3D%27http%3A%2F%2Ffinance.yahoo.com%2Frss%2Fheadline%3Fs%3D";
 
         for (int i = 0; i < stockSymbols.length; i++) {
-            if (i != 0) {
-                yqlUrl += "%2B";
-            }
-            yqlUrl += stockSymbols[i];
+            yqlUrl += (i > 0 ? "%2B" : "") + stockSymbols[i];
         }
         yqlUrl += "%27&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&format=json";
 
@@ -49,10 +44,9 @@ public class APIURLBuilder {
 
     public static String getCompanySearchURL(String searchString) {
 
-        String apiUrl = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?callback=YAHOO.Finance.SymbolSuggest.ssCallback&query=";
-        apiUrl += searchString;
-
-        return apiUrl;
+        // Add the search string to the url
+        return "http://d.yimg.com/autoc.finance.yahoo.com/autoc?callback=YAHOO.Finance." +
+                "SymbolSuggest.ssCallback&query=" + searchString;
     }
 
 }
