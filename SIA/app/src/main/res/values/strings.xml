@@ -13,6 +13,9 @@
     <string name="drawer_open">Open the stock list drawer</string>
     <string name="drawer_close">Close the stock list drawer</string>
 
+    <!-- News feed strings -->
+    <string name="news_feed_ab_title">News Feed</string>
+
     <!-- Stock details fragment strings -->
     <string name="stock_name_title">Name:</string>
     <string name="stock_symbol_title">Symbol:</string>
@@ -25,8 +28,13 @@
 
     <!-- Add stock dialog strings -->
     <string name="add_stock_dialog_title">Add Stock</string>
+    <string name="stock_name_input_title">Stock:</string>
+    <string name="stock_color_input_title">Color:</string>
     <string name="add_stock_button">Add</string>
     <string name="cancel_button">Cancel</string>
+
+    <!-- Color item test strings -->
+    <string name="color_name">Color Name</string>
 
     <!-- Stock list item test strings -->
     <string name="stock_symbol">SYMB</string>

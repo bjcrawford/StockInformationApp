@@ -165,6 +165,10 @@ public class StockDetailsFragment extends Fragment {
         listener = null;
     }
 
+    public String getStockSymbol() {
+        return stockSymbol;
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

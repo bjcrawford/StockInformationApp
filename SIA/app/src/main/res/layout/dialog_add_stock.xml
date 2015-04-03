@@ -5,11 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/stock_name_input_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/stock_name_input"
+        android:textSize="30sp"
+        android:text="@string/stock_name_input_title"/>
+
     <AutoCompleteTextView
         android:id="@+id/stock_name_input"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/stock_name_input_title"
+        android:layout_centerHorizontal="true"
+        android:dropDownHeight="140dp" />
+
+    <TextView
+        android:id="@+id/stock_color_input_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stock_name_input"
+        android:layout_alignLeft="@+id/stock_name_input"
+        android:textSize="30sp"
+        android:text="@string/stock_color_input_title"/>
+
+    <Spinner
+        android:id="@+id/stock_color_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stock_color_input_title"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

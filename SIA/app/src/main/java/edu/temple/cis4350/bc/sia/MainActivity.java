@@ -51,6 +51,9 @@ public class MainActivity extends Activity implements
     private static final String TAG = "MainActivity";
     private static final String PREF_STOCKS_JSON = "PrefStocksJson";
 
+    private static final int NEWS_FEED_FRAG = 1;
+    private static final int STOCK_DETAILS_FRAG = 2;
+
     private DrawerLayout drawerLayout;
     private RelativeLayout drawerView;
     private ActionBarDrawerToggle drawerToggle;
@@ -59,14 +62,13 @@ public class MainActivity extends Activity implements
 
     private APIResponseHandler APIResponseHandler;
 
-
+    private int currentFrag;
     private StockDetailsFragment currentStockDetailsFragment;
     private NewsFeedFragment newsFeedFragment;
 
 
     private RecyclerView drawerStockList;
     private Stocks stocks;
-    private int[] stockColors;
 
 
     private NewsArticles newsArticles;
@@ -79,7 +81,7 @@ public class MainActivity extends Activity implements
         Log.d(TAG, "onCreate() fired");
         setContentView(R.layout.activity_main);
 
-
+        // Set up floating action button in stock drawer
         drawerFab = (FloatingActionButton) findViewById(R.id.drawer_fab);
         drawerFab.setOnFABClickListener(this);
 
@@ -88,8 +90,6 @@ public class MainActivity extends Activity implements
         drawerStockList = (RecyclerView) findViewById(R.id.drawer_recyclerview);
 
         APIResponseHandler = new APIResponseHandler(this);
-
-        stockColors = getResources().getIntArray(R.array.stock_colors);
 
         String strStocksJSONArray = this.getPreferences(Context.MODE_PRIVATE).getString(PREF_STOCKS_JSON, "");
         if (strStocksJSONArray.length() == 0) {
@@ -127,6 +127,15 @@ public class MainActivity extends Activity implements
                 super.onDrawerClosed(view);
                 Log.d(TAG, "Stock list drawer closed");
 
+                switch (currentFrag) {
+                    case NEWS_FEED_FRAG:
+                        getActionBar().setTitle(R.string.news_feed_ab_title);
+                        break;
+                    case STOCK_DETAILS_FRAG:
+                        getActionBar().setTitle(currentStockDetailsFragment.getStockSymbol());
+                        break;
+                }
+
                 stocks.setSelectable(false);
                 stocks.setAllChecked(false);
                 // This is probably not the best place to make this call. Just testing for now
@@ -141,6 +150,8 @@ public class MainActivity extends Activity implements
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 Log.d(TAG, "Stock list drawer opened");
+
+                getActionBar().setTitle(R.string.app_name);
 
                 // This is probably not the best place to make this call. Just testing for now
                 for (int i = 0; i < stocks.size(); i++) {
@@ -169,9 +180,11 @@ public class MainActivity extends Activity implements
         Log.d(TAG, "onStart() fired");
         updateStocks();
         updateNews();
+        getActionBar().setTitle(R.string.news_feed_ab_title);
         getFragmentManager().beginTransaction()
                 .replace(R.id.main_content_fragment_container, newsFeedFragment)
                 .commit();
+        currentFrag = NEWS_FEED_FRAG;
     }
 
     @Override
@@ -251,6 +264,8 @@ public class MainActivity extends Activity implements
                 getFragmentManager().beginTransaction()
                         .replace(R.id.main_content_fragment_container, newsFeedFragment)
                         .commit();
+                currentFrag = NEWS_FEED_FRAG;
+                getActionBar().setTitle(R.string.news_feed_ab_title);
                 return true;
             case R.id.action_settings:
                 makeToast("Settings selected");
@@ -282,6 +297,8 @@ public class MainActivity extends Activity implements
             getFragmentManager().beginTransaction()
                     .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
                     .commit();
+            currentFrag = STOCK_DETAILS_FRAG;
+            getActionBar().setTitle(currentStockDetailsFragment.getStockSymbol());
         }
     }
 
@@ -304,13 +321,12 @@ public class MainActivity extends Activity implements
     }
 
     @Override
-    public void onAddStock(String msg) {
-        if (!msg.equals("")) {
-            if (msg.startsWith("[")) { // Input from auto complete, parse out stock symbol
-                msg = msg.replace("[", "");
-                msg = msg.substring(0, msg.indexOf("]"));
-                makeToast("Selected: " + msg);
-                stocks.add(new Stock(msg, stockColors[stocks.size() % 10], stocks.size()));
+    public void onAddStock(String stockName, int stockColor) {
+        if (!stockName.equals("")) {
+            if (stockName.endsWith("*")) { // Input from auto complete, parse out stock symbol
+                String words[] = stockName.split(" ");
+                //makeToast("Selected: " + words[0]);
+                stocks.add(new Stock(words[0], stockColor, stocks.size()));
                 updateStocks();
                 updateNews();
             }
