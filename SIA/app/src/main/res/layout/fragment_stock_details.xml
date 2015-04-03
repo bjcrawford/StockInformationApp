@@ -223,6 +223,25 @@
                 android:text="@string/placeholder"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/stock_volume_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_market_cap"
+                android:layout_marginTop="10dp"
+                android:text="@string/stock_volume_title"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/stock_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/stock_volume_title"
+                android:text="@string/placeholder"
+                android:textSize="20sp" />
+
         </RelativeLayout>
 
     </ScrollView>

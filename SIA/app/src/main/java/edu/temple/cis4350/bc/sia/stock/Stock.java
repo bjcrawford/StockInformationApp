@@ -27,8 +27,9 @@ public class Stock {
     private String stockPrevClosePrice;
     private String stockOpenPrice;
     private String stockMarketCap;
+    private String stockVolume;
 
-    // Other stuff
+    // State variables
     private boolean isChecked;
 
     /**
@@ -43,14 +44,13 @@ public class Stock {
         this.stockSymbol = stockSymbol.toUpperCase();
         this.stockColorCode = stockColorCode;
         this.listPosition = listPosition;
-
         this.stockName = "null";
         this.stockPrice = "null";
         this.stockChange = "null";
         this.stockPrevClosePrice = "null";
         this.stockOpenPrice = "null";
         this.stockMarketCap = "null";
-
+        this.stockVolume = "null";
         this.isChecked = false;
     }
 
@@ -61,19 +61,10 @@ public class Stock {
      */
     public Stock(JSONObject stockJSONObject) {
         try {
-            // These will be necessary
+            // These will be necessary to populate
             this.stockSymbol = stockJSONObject.getString("symbol");
             this.stockColorCode = stockJSONObject.getInt("colorCode");
             this.listPosition = stockJSONObject.getInt("listPosition");
-
-            // These may not be necessary, as they should be populated during run-time
-            //this.stockName = stockJSONObject.getString("name");
-            //this.stockPrice = stockJSONObject.getString("price");
-            //this.stockChange = stockJSONObject.getString("change");
-            //this.stockPrevClosePrice = stockJSONObject.getString("prevClosePrice");
-            //this.stockOpenPrice = stockJSONObject.getString("openPrice");
-            //this.stockMarketCap = stockJSONObject.getString("marketCap");
-
             this.isChecked = false;
         }
         catch (JSONException e) {
@@ -89,18 +80,10 @@ public class Stock {
     public JSONObject getStockJSONObject() {
         JSONObject stockJSONObject = new JSONObject();
         try {
-            // These will be necessary
+            // These will be necessary to persist
             stockJSONObject.put("symbol", stockSymbol);
             stockJSONObject.put("colorCode", stockColorCode);
             stockJSONObject.put("listPosition", listPosition);
-
-            // These change too often to warrant persisting the data
-            //stockJSONObject.put("name", stockName);
-            //stockJSONObject.put("price", stockPrice);
-            //stockJSONObject.put("change", stockChange);
-            //stockJSONObject.put("prevClosePrice", stockPrevClosePrice);
-            //stockJSONObject.put("openPrice", stockOpenPrice);
-            //stockJSONObject.put("marketCap", stockMarketCap);
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -187,7 +170,7 @@ public class Stock {
      * @return the stock price
      */
     public String getStockPrice() {
-        return stockPrice;
+        return "$" + stockPrice;
     }
 
     /**
@@ -223,7 +206,7 @@ public class Stock {
      * @return the stock previous close price
      */
     public String getStockPrevClosePrice() {
-        return stockPrevClosePrice;
+        return "$" + stockPrevClosePrice;
     }
 
     /**
@@ -241,7 +224,7 @@ public class Stock {
      * @return the stock open price
      */
     public String getStockOpenPrice() {
-        return stockOpenPrice;
+        return "$" + stockOpenPrice;
     }
 
     /**
@@ -259,22 +242,51 @@ public class Stock {
      * @return the stock market capitalization
      */
     public String getStockMarketCap() {
-        return stockMarketCap;
+        return "$" + stockMarketCap;
     }
 
     /**
      * Sets the stock market capitalization.
      *
-     * @param stockMarketCap  the stock market capitalization
+     * @param stockMarketCap the stock market capitalization
      */
     public void setStockMarketCap(String stockMarketCap) {
         this.stockMarketCap = stockMarketCap;
     }
 
+
+    /**
+     * Returns the stock volume
+     *
+     * @return the stock volume
+     */
+    public String getStockVolume() {
+        return stockVolume;
+    }
+
+    /**
+     * Sets the stock volume
+     *
+     * @param stockVolume the stock volume
+     */
+    public void setStockVolume(String stockVolume) {
+        this.stockVolume = stockVolume;
+    }
+
+    /**
+     * Returns the state of the stocks checked property
+     *
+     * @return true if checked, false otherwise
+     */
     public boolean isItemChecked() {
         return this.isChecked;
     }
 
+    /**
+     * Sets the state of the stocks checked property
+     *
+     * @param isChecked the state(true or false)
+     */
     public void setItemChecked(boolean isChecked) {
         this.isChecked = isChecked;
     }

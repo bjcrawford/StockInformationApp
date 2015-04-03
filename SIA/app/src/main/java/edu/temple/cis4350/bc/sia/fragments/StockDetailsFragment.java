@@ -38,6 +38,7 @@ public class StockDetailsFragment extends Fragment {
     private static final String ARG_STOCK_PREV_CLOSE = "stockPrevClose";
     private static final String ARG_STOCK_OPEN = "stockOpen";
     private static final String ARG_STOCK_MARKET_CAP = "stockMarketCap";
+    private static final String ARG_STOCK_VOLUME = "stockVolume";
 
     private Stock stock;
 
@@ -50,13 +51,7 @@ public class StockDetailsFragment extends Fragment {
     private ImageView chart6m;
     private ImageView chart1y;
 
-    private ArrayList<TextView> controls;
-
-    private TextView control1d;
-    private TextView control5d;
-    private TextView control1m;
-    private TextView control6m;
-    private TextView control1y;
+    private ArrayList<TextView> chartControls;
 
     private String stockSymbol;
     private String stockName;
@@ -65,6 +60,7 @@ public class StockDetailsFragment extends Fragment {
     private String stockPrevClose;
     private String stockOpen;
     private String stockMarketCap;
+    private String stockVolume;
 
     private View view;
 
@@ -75,6 +71,7 @@ public class StockDetailsFragment extends Fragment {
     private TextView stockPrevCloseTextView;
     private TextView stockOpenTextView;
     private TextView stockMarketCapTextView;
+    private TextView stockVolumeTextView;
 
     private OnStockDetailsFragmentInteractionListener listener;
 
@@ -96,6 +93,7 @@ public class StockDetailsFragment extends Fragment {
         args.putString(ARG_STOCK_PREV_CLOSE, stock.getStockPrevClosePrice());
         args.putString(ARG_STOCK_OPEN, stock.getStockOpenPrice());
         args.putString(ARG_STOCK_MARKET_CAP, stock.getStockMarketCap());
+        args.putString(ARG_STOCK_VOLUME, stock.getStockVolume());
         fragment.setArguments(args);
         return fragment;
     }
@@ -116,6 +114,7 @@ public class StockDetailsFragment extends Fragment {
             stockPrevClose = getArguments().getString(ARG_STOCK_PREV_CLOSE);
             stockOpen = getArguments().getString(ARG_STOCK_OPEN);
             stockMarketCap = getArguments().getString(ARG_STOCK_MARKET_CAP);
+            stockVolume = getArguments().getString(ARG_STOCK_VOLUME);
         }
     }
 
@@ -137,45 +136,45 @@ public class StockDetailsFragment extends Fragment {
         chart6m = new ImageView(getActivity());
         chart1y = new ImageView(getActivity());
 
-        controls = new ArrayList<TextView>();
+        chartControls = new ArrayList<TextView>();
 
-        controls.add(0, (TextView) view.findViewById(R.id.chart_viewpager_controls_1d));
-        controls.get(0).setOnClickListener(new View.OnClickListener() {
+        chartControls.add(0, (TextView) view.findViewById(R.id.chart_viewpager_controls_1d));
+        chartControls.get(0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chartViewPager.setCurrentItem(0);
             }
         });
-        controls.add(1, (TextView) view.findViewById(R.id.chart_viewpager_controls_5d));
-        controls.get(1).setOnClickListener(new View.OnClickListener() {
+        chartControls.add(1, (TextView) view.findViewById(R.id.chart_viewpager_controls_5d));
+        chartControls.get(1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chartViewPager.setCurrentItem(1);
             }
         });
-        controls.add(2, (TextView) view.findViewById(R.id.chart_viewpager_controls_1m));
-        controls.get(2).setOnClickListener(new View.OnClickListener() {
+        chartControls.add(2, (TextView) view.findViewById(R.id.chart_viewpager_controls_1m));
+        chartControls.get(2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chartViewPager.setCurrentItem(2);
             }
         });
-        controls.add(3, (TextView) view.findViewById(R.id.chart_viewpager_controls_6m));
-        controls.get(3).setOnClickListener(new View.OnClickListener() {
+        chartControls.add(3, (TextView) view.findViewById(R.id.chart_viewpager_controls_6m));
+        chartControls.get(3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chartViewPager.setCurrentItem(3);
             }
         });
-        controls.add(4, (TextView) view.findViewById(R.id.chart_viewpager_controls_1y));
-        controls.get(4).setOnClickListener(new View.OnClickListener() {
+        chartControls.add(4, (TextView) view.findViewById(R.id.chart_viewpager_controls_1y));
+        chartControls.get(4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chartViewPager.setCurrentItem(4);
             }
         });
 
-        controls.get(0).setTextColor(0xFF000000);
+        chartControls.get(0).setTextColor(0xFF000000);
 
         new DownloadImageTask(chart1d).execute("https://chart.yahoo.com/z?t=1d&s=" + stockSymbol);
         new DownloadImageTask(chart5d).execute("https://chart.yahoo.com/z?t=5d&s=" + stockSymbol);
@@ -200,8 +199,8 @@ public class StockDetailsFragment extends Fragment {
             @Override
             public void onPageSelected(int position) {
                 Log.d(TAG, "Page " + position + " selected");
-                for (int i = 0; i < controls.size(); i++) {
-                    controls.get(i).setTextColor(i == position ? 0xFF000000 : 0xFF999999);
+                for (int i = 0; i < chartControls.size(); i++) {
+                    chartControls.get(i).setTextColor(i == position ? 0xFF000000 : 0xFF999999);
                 }
             }
 
@@ -218,6 +217,7 @@ public class StockDetailsFragment extends Fragment {
         stockPrevCloseTextView = (TextView) view.findViewById(R.id.stock_prev_close);
         stockOpenTextView = (TextView) view.findViewById(R.id.stock_open);
         stockMarketCapTextView = (TextView) view.findViewById(R.id.stock_market_cap);
+        stockVolumeTextView = (TextView) view.findViewById(R.id.stock_volume);
 
         updateView();
 
@@ -234,6 +234,7 @@ public class StockDetailsFragment extends Fragment {
         stockPrevClose = stock.getStockPrevClosePrice();
         stockOpen = stock.getStockOpenPrice();
         stockMarketCap = stock.getStockMarketCap();
+        stockVolume = stock.getStockVolume();
 
         updateView();
     }
@@ -248,10 +249,10 @@ public class StockDetailsFragment extends Fragment {
         stockPrevCloseTextView.setText(stockPrevClose);
         stockOpenTextView.setText(stockOpen);
         stockMarketCapTextView.setText(stockMarketCap);
+        stockVolumeTextView.setText(stockVolume);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onSomeAction(Uri uri) {
         if (listener != null) {
             listener.onStockDetailsFragmentInteraction(uri);
         }
@@ -285,10 +286,6 @@ public class StockDetailsFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnStockDetailsFragmentInteractionListener {
         public void onStockDetailsFragmentInteraction(Uri uri);

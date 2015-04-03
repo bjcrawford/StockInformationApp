@@ -429,7 +429,6 @@ public class MainActivity extends Activity implements
                 JSONArray quotes = results.getJSONArray("quote");
                 for (int i = 0; i < count; i++) {
                     parseStockQuoteJSONObject(quotes.getJSONObject(i));
-                    //JSONObject quote = quotes.getJSONObject(i);
                 }
             }
             else {
@@ -459,18 +458,22 @@ public class MainActivity extends Activity implements
             String prevClosePrice = stockQuoteJSONObject.getString("PreviousClose");
             String openPrice = stockQuoteJSONObject.getString("Open");
             String marketCap = stockQuoteJSONObject.getString("MarketCapitalization");
+            String volume = stockQuoteJSONObject.getString("Volume");
 
-            for (Stock stock : stocks.getList()) {
-                if (stock.getStockSymbol().equals(symbol)) {
-                    stock.setStockSymbol(symbol);
-                    stock.setStockName(name);
-                    stock.setStockPrice(price);
-                    stock.setStockChange(change);
-                    stock.setStockPrevClosePrice(prevClosePrice);
-                    stock.setStockOpenPrice(openPrice);
-                    stock.setStockMarketCap(marketCap);
-                    drawerStockList.getAdapter().notifyItemChanged(stock.getListPosition());
-                }
+            Stock stock = stocks.get(symbol);
+            if (stock != null) {
+                stock.setStockSymbol(symbol);
+                stock.setStockName(name);
+                stock.setStockPrice(price);
+                stock.setStockChange(change);
+                stock.setStockPrevClosePrice(prevClosePrice);
+                stock.setStockOpenPrice(openPrice);
+                stock.setStockMarketCap(marketCap);
+                stock.setStockVolume(volume);
+                drawerStockList.getAdapter().notifyItemChanged(stock.getListPosition());
+            }
+            else {
+                Log.d(TAG, "Stock " + symbol + " was not found in the stock list");
             }
         }
         catch (JSONException e) {

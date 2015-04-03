@@ -61,7 +61,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
 
         stockColorBox.setCardBackgroundColor(sli.getStockColorCode());
         stockSymbol.setText(sli.getStockSymbol());
-        stockPrice.setText("$" + sli.getStockPrice());
+        stockPrice.setText(sli.getStockPrice());
         int resID;
         if (sli.getStockChange().startsWith("+")) {
             stockChange.setTextColor(Color.parseColor("#99CC00"));
