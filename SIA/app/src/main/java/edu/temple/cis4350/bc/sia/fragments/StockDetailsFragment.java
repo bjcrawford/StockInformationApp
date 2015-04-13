@@ -8,26 +8,39 @@
 package edu.temple.cis4350.bc.sia.fragments;
 
 import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import edu.temple.cis4350.bc.sia.MainActivity;
 import edu.temple.cis4350.bc.sia.R;
+import edu.temple.cis4350.bc.sia.apirequest.APIRequestTask;
+import edu.temple.cis4350.bc.sia.apirequest.APIResponseHandler;
+import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
 import edu.temple.cis4350.bc.sia.chartpageradapter.ChartPagerAdapter;
 import edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager;
 import edu.temple.cis4350.bc.sia.chartpageradapter.DownloadImageTask;
+import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
 
-public class StockDetailsFragment extends Fragment {
+public class StockDetailsFragment extends Fragment implements
+        APIResponseHandler.OnAPIResponseHandlerInteractionListener {
 
     private static final String TAG = "StockDetailsFragment";
 
@@ -64,6 +77,7 @@ public class StockDetailsFragment extends Fragment {
 
     private View view;
 
+    private CardView stockNameCardView;
     private TextView stockSymbolTextView;
     private TextView stockNameTextView;
     private TextView stockPriceTextView;
@@ -72,6 +86,11 @@ public class StockDetailsFragment extends Fragment {
     private TextView stockOpenTextView;
     private TextView stockMarketCapTextView;
     private TextView stockVolumeTextView;
+
+    private NewsArticles newsArticles;
+    private NewsFeedFragment newsFeedFragment;
+
+    private APIResponseHandler APIResponseHandler;
 
     private OnStockDetailsFragmentInteractionListener listener;
 
@@ -102,6 +121,23 @@ public class StockDetailsFragment extends Fragment {
         // Required empty public constructor
     }
 
+
+/*====================================== Lifecycle Methods =======================================*/
+
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        Log.d(TAG, "OnAttach() fired");
+        try {
+            listener = (OnStockDetailsFragmentInteractionListener) activity;
+        }
+        catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnStockDetailsFragmentInteractionListener");
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,6 +152,10 @@ public class StockDetailsFragment extends Fragment {
             stockMarketCap = getArguments().getString(ARG_STOCK_MARKET_CAP);
             stockVolume = getArguments().getString(ARG_STOCK_VOLUME);
         }
+
+        APIResponseHandler = new APIResponseHandler(this);
+        newsArticles = new NewsArticles();
+        newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
     }
 
     @Override
@@ -210,6 +250,7 @@ public class StockDetailsFragment extends Fragment {
             }
         });
 
+        stockNameCardView = (CardView) view.findViewById(R.id.stock_name_color_box);
         stockSymbolTextView = (TextView) view.findViewById(R.id.stock_symbol);
         stockNameTextView = (TextView) view.findViewById(R.id.stock_name);
         stockPriceTextView = (TextView) view.findViewById(R.id.stock_price);
@@ -219,9 +260,93 @@ public class StockDetailsFragment extends Fragment {
         stockMarketCapTextView = (TextView) view.findViewById(R.id.stock_market_cap);
         stockVolumeTextView = (TextView) view.findViewById(R.id.stock_volume);
 
+        getChildFragmentManager().beginTransaction()
+                .add(R.id.news_feed_frag_container, newsFeedFragment)
+                .commit();
+
         updateView();
 
         return view;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(TAG, "onActivityCreated() fired");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart() fired");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume() fired");
+        updateNews();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause() fired");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop() fired");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView() fired");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() fired");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d(TAG, "OnDetach() fired");
+        listener = null;
+    }
+
+
+/*====================================== Listener Methods ========================================*/
+
+
+    @Override
+    public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId) {
+
+        switch (taskId) {
+            case MainActivity.NEWS_QUERY_ID:
+                newsArticles.parseNewsQueryJSONObject(jsonObject);
+                newsFeedFragment.updateRecyclerView();
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onAPIResponseHandlerError(String errorMsg) {
+        makeToast(errorMsg);
+    }
+
+
+/*====================================== General Methods =========================================*/
+
+
+    public String getStockSymbol() {
+        return stockSymbol;
     }
 
     public void update() {
@@ -236,49 +361,69 @@ public class StockDetailsFragment extends Fragment {
         stockMarketCap = stock.getStockMarketCap();
         stockVolume = stock.getStockVolume();
 
+        updateNews();
         updateView();
     }
 
     public void updateView() {
 
         Log.d(TAG, "updateView() fired");
+        stockNameCardView.setCardBackgroundColor(stock.getStockColorCode());
         stockSymbolTextView.setText(stockSymbol);
         stockNameTextView.setText(stockName);
+        stockNameTextView.setTextColor(0xFFFFFFFF);
         stockPriceTextView.setText(stockPrice);
         stockChangeTextView.setText(stockChange);
+        if (stock.getStockChange().startsWith("+")) {
+            stockChangeTextView.setTextColor(0xFF99CC00);
+        }
+        else if (stock.getStockChange().startsWith("-")) {
+            stockChangeTextView.setTextColor(0xFFFF4444);
+        }
         stockPrevCloseTextView.setText(stockPrevClose);
         stockOpenTextView.setText(stockOpen);
         stockMarketCapTextView.setText(stockMarketCap);
         stockVolumeTextView.setText(stockVolume);
     }
 
+    /**
+     * Updates the news list information. Launches an AsyncTask to retrieve a JSON news query.
+     */
+    protected void updateNews() {
+
+        if (hasConnection()) {
+            try {
+                String apiUrl = APIURLBuilder.getNewsQueryURL(getStockSymbol());
+                new APIRequestTask(APIResponseHandler, apiUrl, MainActivity.NEWS_QUERY_ID).execute().get();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            // Notify user of lack of network connection
+            makeToast("No network connection");
+        }
+    }
+
+    /**
+     * Checks for an internet connection.
+     *
+     * @return true if connection is found, otherwise false
+     */
+    private boolean hasConnection() {
+        ConnectivityManager connMgr = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        return (networkInfo != null && networkInfo.isConnected());
+    }
+
+    public void makeToast(String text) {
+        Toast.makeText(getActivity(), text, Toast.LENGTH_LONG).show();
+    }
+
     public void onSomeAction(Uri uri) {
         if (listener != null) {
             listener.onStockDetailsFragmentInteraction(uri);
         }
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        Log.d(TAG, "OnAttach() fired");
-        try {
-            listener = (OnStockDetailsFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnStockDetailsFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Log.d(TAG, "OnDetach() fired");
-        listener = null;
-    }
-
-    public String getStockSymbol() {
-        return stockSymbol;
     }
 
     /**
@@ -290,5 +435,4 @@ public class StockDetailsFragment extends Fragment {
     public interface OnStockDetailsFragmentInteractionListener {
         public void onStockDetailsFragmentInteraction(Uri uri);
     }
-
 }

@@ -9,6 +9,7 @@ package edu.temple.cis4350.bc.sia;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -375,7 +376,13 @@ public class MainActivity extends Activity implements
     }
 
     @Override
-    public void onNewsFeedFragmentInteraction(Uri uri) {
+    public void onNewsFeedFragmentNewsItemClick(String url) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
+    }
+
+    @Override
+    public void onHelpFragmentInteraction(Uri uri) {
 
     }
 

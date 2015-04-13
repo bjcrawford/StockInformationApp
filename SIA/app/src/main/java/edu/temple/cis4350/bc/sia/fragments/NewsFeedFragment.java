@@ -17,6 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import edu.temple.cis4350.bc.sia.MainActivity;
 import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
@@ -31,7 +34,7 @@ public class NewsFeedFragment extends Fragment implements
     private static final String TAG = "NewsFeedFragment";
 
     private View view;
-    private OnNewsFeedFragmentInteractionListener mListener;
+    private OnNewsFeedFragmentInteractionListener listener;
 
     private RecyclerView newsList;
     private NewsArticles newsArticles;
@@ -82,11 +85,11 @@ public class NewsFeedFragment extends Fragment implements
 
     /**
      * Handles calls to the parent activity.
-     * @param uri
+     * @param url
      */
-    public void onSomeAction(Uri uri) {
-        if (mListener != null) {
-            mListener.onNewsFeedFragmentInteraction(uri);
+    public void onArticleSelected(String url) {
+        if (listener != null) {
+            listener.onNewsFeedFragmentNewsItemClick(url);
         }
     }
 
@@ -94,7 +97,7 @@ public class NewsFeedFragment extends Fragment implements
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (OnNewsFeedFragmentInteractionListener) activity;
+            listener = (OnNewsFeedFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnNewsFeedFragmentInteractionListener");
@@ -104,7 +107,7 @@ public class NewsFeedFragment extends Fragment implements
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+        listener = null;
     }
 
     /**
@@ -114,7 +117,7 @@ public class NewsFeedFragment extends Fragment implements
      */
     @Override
     public void onNewsItemClick(View view, int position) {
-        ((MainActivity) getActivity()).makeToast(newsArticles.get(position).getLink());
+        onArticleSelected(newsArticles.get(position).getLink());
     }
 
     /**
@@ -124,7 +127,7 @@ public class NewsFeedFragment extends Fragment implements
      * activity.
      */
     public interface OnNewsFeedFragmentInteractionListener {
-        public void onNewsFeedFragmentInteraction(Uri uri);
+        public void onNewsFeedFragmentNewsItemClick(String url);
     }
 
     /**

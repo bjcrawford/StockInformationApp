@@ -11,6 +11,11 @@ package edu.temple.cis4350.bc.sia.newsarticle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class NewsArticle {
 
     private String title;
@@ -54,6 +59,20 @@ public class NewsArticle {
 
     public String getPubDate() {
         return pubDate;
+    }
+    public String getPubDateFormatted() {
+
+        Date date = null;
+
+        SimpleDateFormat format = new SimpleDateFormat("ccc, d MMM yyyy H:m:s zzz");
+        try {
+            date = format.parse(pubDate);
+        }
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return DateFormat.getDateTimeInstance().format(date);
     }
 
     public int getPosition() {

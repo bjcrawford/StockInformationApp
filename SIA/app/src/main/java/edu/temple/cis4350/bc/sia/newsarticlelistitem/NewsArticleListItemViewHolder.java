@@ -24,7 +24,7 @@ public class NewsArticleListItemViewHolder extends RecyclerView.ViewHolder {
 
     private View newsListItemView;
     private TextView newsTitle;
-    private TextView newsDesc;
+    private TextView newsPubDate;
 
     /**
      * A constructor for the NewsListItemViewHolder.
@@ -37,7 +37,7 @@ public class NewsArticleListItemViewHolder extends RecyclerView.ViewHolder {
         newsListItemView = v;
 
         newsTitle = (TextView) newsListItemView.findViewById(R.id.news_title);
-        newsDesc = (TextView) newsListItemView.findViewById(R.id.news_desc);
+        newsPubDate = (TextView) newsListItemView.findViewById(R.id.news_pub_date);
     }
 
     /**
@@ -48,7 +48,7 @@ public class NewsArticleListItemViewHolder extends RecyclerView.ViewHolder {
     public void bindStockListItem(NewsArticle na) {
 
         newsTitle.setText(na.getTitle());
-        newsDesc.setText(na.getDesc());
+        newsPubDate.setText(na.getPubDateFormatted());
     }
 
     /**

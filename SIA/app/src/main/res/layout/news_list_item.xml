@@ -26,11 +26,12 @@
                 android:text="@string/news_title" />
 
             <TextView
-                android:id="@+id/news_desc"
+                android:id="@+id/news_pub_date"
                 style="@style/Widget.CardItem.Description"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/news_desc"/>
+                android:layout_gravity="right"
+                android:text="@string/news_pub_date"/>
 
         </LinearLayout>
 

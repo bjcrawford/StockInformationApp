@@ -26,9 +26,9 @@
     <string name="stock_symbol_title">Symbol:</string>
     <string name="stock_price_title">Price:</string>
     <string name="stock_change_title">Change:</string>
-    <string name="stock_prev_close_title">Previous Close Price:</string>
-    <string name="stock_open_title">Open Price:</string>
-    <string name="stock_market_cap_title">Market Capitalization:</string>
+    <string name="stock_prev_close_title">Prev Close:</string>
+    <string name="stock_open_title">Open:</string>
+    <string name="stock_market_cap_title">Market Cap:</string>
     <string name="stock_volume_title">Volume:</string>
     <string name="placeholder">Placeholder</string>
 
@@ -74,6 +74,6 @@
                              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
     </string>
-
+    <string name="news_pub_date">Sun, 12 Apr 2015 18:04:09 GMT</string>
 
 </resources>
