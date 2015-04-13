@@ -279,11 +279,17 @@ public class MainActivity extends Activity implements
                 return true;
             case R.id.action_discard:
                 Log.d(TAG, "Discard selected");
+                if (currentFrag == STOCK_DETAILS_FRAG) {
+                    currentStockDetailsFragment = null;
+                    getActionBar().setTitle(R.string.news_feed_ab_title);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content_fragment_container, newsFeedFragment)
+                            .commit();
+                    currentFrag = NEWS_FEED_FRAG;
+                }
                 List<Stock> checked = stocks.getCheckedItems();
                 for (Stock s : checked) {
-                    int listPosition = s.getListPosition();
                     stocks.remove(s);
-                    //drawerStockList.getAdapter().notifyItemChanged(listPosition);
                 }
                 updateNews();
                 updateStocks();
