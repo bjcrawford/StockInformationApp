@@ -64,15 +64,15 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         stockPrice.setText(sli.getStockPrice());
         int resID;
         if (sli.getStockChange().startsWith("+")) {
-            stockChange.setTextColor(Color.parseColor("#99CC00"));
+            stockChange.setTextColor(0xFF99CC00);
             resID = R.drawable.plus_change;
         }
         else if (sli.getStockChange().startsWith("-")) {
-            stockChange.setTextColor(Color.parseColor("#FF4444"));
+            stockChange.setTextColor(0xFFFF4444);
             resID = R.drawable.minus_change;
         }
         else {
-            stockChange.setTextColor(Color.parseColor("#AAAAAA"));
+            stockChange.setTextColor(0xFFAAAAAA);
             resID = R.drawable.no_change;
         }
         stockChange.setText(sli.getStockChange());

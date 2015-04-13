@@ -296,13 +296,11 @@ public class MainActivity extends Activity implements
                 invalidateOptionsMenu();
                 return true;
             case R.id.action_news_feed:
-                makeToast("News Feed selected");
-                Log.d(TAG, "News Feed selected");
+                getActionBar().setTitle(R.string.news_feed_ab_title);
                 getFragmentManager().beginTransaction()
                         .replace(R.id.main_content_fragment_container, newsFeedFragment)
                         .commit();
                 currentFrag = NEWS_FEED_FRAG;
-                getActionBar().setTitle(R.string.news_feed_ab_title);
                 return true;
             case R.id.action_settings:
                 makeToast("Settings selected");
