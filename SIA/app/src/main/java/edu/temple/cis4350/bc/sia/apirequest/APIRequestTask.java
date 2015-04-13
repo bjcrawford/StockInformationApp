@@ -17,6 +17,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import edu.temple.cis4350.bc.sia.MainActivity;
+
 /**
  * An AsyncTask that handles requesting  data from various APIs.
  */
@@ -26,20 +28,12 @@ public class APIRequestTask extends AsyncTask<Void, Void, Void> {
 
     private Handler handler;
     private String apiUrl;
-    private int arg1id;
+    private int taskId;
 
-    public APIRequestTask(Handler handler, String apiUrl) {
+    public APIRequestTask(Handler handler, String apiUrl, int taskId) {
         this.handler = handler;
         this.apiUrl = apiUrl;
-        if (this.apiUrl.contains("quotes")) {
-            arg1id = 1;
-        }
-        else if (this.apiUrl.contains("headline")) {
-            arg1id = 2;
-        }
-        else if (this.apiUrl.contains("SymbolSuggest")) {
-            arg1id = 4;
-        }
+        this.taskId = taskId;
     }
 
     @Override
@@ -59,7 +53,7 @@ public class APIRequestTask extends AsyncTask<Void, Void, Void> {
             }
 
             // If the response is from the company search, we have to strip off the crap
-            if (arg1id == 4) {
+            if (taskId == MainActivity.COMPANY_QUERY_ID) {
                 totalResponse = totalResponse.replace("YAHOO.Finance.SymbolSuggest.ssCallback(", "");
                 totalResponse = totalResponse.replace(")", "");
             }
@@ -67,7 +61,7 @@ public class APIRequestTask extends AsyncTask<Void, Void, Void> {
             // Pass response to the handler
             JSONObject jsonObject = new JSONObject(totalResponse);
             Message msg = Message.obtain();
-            msg.arg1 = arg1id;
+            msg.arg1 = taskId;
             msg.obj = jsonObject;
             handler.sendMessage(msg);
         }

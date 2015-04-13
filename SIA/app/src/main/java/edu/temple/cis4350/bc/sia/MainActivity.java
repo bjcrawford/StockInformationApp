@@ -29,6 +29,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
 
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
@@ -57,6 +59,10 @@ public class MainActivity extends Activity implements
 
     private static final String TAG = "MainActivity";
     private static final String PREF_STOCKS_JSON = "PrefStocksJson";
+
+    public static final int STOCK_QUERY_ID = 1;
+    public static final int NEWS_QUERY_ID = 2;
+    public static final int COMPANY_QUERY_ID = 3;
 
     private static final int NEWS_FEED_FRAG = 1;
     private static final int STOCK_DETAILS_FRAG = 2;
@@ -397,7 +403,7 @@ public class MainActivity extends Activity implements
             if (hasConnection()) {
                 try {
                     String apiUrl = APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray());
-                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+                    new APIRequestTask(APIResponseHandler, apiUrl, STOCK_QUERY_ID).execute().get();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -421,7 +427,7 @@ public class MainActivity extends Activity implements
             if (hasConnection()) {
                 try {
                     String apiUrl = APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray());
-                    new APIRequestTask(APIResponseHandler, apiUrl).execute().get();
+                    new APIRequestTask(APIResponseHandler, apiUrl, NEWS_QUERY_ID).execute().get();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -436,94 +442,6 @@ public class MainActivity extends Activity implements
         }
     }
 
-    /**
-     * Parses a JSON stock query response. Individual JSON stock quotes are passed to the
-     * parseStockQuoteJSONObject() method. On finish, the current stock details fragment is
-     * updated.
-     * @param stockQueryJSONObject
-     */
-    public void parseStockQueryJSONObject(JSONObject stockQueryJSONObject) {
-        try {
-            JSONObject query = stockQueryJSONObject.getJSONObject("query");
-            int count = query.getInt("count");
-            JSONObject results = query.getJSONObject("results");
-
-            if (count > 1) {
-                JSONArray quotes = results.getJSONArray("quote");
-                for (int i = 0; i < count; i++) {
-                    parseStockQuoteJSONObject(quotes.getJSONObject(i));
-                }
-            }
-            else {
-                parseStockQuoteJSONObject(results.getJSONObject("quote"));
-            }
-
-            if (currentStockDetailsFragment != null) {
-                currentStockDetailsFragment.update();
-            }
-        }
-        catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    /**
-     * Parses a JSON stock quote response.
-     * @param stockQuoteJSONObject
-     */
-    protected void parseStockQuoteJSONObject(JSONObject stockQuoteJSONObject) {
-        try {
-            String symbol = stockQuoteJSONObject.getString("symbol");
-            String name = stockQuoteJSONObject.getString("Name");
-            String price = stockQuoteJSONObject.getString("LastTradePriceOnly");
-            String change = stockQuoteJSONObject.getString("PercentChange");
-            String prevClosePrice = stockQuoteJSONObject.getString("PreviousClose");
-            String openPrice = stockQuoteJSONObject.getString("Open");
-            String marketCap = stockQuoteJSONObject.getString("MarketCapitalization");
-            String volume = stockQuoteJSONObject.getString("Volume");
-
-            Stock stock = stocks.get(symbol);
-            if (stock != null) {
-                stock.setStockSymbol(symbol);
-                stock.setStockName(name);
-                stock.setStockPrice(price);
-                stock.setStockChange(change);
-                stock.setStockPrevClosePrice(prevClosePrice);
-                stock.setStockOpenPrice(openPrice);
-                stock.setStockMarketCap(marketCap);
-                stock.setStockVolume(volume);
-                drawerStockList.getAdapter().notifyItemChanged(stock.getListPosition());
-            }
-            else {
-                Log.d(TAG, "Stock " + symbol + " was not found in the stock list");
-            }
-        }
-        catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void parseNewsQueryJSONObject(JSONObject newsQueryJSONObject) {
-        try {
-            JSONArray item = newsQueryJSONObject.getJSONObject("query")
-                    .getJSONObject("results")
-                    .getJSONObject("rss")
-                    .getJSONObject("channel")
-                    .getJSONArray("item");
-
-            newsArticles.clear();
-            for (int i = 0; i < item.length(); i++) {
-                newsArticles.add(new NewsArticle(item.getJSONObject(i)));
-            }
-            newsFeedFragment.updateRecyclerView();
-
-        }
-        catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void parseCompanySearchJSONObject(JSONObject companySearchJSONObject) {
         // Stub
         Log.d(TAG, companySearchJSONObject.toString());
@@ -533,4 +451,31 @@ public class MainActivity extends Activity implements
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId) {
+
+        switch (taskId) {
+            case STOCK_QUERY_ID:
+                stocks.parseStockQueryJSONObject(jsonObject);
+                drawerStockList.getAdapter().notifyDataSetChanged();
+                if (currentStockDetailsFragment != null) {
+                    currentStockDetailsFragment.update();
+                }
+                break;
+            case NEWS_QUERY_ID:
+                newsArticles.parseNewsQueryJSONObject(jsonObject);
+                newsFeedFragment.updateRecyclerView();
+                break;
+            case COMPANY_QUERY_ID:
+                parseCompanySearchJSONObject(jsonObject);
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onAPIResponseHandlerError(String errorMsg) {
+        makeToast(errorMsg);
+    }
 }

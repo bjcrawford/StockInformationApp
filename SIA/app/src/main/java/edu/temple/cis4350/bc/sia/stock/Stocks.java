@@ -103,6 +103,12 @@ public class Stocks {
         return true;
     }
 
+    /**
+     * Removes a stock from the list
+     *
+     * @param stock The stock to remove
+     * @return True if removed, otherwise false
+     */
     public boolean remove(Stock stock) {
         for (Stock s : stocks) {
             if (stock.getStockSymbol().equals(s.getStockSymbol())) {
@@ -153,6 +159,10 @@ public class Stocks {
         return null;
     }
 
+    /**
+     * Updates the list position associated with each stock object to match
+     * its position in the stock list
+     */
     public void updateStockListPositions() {
         for (int i = 0; i < stocks.size(); i++) {
             stocks.get(i).setListPosition(i);
@@ -194,14 +204,29 @@ public class Stocks {
         return stockSymbols;
     }
 
+    /**
+     * Returns the selectable state of the stock list
+     *
+     * @return True is selectable, otherwise false
+     */
     public boolean isSelectable() {
         return isSelectable;
     }
 
+    /**
+     * Sets the selectable state of the stock list
+     *
+     * @param selectable True if selectable, false otherwise
+     */
     public void setSelectable(boolean selectable) {
         isSelectable = selectable;
     }
 
+    /**
+     * Returns true if any stocks are checked
+     *
+     * @return True if any checked, otherwise false
+     */
     public boolean areAnyChecked() {
         for (int i = 0; i < stocks.size(); i++) {
             if (stocks.get(i).isItemChecked()) {
@@ -213,12 +238,22 @@ public class Stocks {
         return false;
     }
 
+    /**
+     * Set the checked state of all stocks
+     *
+     * @param isChecked The checked state
+     */
     public void setAllChecked(boolean isChecked) {
         for (int i = 0; i < stocks.size(); i++) {
             stocks.get(i).setItemChecked(isChecked);
         }
     }
 
+    /**
+     * Returns a list of all the checked stocks
+     *
+     * @return A list of checked stocks
+     */
     public List<Stock> getCheckedItems() {
         ArrayList<Stock> checked = new ArrayList<Stock>();
         for (int i = 0; i < stocks.size(); i++) {
@@ -227,5 +262,71 @@ public class Stocks {
         }
 
         return checked;
+    }
+
+
+
+    /**
+     * Parses a JSON stock query response. Individual JSON stock quotes are passed to the
+     * parseStockQuoteJSONObject() method. On finish, the current stock details fragment is
+     * updated.
+     * @param stockQueryJSONObject
+     */
+    public void parseStockQueryJSONObject(JSONObject stockQueryJSONObject) {
+        try {
+            JSONObject query = stockQueryJSONObject.getJSONObject("query");
+            int count = query.getInt("count");
+            JSONObject results = query.getJSONObject("results");
+
+            if (count > 1) {
+                JSONArray quotes = results.getJSONArray("quote");
+                for (int i = 0; i < count; i++) {
+                    parseStockQuoteJSONObject(quotes.getJSONObject(i));
+                }
+            }
+            else {
+                parseStockQuoteJSONObject(results.getJSONObject("quote"));
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    /**
+     * Parses a JSON stock quote response.
+     * @param stockQuoteJSONObject
+     */
+    private void parseStockQuoteJSONObject(JSONObject stockQuoteJSONObject) {
+        try {
+            String symbol = stockQuoteJSONObject.getString("symbol");
+            String name = stockQuoteJSONObject.getString("Name");
+            String price = stockQuoteJSONObject.getString("LastTradePriceOnly");
+            String change = stockQuoteJSONObject.getString("PercentChange");
+            String prevClosePrice = stockQuoteJSONObject.getString("PreviousClose");
+            String openPrice = stockQuoteJSONObject.getString("Open");
+            String marketCap = stockQuoteJSONObject.getString("MarketCapitalization");
+            String volume = stockQuoteJSONObject.getString("Volume");
+
+            Stock stock = this.get(symbol);
+            if (stock != null) {
+                stock.setStockSymbol(symbol);
+                stock.setStockName(name);
+                stock.setStockPrice(price);
+                stock.setStockChange(change);
+                stock.setStockPrevClosePrice(prevClosePrice);
+                stock.setStockOpenPrice(openPrice);
+                stock.setStockMarketCap(marketCap);
+                stock.setStockVolume(volume);
+            }
+            else {
+                Log.d(TAG, "Stock " + symbol + " was not found in the stock list");
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

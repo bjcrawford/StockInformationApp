@@ -7,7 +7,6 @@
 
 package edu.temple.cis4350.bc.sia.apirequest;
 
-import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 
@@ -22,36 +21,56 @@ public class APIResponseHandler extends Handler {
 
     private static final String TAG = "APIResponseHandler";
 
-    private Context context;
+    private OnAPIResponseHandlerInteractionListener listener;
 
-    public APIResponseHandler(Context context) {
-        this.context = context;
+    public APIResponseHandler(OnAPIResponseHandlerInteractionListener listener) {
+        this.listener = listener;
     }
 
     @Override
     public void handleMessage(Message msg) {
         switch (msg.arg1) {
 
-            case 1: // Successful stock query JSON response received
+            case MainActivity.STOCK_QUERY_ID:
                 JSONObject stockQueryJSONObject = (JSONObject) msg.obj;
-                // Pass the response to the main activity for processing
-                ((MainActivity) context).parseStockQueryJSONObject(stockQueryJSONObject);
+                onResponse(stockQueryJSONObject, MainActivity.STOCK_QUERY_ID);
                 break;
 
-            case 2: // Successful news query JSON response received
+            case MainActivity.NEWS_QUERY_ID:
                 JSONObject newsQueryJSONObject = (JSONObject) msg.obj;
-                // Pass the response to the main activity for processing
-                ((MainActivity) context).parseNewsQueryJSONObject(newsQueryJSONObject);
+                onResponse(newsQueryJSONObject, MainActivity.NEWS_QUERY_ID);
                 break;
 
-            case 4: // Successful company search query response received
+            case MainActivity.COMPANY_QUERY_ID:
                 JSONObject companySearchJSONObject = (JSONObject) msg.obj;
-                // Pass the response to the main activity for processing
-                ((MainActivity) context).parseCompanySearchJSONObject(companySearchJSONObject);
+                onResponse(companySearchJSONObject, MainActivity.COMPANY_QUERY_ID);
 
-            default: // Invalid handler message format
-                ((MainActivity) context).makeToast("Error: Invalid handler message format");
+            default:
+                onError(TAG + " Error: Invalid handler message format");
                 break;
         }
+    }
+
+
+    public void onResponse(JSONObject jsonObject, int taskId) {
+        if (listener != null) {
+            listener.onAPIResponseHandlerInteraction(jsonObject, taskId);
+        }
+    }
+
+    public void onError(String errorMsg) {
+        if (listener != null) {
+            listener.onAPIResponseHandlerError(errorMsg);
+        }
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * handler to allow an interaction in this handler to be communicated
+     * to the activity.
+     */
+    public interface OnAPIResponseHandlerInteractionListener {
+        public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId);
+        public void onAPIResponseHandlerError(String errorMsg);
     }
 }

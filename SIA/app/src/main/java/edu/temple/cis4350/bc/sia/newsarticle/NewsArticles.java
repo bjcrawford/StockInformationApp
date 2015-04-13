@@ -7,6 +7,10 @@
 
 package edu.temple.cis4350.bc.sia.newsarticle;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,5 +60,24 @@ public class NewsArticles {
 
     public void clear() {
         newsArticles.clear();
+    }
+
+    public void parseNewsQueryJSONObject(JSONObject newsQueryJSONObject) {
+        try {
+            JSONArray item = newsQueryJSONObject.getJSONObject("query")
+                    .getJSONObject("results")
+                    .getJSONObject("rss")
+                    .getJSONObject("channel")
+                    .getJSONArray("item");
+
+            newsArticles.clear();
+            for (int i = 0; i < item.length(); i++) {
+                newsArticles.add(new NewsArticle(item.getJSONObject(i)));
+            }
+
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
