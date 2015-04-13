@@ -32,6 +32,27 @@
     <string name="stock_volume_title">Volume:</string>
     <string name="placeholder">Placeholder</string>
 
+    <!-- Settings strings -->
+    <string name="settings_ab_title">Settings</string>
+
+    <!-- Help strings -->
+    <string name="help_ab_title">Help</string>
+    <string name="help_intro">Welcome to the Stock Information Application.</string>
+    <string name="help_stock_list_drawer_title">The Stock List Drawer</string>
+    <string name="help_stock_list_drawer_open">To get started, open the stock list drawer by swiping from the left
+                                   edge of the screen or pressing:</string>
+    <string name="help_stock_list_drawer_add">You can add a stock to the stock list by using the floating
+                                       action button:</string>
+    <string name="help_stock_list_drawer_remove">To remove a stock from the list, long press on the stock
+                                          to select it (you can select multiple stocks at once) and
+                                          then press:</string>
+    <string name="help_stock_list_drawer_close">You can close the stock list drawer by swiping from right, tapping
+                                         outside of the stock list, pressing the back button, or
+                                         pressing:</string>
+    <string name="help_stock_detail_page_title">The Stock Detail Page</string>
+    <string name="help_stock_detail_page_open">To open a stock\'s detail page, click on the stock from
+                                               inside the stock list drawer:</string>
+
     <!-- Add stock dialog strings -->
     <string name="add_stock_dialog_title">Add Stock</string>
     <string name="stock_name_input_title">Stock:</string>

@@ -34,6 +34,7 @@ import java.util.List;
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
 import edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton;
 import edu.temple.cis4350.bc.sia.fragments.AddStockDialogFragment;
+import edu.temple.cis4350.bc.sia.fragments.HelpFragment;
 import edu.temple.cis4350.bc.sia.fragments.NewsFeedFragment;
 import edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
@@ -50,13 +51,17 @@ public class MainActivity extends Activity implements
         FloatingActionButton.OnFABClickListener,
         AddStockDialogFragment.OnAddStockListener,
         StockDetailsFragment.OnStockDetailsFragmentInteractionListener,
-        NewsFeedFragment.OnNewsFeedFragmentInteractionListener {
+        NewsFeedFragment.OnNewsFeedFragmentInteractionListener,
+        HelpFragment.OnHelpFragmentInteractionListener,
+        APIResponseHandler.OnAPIResponseHandlerInteractionListener {
 
     private static final String TAG = "MainActivity";
     private static final String PREF_STOCKS_JSON = "PrefStocksJson";
 
     private static final int NEWS_FEED_FRAG = 1;
     private static final int STOCK_DETAILS_FRAG = 2;
+    private static final int SETTINGS_FRAG = 3;
+    private static final int HELP_FRAG = 4;
 
     private DrawerLayout drawerLayout;
     private RelativeLayout drawerView;
@@ -69,6 +74,7 @@ public class MainActivity extends Activity implements
     private int currentFrag;
     private StockDetailsFragment currentStockDetailsFragment;
     private NewsFeedFragment newsFeedFragment;
+    private HelpFragment helpFragment;
 
 
     private RecyclerView drawerStockList;
@@ -110,6 +116,7 @@ public class MainActivity extends Activity implements
 
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
+        helpFragment = HelpFragment.newInstance();
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
@@ -137,6 +144,11 @@ public class MainActivity extends Activity implements
                         break;
                     case STOCK_DETAILS_FRAG:
                         getActionBar().setTitle(currentStockDetailsFragment.getStockSymbol());
+                        break;
+                    case SETTINGS_FRAG:
+                        getActionBar().setTitle(R.string.settings_ab_title);
+                    case HELP_FRAG:
+                        getActionBar().setTitle(R.string.help_ab_title);
                         break;
                 }
 
@@ -169,7 +181,6 @@ public class MainActivity extends Activity implements
 
         drawerLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
-
     }
 
     @Override
@@ -182,13 +193,22 @@ public class MainActivity extends Activity implements
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart() fired");
-        updateStocks();
-        updateNews();
-        getActionBar().setTitle(R.string.news_feed_ab_title);
-        getFragmentManager().beginTransaction()
-                .replace(R.id.main_content_fragment_container, newsFeedFragment)
-                .commit();
-        currentFrag = NEWS_FEED_FRAG;
+        if (stocks.size() == 0) {
+            getActionBar().setTitle(R.string.help_ab_title);
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.main_content_fragment_container, helpFragment)
+                    .commit();
+            currentFrag = HELP_FRAG;
+        }
+        else {
+            updateStocks();
+            updateNews();
+            getActionBar().setTitle(R.string.news_feed_ab_title);
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.main_content_fragment_container, newsFeedFragment)
+                    .commit();
+            currentFrag = NEWS_FEED_FRAG;
+        }
     }
 
     @Override
@@ -276,8 +296,11 @@ public class MainActivity extends Activity implements
                 Log.d(TAG, "Settings selected");
                 return true;
             case R.id.action_help:
-                makeToast("Help selected");
-                Log.d(TAG, "Help selected");
+                getActionBar().setTitle(R.string.help_ab_title);
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.main_content_fragment_container, helpFragment)
+                        .commit();
+                currentFrag = HELP_FRAG;
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

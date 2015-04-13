@@ -1,0 +1,188 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.temple.cis4350.bc.sia.fragments.HelpFragment">
+
+
+    <TextView
+        android:id="@+id/help_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/help_intro"/>
+
+    <View style="@style/Divider"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/help_stock_list_drawer"
+                style="@style/Widget.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/help_stock_list_drawer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="30sp"
+                        android:textColor="@color/teal"
+                        android:text="@string/help_stock_list_drawer_title"/>
+
+
+                    <TextView
+                        android:id="@+id/help_stock_list_drawer_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/help_stock_list_drawer_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="20sp"
+                        android:text="@string/help_stock_list_drawer_open"/>
+
+                    <ImageView
+                        android:id="@+id/help_nav_drawer_ind"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/help_stock_list_drawer_open"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/nav_drawer_indicator"/>
+
+                    <TextView
+                        android:id="@+id/help_stock_list_drawer_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/help_nav_drawer_ind"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="20sp"
+                        android:text="@string/help_stock_list_drawer_add"/>
+
+                        <edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/help_fab"
+                            android:layout_width="@dimen/fab_size_small"
+                            android:layout_height="@dimen/fab_size_small"
+                            android:layout_below="@+id/help_stock_list_drawer_add"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:elevation="@dimen/fab_elevation"
+                            android:background="@drawable/fab_background"
+                            android:stateListAnimator="@animator/fab_anim">
+
+                            <ImageView
+                                android:layout_width="@dimen/fab_icon_size"
+                                android:layout_height="@dimen/fab_icon_size"
+                                android:src="@drawable/fab_icons"
+                                android:layout_gravity="center"
+                                android:duplicateParentState="true"/>
+
+                        </edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton>
+
+                    <TextView
+                        android:id="@+id/help_stock_list_drawer_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/help_fab"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="20sp"
+                        android:text="@string/help_stock_list_drawer_remove"/>
+
+                    <ImageView
+                        android:id="@+id/help_discard"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/help_stock_list_drawer_remove"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_action_discard"/>
+
+                    <TextView
+                        android:id="@+id/help_stock_list_drawer_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/help_discard"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="20sp"
+                        android:text="@string/help_stock_list_drawer_close"/>
+
+                    <ImageView
+                        android:id="@+id/help_nav_drawer_ind_back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/help_stock_list_drawer_close"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/nav_drawer_indicator_back"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/help_stock_detail_page"
+                style="@style/Widget.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/help_stock_list_drawer">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/help_stock_detail_page_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="30sp"
+                        android:textColor="@color/teal"
+                        android:text="@string/help_stock_detail_page_title"/>
+
+                    <TextView
+                        android:id="@+id/help_stock_detail_page_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/help_stock_detail_page_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="20sp"
+                        android:text="@string/help_stock_detail_page_open"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
