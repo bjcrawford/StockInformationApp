@@ -39,6 +39,7 @@ import edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton;
 import edu.temple.cis4350.bc.sia.fragments.AddStockDialogFragment;
 import edu.temple.cis4350.bc.sia.fragments.HelpFragment;
 import edu.temple.cis4350.bc.sia.fragments.NewsFeedFragment;
+import edu.temple.cis4350.bc.sia.fragments.SettingsFragment;
 import edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
@@ -65,6 +66,9 @@ public class MainActivity extends Activity implements
     public static final int NEWS_QUERY_ID = 2;
     public static final int COMPANY_QUERY_ID = 3;
 
+    private static final String FRAG_BUNDLE_KEY = "FragBundleKey";
+    private static final String STOCK_BUNDLE_KEY = "StockBundleKey";
+
     private static final int NEWS_FEED_FRAG = 1;
     private static final int STOCK_DETAILS_FRAG = 2;
     private static final int SETTINGS_FRAG = 3;
@@ -81,6 +85,7 @@ public class MainActivity extends Activity implements
     private int currentFrag;
     private StockDetailsFragment currentStockDetailsFragment;
     private NewsFeedFragment newsFeedFragment;
+    private SettingsFragment settingsFragment;
     private HelpFragment helpFragment;
 
 
@@ -124,6 +129,7 @@ public class MainActivity extends Activity implements
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
         helpFragment = HelpFragment.newInstance();
+        settingsFragment = SettingsFragment.newInstance();
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
@@ -188,24 +194,51 @@ public class MainActivity extends Activity implements
 
         drawerLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
-    }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(TAG, "onRestart() fired");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG, "onStart() fired");
         if (stocks.size() == 0) {
             getActionBar().setTitle(R.string.help_ab_title);
             getFragmentManager().beginTransaction()
                     .replace(R.id.main_content_fragment_container, helpFragment)
                     .commit();
             currentFrag = HELP_FRAG;
+        }
+        else if (savedInstanceState != null) {
+            updateStocks();
+            updateNews();
+            switch (savedInstanceState.getInt(FRAG_BUNDLE_KEY)) {
+                case STOCK_DETAILS_FRAG:
+                    Stock s = stocks.get(savedInstanceState.getString(STOCK_BUNDLE_KEY));
+                    currentStockDetailsFragment = StockDetailsFragment.newInstance(s);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
+                            .commit();
+                    currentFrag = STOCK_DETAILS_FRAG;
+                    getActionBar().setTitle(currentStockDetailsFragment.getStockSymbol());
+                    break;
+                case NEWS_FEED_FRAG:
+                    getActionBar().setTitle(R.string.news_feed_ab_title);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content_fragment_container, newsFeedFragment)
+                            .commit();
+                    currentFrag = NEWS_FEED_FRAG;
+                    break;
+                case SETTINGS_FRAG:
+                    getActionBar().setTitle(R.string.settings_ab_title);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content_fragment_container, settingsFragment)
+                            .commit();
+                    currentFrag = SETTINGS_FRAG;
+                    break;
+                case HELP_FRAG:
+                    getActionBar().setTitle(R.string.help_ab_title);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content_fragment_container, helpFragment)
+                            .commit();
+                    currentFrag = HELP_FRAG;
+                    break;
+                default:
+                    break;
+            }
         }
         else {
             updateStocks();
@@ -219,9 +252,31 @@ public class MainActivity extends Activity implements
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart() fired");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart() fired");
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume() fired");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        Log.d(TAG, "onSaveInstanceState() fired");
+        savedInstanceState.putInt(FRAG_BUNDLE_KEY, currentFrag);
+        if (currentStockDetailsFragment != null) {
+            savedInstanceState.putString(STOCK_BUNDLE_KEY, currentStockDetailsFragment.getStockSymbol());
+        }
     }
 
     @Override
@@ -240,9 +295,6 @@ public class MainActivity extends Activity implements
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy() fired");
-        this.getPreferences(Context.MODE_PRIVATE).edit()
-                .putString(PREF_STOCKS_JSON, stocks.getStockJSONArray().toString())
-                .commit();
     }
 
 /*==================================== Options Menu Methods ======================================*/
@@ -303,8 +355,11 @@ public class MainActivity extends Activity implements
                 currentFrag = NEWS_FEED_FRAG;
                 return true;
             case R.id.action_settings:
-                makeToast("Settings selected");
-                Log.d(TAG, "Settings selected");
+                getActionBar().setTitle(R.string.settings_ab_title);
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.main_content_fragment_container, settingsFragment)
+                        .commit();
+                currentFrag = SETTINGS_FRAG;
                 return true;
             case R.id.action_help:
                 getActionBar().setTitle(R.string.help_ab_title);
@@ -363,10 +418,12 @@ public class MainActivity extends Activity implements
         if (!stockName.equals("")) {
             if (stockName.endsWith("*")) { // Input from auto complete, parse out stock symbol
                 String words[] = stockName.split(" ");
-                //makeToast("Selected: " + words[0]);
                 stocks.add(new Stock(words[0], stockColor, stocks.size()));
                 updateStocks();
                 updateNews();
+                this.getPreferences(Context.MODE_PRIVATE).edit()
+                        .putString(PREF_STOCKS_JSON, stocks.getStockJSONArray().toString())
+                        .commit();
             }
             else {
                 makeToast("Please make selection from the auto complete suggestions.");
