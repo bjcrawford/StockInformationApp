@@ -45,6 +45,7 @@ public class StockDetailsFragment extends Fragment implements
     private static final String TAG = "StockDetailsFragment";
 
     private static final String ARG_STOCK_SYMBOL = "stockSymbol";
+    private static final String ARG_STOCK_COLOR = "stockColor";
     private static final String ARG_STOCK_NAME = "stockName";
     private static final String ARG_STOCK_PRICE = "stockPrice";
     private static final String ARG_STOCK_CHANGE = "stockChange";
@@ -67,6 +68,7 @@ public class StockDetailsFragment extends Fragment implements
     private ArrayList<TextView> chartControls;
 
     private String stockSymbol;
+    private int stockColor;
     private String stockName;
     private String stockPrice;
     private String stockChange;
@@ -86,6 +88,8 @@ public class StockDetailsFragment extends Fragment implements
     private TextView stockOpenTextView;
     private TextView stockMarketCapTextView;
     private TextView stockVolumeTextView;
+    private View stockDivider1;
+    private View stockDivider2;
 
     private NewsArticles newsArticles;
     private NewsFeedFragment newsFeedFragment;
@@ -106,6 +110,7 @@ public class StockDetailsFragment extends Fragment implements
         fragment.stock = stock;
         Bundle args = new Bundle();
         args.putString(ARG_STOCK_SYMBOL, stock.getStockSymbol());
+        args.putInt(ARG_STOCK_COLOR, stock.getStockColorCode());
         args.putString(ARG_STOCK_NAME, stock.getStockName());
         args.putString(ARG_STOCK_PRICE, stock.getStockPrice());
         args.putString(ARG_STOCK_CHANGE, stock.getStockChange());
@@ -144,6 +149,7 @@ public class StockDetailsFragment extends Fragment implements
         Log.d(TAG, "onCreate() fired");
         if (getArguments() != null) {
             stockSymbol = getArguments().getString(ARG_STOCK_SYMBOL);
+            stockColor = getArguments().getInt(ARG_STOCK_COLOR);
             stockName = getArguments().getString(ARG_STOCK_NAME);
             stockPrice = getArguments().getString(ARG_STOCK_PRICE);
             stockChange = getArguments().getString(ARG_STOCK_CHANGE);
@@ -214,7 +220,7 @@ public class StockDetailsFragment extends Fragment implements
             }
         });
 
-        chartControls.get(0).setTextColor(0xFF000000);
+        chartControls.get(0).setTextColor(stockColor);
 
         new DownloadImageTask(chart1d).execute("https://chart.yahoo.com/z?t=1d&s=" + stockSymbol);
         new DownloadImageTask(chart5d).execute("https://chart.yahoo.com/z?t=5d&s=" + stockSymbol);
@@ -240,7 +246,7 @@ public class StockDetailsFragment extends Fragment implements
             public void onPageSelected(int position) {
                 Log.d(TAG, "Page " + position + " selected");
                 for (int i = 0; i < chartControls.size(); i++) {
-                    chartControls.get(i).setTextColor(i == position ? 0xFF000000 : 0xFF999999);
+                    chartControls.get(i).setTextColor(i == position ? stockColor : 0xFF999999);
                 }
             }
 
@@ -259,6 +265,8 @@ public class StockDetailsFragment extends Fragment implements
         stockOpenTextView = (TextView) view.findViewById(R.id.stock_open);
         stockMarketCapTextView = (TextView) view.findViewById(R.id.stock_market_cap);
         stockVolumeTextView = (TextView) view.findViewById(R.id.stock_volume);
+        stockDivider1 = view.findViewById(R.id.stock_detail_divider1);
+        stockDivider2 = view.findViewById(R.id.stock_detail_divider2);
 
         getChildFragmentManager().beginTransaction()
                 .add(R.id.news_feed_frag_container, newsFeedFragment)
@@ -353,6 +361,7 @@ public class StockDetailsFragment extends Fragment implements
 
         Log.d(TAG, "update() fired");
         stockSymbol = stock.getStockSymbol();
+        stockColor = stock.getStockColorCode();
         stockName = stock.getStockName();
         stockPrice = stock.getStockPrice();
         stockChange = stock.getStockChange();
@@ -368,22 +377,26 @@ public class StockDetailsFragment extends Fragment implements
     public void updateView() {
 
         Log.d(TAG, "updateView() fired");
-        stockNameCardView.setCardBackgroundColor(stock.getStockColorCode());
+        stockNameCardView.setCardBackgroundColor(stockColor);
+        stockNameCardView.setCardBackgroundColor(stockColor);
         stockSymbolTextView.setText(stockSymbol);
         stockNameTextView.setText(stockName);
         stockNameTextView.setTextColor(0xFFFFFFFF);
         stockPriceTextView.setText(stockPrice);
         stockChangeTextView.setText(stockChange);
-        if (stock.getStockChange().startsWith("+")) {
+        if (stockChange.startsWith("+")) {
             stockChangeTextView.setTextColor(0xFF99CC00);
-        }
-        else if (stock.getStockChange().startsWith("-")) {
+        } else if (stockChange.startsWith("-")) {
             stockChangeTextView.setTextColor(0xFFFF4444);
         }
         stockPrevCloseTextView.setText(stockPrevClose);
         stockOpenTextView.setText(stockOpen);
         stockMarketCapTextView.setText(stockMarketCap);
         stockVolumeTextView.setText(stockVolume);
+        if (stockDivider1 != null) {
+            stockDivider1.setBackgroundColor(stockColor);
+        }
+        stockDivider2.setBackgroundColor(stockColor);
     }
 
     /**

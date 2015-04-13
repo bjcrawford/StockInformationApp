@@ -1,0 +1,287 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment">
+
+
+    <android.support.v7.widget.CardView
+        style="@style/Widget.CardColorBox"
+        android:id="@+id/stock_name_color_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/stock_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/placeholder"
+            android:textSize="35sp" />
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/stock_symbol_and_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stock_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/placeholder"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stock_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/placeholder"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/stock_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/placeholder"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/stock_detail_divider1"
+        style="@style/Divider"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.60">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager
+                android:id="@+id/chart_viewpager"
+                android:layout_width="330dp"
+                android:layout_height="186dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+            </edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager>
+
+            <LinearLayout
+                android:id="@+id/chart_viewpager_controls"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_below="@+id/chart_viewpager"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/chart_viewpager_controls_1d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FF999999"
+                    android:text="@string/stock_chart_control_1d"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/chart_viewpager_controls_5d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FF999999"
+                    android:text="@string/stock_chart_control_5d"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <TextView
+                    android:id="@+id/chart_viewpager_controls_1m"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FF999999"
+                    android:text="@string/stock_chart_control_1m"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <TextView
+                    android:id="@+id/chart_viewpager_controls_6m"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FF999999"
+                    android:text="@string/stock_chart_control_6m"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <TextView
+                    android:id="@+id/chart_viewpager_controls_1y"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FF999999"
+                    android:text="@string/stock_chart_control_1y"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chart_viewpager_controls"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stock_open_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/stock_open_title"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/stock_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/placeholder"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/stock_prev_close_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/stock_prev_close_title"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/stock_prev_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/placeholder"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stock_market_cap_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/stock_market_cap_title"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/stock_market_cap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/placeholder"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/stock_volume_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/stock_volume_title"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/stock_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/placeholder"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/stock_detail_divider2"
+        style="@style/Divider"/>
+
+    <FrameLayout
+        android:id="@+id/news_feed_frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.40">
+
+    </FrameLayout>
+
+</LinearLayout>
