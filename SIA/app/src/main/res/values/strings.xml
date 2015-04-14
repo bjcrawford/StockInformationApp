@@ -34,6 +34,17 @@
 
     <!-- Settings strings -->
     <string name="settings_ab_title">Settings</string>
+    <string name="settings_back_button">Back</string>
+    <string name="settings_dialog_title">Settings</string>
+    <string name="settings_category_main">Main Prefs</string>
+    <string name="settings_refresh_rate">Auto Refresh:</string>
+    <string name="settings_refresh_default">15</string>
+    <string name="settings_refresh_radio_1">5 Seconds</string>
+    <string name="settings_refresh_radio_2">15 Seconds</string>
+    <string name="settings_refresh_radio_3">30 Seconds</string>
+    <string name="settings_refresh_radio_4">45 Seconds</string>
+    <string name="settings_refresh_radio_5">60 Seconds</string>
+    <string name="settings_refresh_radio_6">Manual</string>
 
     <!-- Help strings -->
     <string name="help_ab_title">Help</string>

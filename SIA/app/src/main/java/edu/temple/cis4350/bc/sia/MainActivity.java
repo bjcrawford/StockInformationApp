@@ -10,10 +10,12 @@ package edu.temple.cis4350.bc.sia;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -30,25 +32,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.List;
+import java.util.Timer;
 
 import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
 import edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton;
 import edu.temple.cis4350.bc.sia.fragments.AddStockDialogFragment;
 import edu.temple.cis4350.bc.sia.fragments.HelpFragment;
 import edu.temple.cis4350.bc.sia.fragments.NewsFeedFragment;
-import edu.temple.cis4350.bc.sia.fragments.SettingsFragment;
+import edu.temple.cis4350.bc.sia.fragments.SettingsDialogFragment;
 import edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment;
-import edu.temple.cis4350.bc.sia.newsarticle.NewsArticle;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
 import edu.temple.cis4350.bc.sia.stock.Stocks;
 import edu.temple.cis4350.bc.sia.stocklistitem.StockListItemAdapter;
 import edu.temple.cis4350.bc.sia.apirequest.APIResponseHandler;
 import edu.temple.cis4350.bc.sia.apirequest.APIRequestTask;
-
+import edu.temple.cis4350.bc.sia.timertask.RefreshTimerTask;
 
 public class MainActivity extends Activity implements
         StockListItemAdapter.OnStockListItemClickListener,
@@ -57,7 +57,9 @@ public class MainActivity extends Activity implements
         StockDetailsFragment.OnStockDetailsFragmentInteractionListener,
         NewsFeedFragment.OnNewsFeedFragmentInteractionListener,
         HelpFragment.OnHelpFragmentInteractionListener,
-        APIResponseHandler.OnAPIResponseHandlerInteractionListener {
+        APIResponseHandler.OnAPIResponseHandlerInteractionListener,
+        RefreshTimerTask.OnRefreshTimerTaskInteractionListener,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final String TAG = "MainActivity";
     private static final String PREF_STOCKS_JSON = "PrefStocksJson";
@@ -74,26 +76,32 @@ public class MainActivity extends Activity implements
     private static final int SETTINGS_FRAG = 3;
     private static final int HELP_FRAG = 4;
 
+    public static final String KEY_PREF_REFRESH_RATE = "pref_refresh_rate";
+    public static final String VALUE_PREF_REFRESH_5 = "5";
+    public static final String VALUE_PREF_REFRESH_15 = "15";
+    public static final String VALUE_PREF_REFRESH_30 = "30";
+    public static final String VALUE_PREF_REFRESH_45 = "45";
+    public static final String VALUE_PREF_REFRESH_60 = "60";
+    public static final String VALUE_PREF_REFRESH_0 = "0";
+
     private DrawerLayout drawerLayout;
     private RelativeLayout drawerView;
-    private ActionBarDrawerToggle drawerToggle;
+    private RecyclerView drawerStockList;
     private FloatingActionButton drawerFab;
-
+    private ActionBarDrawerToggle drawerToggle;
 
     private APIResponseHandler APIResponseHandler;
 
     private int currentFrag;
     private StockDetailsFragment currentStockDetailsFragment;
     private NewsFeedFragment newsFeedFragment;
-    private SettingsFragment settingsFragment;
     private HelpFragment helpFragment;
 
-
-    private RecyclerView drawerStockList;
     private Stocks stocks;
-
-
     private NewsArticles newsArticles;
+
+    private Timer refreshTimer;
+    private RefreshTimerTask refreshTimerTask;
 
 /*====================================== Lifecycle Methods =======================================*/
 
@@ -129,7 +137,6 @@ public class MainActivity extends Activity implements
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
         helpFragment = HelpFragment.newInstance();
-        settingsFragment = SettingsFragment.newInstance();
 
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
@@ -160,6 +167,7 @@ public class MainActivity extends Activity implements
                         break;
                     case SETTINGS_FRAG:
                         getActionBar().setTitle(R.string.settings_ab_title);
+                        break;
                     case HELP_FRAG:
                         getActionBar().setTitle(R.string.help_ab_title);
                         break;
@@ -224,9 +232,7 @@ public class MainActivity extends Activity implements
                     break;
                 case SETTINGS_FRAG:
                     getActionBar().setTitle(R.string.settings_ab_title);
-                    getFragmentManager().beginTransaction()
-                            .replace(R.id.main_content_fragment_container, settingsFragment)
-                            .commit();
+                    new SettingsDialogFragment().show(getFragmentManager(), null);
                     currentFrag = SETTINGS_FRAG;
                     break;
                 case HELP_FRAG:
@@ -235,8 +241,6 @@ public class MainActivity extends Activity implements
                             .replace(R.id.main_content_fragment_container, helpFragment)
                             .commit();
                     currentFrag = HELP_FRAG;
-                    break;
-                default:
                     break;
             }
         }
@@ -249,6 +253,7 @@ public class MainActivity extends Activity implements
                     .commit();
             currentFrag = NEWS_FEED_FRAG;
         }
+
     }
 
     @Override
@@ -267,6 +272,10 @@ public class MainActivity extends Activity implements
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume() fired");
+
+        startRefreshTimer();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
@@ -283,6 +292,10 @@ public class MainActivity extends Activity implements
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause() fired");
+
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this);
+        stopRefreshTimer();
     }
 
     @Override
@@ -348,6 +361,7 @@ public class MainActivity extends Activity implements
                 invalidateOptionsMenu();
                 return true;
             case R.id.action_news_feed:
+                currentStockDetailsFragment = null;
                 getActionBar().setTitle(R.string.news_feed_ab_title);
                 getFragmentManager().beginTransaction()
                         .replace(R.id.main_content_fragment_container, newsFeedFragment)
@@ -355,13 +369,13 @@ public class MainActivity extends Activity implements
                 currentFrag = NEWS_FEED_FRAG;
                 return true;
             case R.id.action_settings:
+                currentStockDetailsFragment = null;
                 getActionBar().setTitle(R.string.settings_ab_title);
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.main_content_fragment_container, settingsFragment)
-                        .commit();
+                new SettingsDialogFragment().show(getFragmentManager(), null);
                 currentFrag = SETTINGS_FRAG;
                 return true;
             case R.id.action_help:
+                currentStockDetailsFragment = null;
                 getActionBar().setTitle(R.string.help_ab_title);
                 getFragmentManager().beginTransaction()
                         .replace(R.id.main_content_fragment_container, helpFragment)
@@ -447,6 +461,55 @@ public class MainActivity extends Activity implements
 
     }
 
+    @Override
+    public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId) {
+
+        switch (taskId) {
+            case STOCK_QUERY_ID:
+                stocks.parseStockQueryJSONObject(jsonObject);
+                drawerStockList.getAdapter().notifyDataSetChanged();
+                if (currentStockDetailsFragment != null) {
+                    currentStockDetailsFragment.update();
+                }
+                break;
+            case NEWS_QUERY_ID:
+                newsArticles.parseNewsQueryJSONObject(jsonObject);
+                newsFeedFragment.updateRecyclerView();
+                break;
+            case COMPANY_QUERY_ID:
+                parseCompanySearchJSONObject(jsonObject);
+                break;
+        }
+    }
+
+    @Override
+    public void onAPIResponseHandlerError(String errorMsg) {
+        makeToast(errorMsg);
+    }
+
+    @Override
+    public void OnRefreshTimerTaskInteraction() {
+        this.runOnUiThread(new Runnable() {
+            public void run() {
+                updateStocks();
+                updateNews();
+                Log.d(TAG, "Refresh");
+            }
+        });
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        switch (key) {
+            case KEY_PREF_REFRESH_RATE:
+                stopRefreshTimer();
+                startRefreshTimer();
+                break;
+            default:
+                break;
+        }
+    }
+
 /*====================================== General Methods =========================================*/
 
     /**
@@ -519,31 +582,24 @@ public class MainActivity extends Activity implements
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId) {
+    private void startRefreshTimer() {
 
-        switch (taskId) {
-            case STOCK_QUERY_ID:
-                stocks.parseStockQueryJSONObject(jsonObject);
-                drawerStockList.getAdapter().notifyDataSetChanged();
-                if (currentStockDetailsFragment != null) {
-                    currentStockDetailsFragment.update();
-                }
-                break;
-            case NEWS_QUERY_ID:
-                newsArticles.parseNewsQueryJSONObject(jsonObject);
-                newsFeedFragment.updateRecyclerView();
-                break;
-            case COMPANY_QUERY_ID:
-                parseCompanySearchJSONObject(jsonObject);
-                break;
-            default:
-                break;
+        String strRate = PreferenceManager.getDefaultSharedPreferences(this).getString(KEY_PREF_REFRESH_RATE, "15");
+        Long refreshRate = Long.decode(strRate);
+
+        Log.d(TAG, "refresh rate: " + refreshRate);
+
+        if (refreshRate > 0) {
+            refreshTimer = new Timer();
+            refreshTimerTask = new RefreshTimerTask(this);
+            refreshTimer.schedule(refreshTimerTask, 0, refreshRate * 1000);
         }
     }
 
-    @Override
-    public void onAPIResponseHandlerError(String errorMsg) {
-        makeToast(errorMsg);
+    private void stopRefreshTimer() {
+        if (refreshTimer != null) {
+            refreshTimer.cancel();
+            refreshTimer = null;
+        }
     }
 }
