@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="edu.temple.cis4350.bc.sia.fragments.StockDetailsFragment">
+    tools:context="edu.temple.cis4350.bc.sia.fragment.StockDetailsFragment">
 
 
     <android.support.v7.widget.CardView
@@ -100,14 +100,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager
+            <edu.temple.cis4350.bc.sia.chartpager.ChartViewPager
                 android:id="@+id/chart_viewpager"
                 android:layout_width="330dp"
                 android:layout_height="186dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp">
 
-            </edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager>
+            </edu.temple.cis4350.bc.sia.chartpager.ChartViewPager>
 
             <LinearLayout
                 android:id="@+id/chart_viewpager_controls"

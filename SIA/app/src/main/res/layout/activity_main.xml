@@ -37,7 +37,7 @@
             android:dividerHeight="0dp"
             android:background="#EEE" />
 
-        <edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton
+        <edu.temple.cis4350.bc.sia.stockdrawer.FloatingActionButton
             android:id="@+id/drawer_fab"
             android:layout_width="@dimen/fab_size"
             android:layout_height="@dimen/fab_size"
@@ -57,7 +57,7 @@
                 android:layout_gravity="center"
                 android:duplicateParentState="true"/>
 
-        </edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton>
+        </edu.temple.cis4350.bc.sia.stockdrawer.FloatingActionButton>
 
     </RelativeLayout>
 

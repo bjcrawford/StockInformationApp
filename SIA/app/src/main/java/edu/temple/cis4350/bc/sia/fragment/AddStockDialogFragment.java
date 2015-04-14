@@ -1,4 +1,4 @@
-package edu.temple.cis4350.bc.sia.fragments;
+package edu.temple.cis4350.bc.sia.fragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -22,10 +22,6 @@ import edu.temple.cis4350.bc.sia.coloritem.ColorItemAdapter;
 public class AddStockDialogFragment extends DialogFragment {
 
     private static final String TAG = "AddStockDialogFragment";
-
-    public interface OnAddStockListener {
-        public void onAddStock(String stockName, int stockColor);
-    }
 
     private AutoCompleteTextView stockName;
     private Spinner colorSpinner;
@@ -117,5 +113,9 @@ public class AddStockDialogFragment extends DialogFragment {
 
     public void doCancel() {
 
+    }
+
+    public interface OnAddStockListener {
+        public void onAddStock(String stockName, int stockColor);
     }
 }

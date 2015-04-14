@@ -1,4 +1,4 @@
-package edu.temple.cis4350.bc.sia.chartpageradapter;
+package edu.temple.cis4350.bc.sia.chartpager;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

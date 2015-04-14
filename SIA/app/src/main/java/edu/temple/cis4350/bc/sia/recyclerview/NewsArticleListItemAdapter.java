@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.newsarticlelistitem;
+package edu.temple.cis4350.bc.sia.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.apirequest;
+package edu.temple.cis4350.bc.sia.api;
 
 /**
  * A simple class for building API URLs with given parameters

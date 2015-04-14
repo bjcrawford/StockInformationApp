@@ -5,10 +5,9 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.fragments;
+package edu.temple.cis4350.bc.sia.fragment;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,13 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import edu.temple.cis4350.bc.sia.MainActivity;
 import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
-import edu.temple.cis4350.bc.sia.newsarticlelistitem.NewsArticleListItemAdapter;
+import edu.temple.cis4350.bc.sia.recyclerview.NewsArticleListItemAdapter;
 
 /**
  * A fragment to hold the news feed page.
@@ -121,6 +116,15 @@ public class NewsFeedFragment extends Fragment implements
     }
 
     /**
+     * Notifies the RecyclerView's adapter that the data set has been changed.
+     */
+    public void updateRecyclerView() {
+        if (newsList != null) {
+            newsList.getAdapter().notifyDataSetChanged();
+        }
+    }
+
+    /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
@@ -128,15 +132,6 @@ public class NewsFeedFragment extends Fragment implements
      */
     public interface OnNewsFeedFragmentInteractionListener {
         public void onNewsFeedFragmentNewsItemClick(String url);
-    }
-
-    /**
-     * Notifies the RecyclerView's adapter that the data set has been changed.
-     */
-    public void updateRecyclerView() {
-        if (newsList != null) {
-            newsList.getAdapter().notifyDataSetChanged();
-        }
     }
 
 }

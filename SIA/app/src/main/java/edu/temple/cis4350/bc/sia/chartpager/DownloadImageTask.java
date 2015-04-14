@@ -1,4 +1,4 @@
-package edu.temple.cis4350.bc.sia.chartpageradapter;
+package edu.temple.cis4350.bc.sia.chartpager;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -5,13 +5,9 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.fragments;
+package edu.temple.cis4350.bc.sia.fragment;
 
 import android.app.Activity;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -20,8 +16,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,14 +30,15 @@ import java.util.ArrayList;
 
 import edu.temple.cis4350.bc.sia.MainActivity;
 import edu.temple.cis4350.bc.sia.R;
-import edu.temple.cis4350.bc.sia.apirequest.APIRequestTask;
-import edu.temple.cis4350.bc.sia.apirequest.APIResponseHandler;
-import edu.temple.cis4350.bc.sia.apirequest.APIURLBuilder;
-import edu.temple.cis4350.bc.sia.chartpageradapter.ChartPagerAdapter;
-import edu.temple.cis4350.bc.sia.chartpageradapter.ChartViewPager;
-import edu.temple.cis4350.bc.sia.chartpageradapter.DownloadImageTask;
+import edu.temple.cis4350.bc.sia.api.APIRequestTask;
+import edu.temple.cis4350.bc.sia.api.APIResponseHandler;
+import edu.temple.cis4350.bc.sia.api.APIURLBuilder;
+import edu.temple.cis4350.bc.sia.chartpager.ChartPagerAdapter;
+import edu.temple.cis4350.bc.sia.chartpager.ChartViewPager;
+import edu.temple.cis4350.bc.sia.chartpager.DownloadImageTask;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
+import edu.temple.cis4350.bc.sia.util.Utils;
 
 public class StockDetailsFragment extends Fragment implements
         APIResponseHandler.OnAPIResponseHandlerInteractionListener {
@@ -85,7 +80,6 @@ public class StockDetailsFragment extends Fragment implements
 
     private View view;
 
-
     private CardView stockNameCardView;
     private TextView stockSymbolTextView;
     private TextView stockNameTextView;
@@ -108,7 +102,9 @@ public class StockDetailsFragment extends Fragment implements
 
     private APIResponseHandler APIResponseHandler;
 
-    private OnStockDetailsFragmentInteractionListener listener;
+    public StockDetailsFragment() {
+
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -134,10 +130,6 @@ public class StockDetailsFragment extends Fragment implements
         return fragment;
     }
 
-    public StockDetailsFragment() {
-        // Required empty public constructor
-    }
-
 
 /*====================================== Lifecycle Methods =======================================*/
 
@@ -146,13 +138,6 @@ public class StockDetailsFragment extends Fragment implements
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         Log.d(TAG, "OnAttach() fired");
-        try {
-            listener = (OnStockDetailsFragmentInteractionListener) activity;
-        }
-        catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnStockDetailsFragmentInteractionListener");
-        }
     }
 
     @Override
@@ -366,7 +351,6 @@ public class StockDetailsFragment extends Fragment implements
     public void onDetach() {
         super.onDetach();
         Log.d(TAG, "OnDetach() fired");
-        listener = null;
     }
 
 
@@ -401,7 +385,6 @@ public class StockDetailsFragment extends Fragment implements
 
     public void update() {
 
-        Log.d(TAG, "update() fired");
         stockSymbol = stock.getStockSymbol();
         stockColor = stock.getStockColorCode();
         stockName = stock.getStockName();
@@ -416,37 +399,12 @@ public class StockDetailsFragment extends Fragment implements
         updateView();
     }
 
-    public void updateView() {
-
-        Log.d(TAG, "updateView() fired");
-        stockNameCardView.setCardBackgroundColor(stockColor);
-        stockNameCardView.setCardBackgroundColor(stockColor);
-        stockSymbolTextView.setText(stockSymbol);
-        stockNameTextView.setText(stockName);
-        stockNameTextView.setTextColor(0xFFFFFFFF);
-        stockPriceTextView.setText(stockPrice);
-        stockChangeTextView.setText(stockChange);
-        if (stockChange.startsWith("+")) {
-            stockChangeTextView.setTextColor(0xFF99CC00);
-        } else if (stockChange.startsWith("-")) {
-            stockChangeTextView.setTextColor(0xFFFF4444);
-        }
-        stockPrevCloseTextView.setText(stockPrevClose);
-        stockOpenTextView.setText(stockOpen);
-        stockMarketCapTextView.setText(stockMarketCap);
-        stockVolumeTextView.setText(stockVolume);
-        if (stockDivider1 != null) {
-            stockDivider1.setBackgroundColor(stockColor);
-        }
-        stockDivider2.setBackgroundColor(stockColor);
-    }
-
     /**
-     * Updates the news list information. Launches an AsyncTask to retrieve a JSON news query.
+     * Updates the news list. Launches an AsyncTask to retrieve a JSON news query.
      */
     protected void updateNews() {
 
-        if (hasConnection()) {
+        if (Utils.hasConnection(getActivity())) {
             try {
                 String apiUrl = APIURLBuilder.getNewsQueryURL(getStockSymbol());
                 new APIRequestTask(APIResponseHandler, apiUrl, MainActivity.NEWS_QUERY_ID).execute().get();
@@ -460,34 +418,34 @@ public class StockDetailsFragment extends Fragment implements
     }
 
     /**
-     * Checks for an internet connection.
-     *
-     * @return true if connection is found, otherwise false
+     * Updates the view.
      */
-    private boolean hasConnection() {
-        ConnectivityManager connMgr = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+    public void updateView() {
 
-        return (networkInfo != null && networkInfo.isConnected());
+        stockNameCardView.setCardBackgroundColor(stockColor);
+        stockNameCardView.setCardBackgroundColor(stockColor);
+        stockSymbolTextView.setText(stockSymbol);
+        stockNameTextView.setText(stockName);
+        stockNameTextView.setTextColor(0xFFFFFFFF);
+        stockPriceTextView.setText(stockPrice);
+        stockChangeTextView.setText(stockChange);
+        if (stockChange.startsWith("+")) {
+            stockChangeTextView.setTextColor(0xFF99CC00);
+        }
+        else if (stockChange.startsWith("-")) {
+            stockChangeTextView.setTextColor(0xFFFF4444);
+        }
+        stockPrevCloseTextView.setText(stockPrevClose);
+        stockOpenTextView.setText(stockOpen);
+        stockMarketCapTextView.setText(stockMarketCap);
+        stockVolumeTextView.setText(stockVolume);
+        if (stockDivider1 != null) {
+            stockDivider1.setBackgroundColor(stockColor);
+        }
+        stockDivider2.setBackgroundColor(stockColor);
     }
 
     public void makeToast(String text) {
         Toast.makeText(getActivity(), text, Toast.LENGTH_LONG).show();
-    }
-
-    public void onSomeAction(Uri uri) {
-        if (listener != null) {
-            listener.onStockDetailsFragmentInteraction(uri);
-        }
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     */
-    public interface OnStockDetailsFragmentInteractionListener {
-        public void onStockDetailsFragmentInteraction(Uri uri);
     }
 }

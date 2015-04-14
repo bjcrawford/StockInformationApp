@@ -1,4 +1,4 @@
-package edu.temple.cis4350.bc.sia.fragments;
+package edu.temple.cis4350.bc.sia.fragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -64,7 +64,7 @@ public class SettingsDialogFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(R.string.settings_dialog_title);
         builder.setView(dialogView);
-        builder.setNeutralButton(R.string.settings_back_button, null);
+        builder.setPositiveButton(R.string.settings_back_button, null);
         builder.setCancelable(true);
 
         // Create the AlertDialog object and return it

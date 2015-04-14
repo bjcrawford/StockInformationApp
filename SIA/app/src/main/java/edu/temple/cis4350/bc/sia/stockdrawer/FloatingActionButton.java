@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package edu.temple.cis4350.bc.sia.floatingactionbutton;
+package edu.temple.cis4350.bc.sia.stockdrawer;
 
 import android.content.Context;
 import android.graphics.Outline;
