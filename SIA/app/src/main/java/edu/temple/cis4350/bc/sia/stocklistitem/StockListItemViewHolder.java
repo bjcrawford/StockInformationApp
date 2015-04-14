@@ -59,6 +59,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
      */
     public void bindStockListItem(Stock sli) {
 
+        stockCard.setCardElevation(sli.isItemChecked() ? 21.0f : 7.0f);
         stockColorBox.setCardBackgroundColor(sli.getStockColorCode());
         stockSymbol.setText(sli.getStockSymbol());
         stockPrice.setText(sli.getStockPrice());
@@ -79,8 +80,7 @@ public class StockListItemViewHolder extends RecyclerView.ViewHolder {
         stockChangeImg.setImageResource(resID);
 
         boolean isSelected = sli.isItemChecked();
-        Log.d(TAG, "Item " + sli.getStockSymbol() + " is selected: " + isSelected);
-        stockCard.setCardBackgroundColor(isSelected ? 0xFFCCCCCC : 0xFFFFFFFF);
+        stockCard.setCardBackgroundColor(isSelected ? 0xFFDDDDDD : 0xFFFFFFFF);
     }
 
     /**

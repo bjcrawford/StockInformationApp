@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/placeholder"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -91,6 +91,7 @@
         style="@style/Divider"/>
 
     <ScrollView
+        android:id="@+id/stock_scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.60">
@@ -276,12 +277,29 @@
         android:id="@+id/stock_detail_divider2"
         style="@style/Divider"/>
 
-    <FrameLayout
-        android:id="@+id/news_feed_frag_container"
+    <RelativeLayout
+        android:id="@+id/stock_news_feed"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.40">
 
-    </FrameLayout>
+        <FrameLayout
+            android:id="@+id/news_feed_frag_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/stock_news_feed_expand_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_action_expand"
+            style="?android:attr/buttonStyleSmall"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

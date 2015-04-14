@@ -20,7 +20,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -79,6 +85,7 @@ public class StockDetailsFragment extends Fragment implements
 
     private View view;
 
+
     private CardView stockNameCardView;
     private TextView stockSymbolTextView;
     private TextView stockNameTextView;
@@ -90,6 +97,11 @@ public class StockDetailsFragment extends Fragment implements
     private TextView stockVolumeTextView;
     private View stockDivider1;
     private View stockDivider2;
+    private ScrollView stockScrollView;
+    private RelativeLayout stockNewsFeed;
+    private ImageButton newsFeedExpandButton;
+
+    private boolean expanded;
 
     private NewsArticles newsArticles;
     private NewsFeedFragment newsFeedFragment;
@@ -162,6 +174,8 @@ public class StockDetailsFragment extends Fragment implements
         APIResponseHandler = new APIResponseHandler(this);
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
+
+        expanded = false;
     }
 
     @Override
@@ -267,6 +281,34 @@ public class StockDetailsFragment extends Fragment implements
         stockVolumeTextView = (TextView) view.findViewById(R.id.stock_volume);
         stockDivider1 = view.findViewById(R.id.stock_detail_divider1);
         stockDivider2 = view.findViewById(R.id.stock_detail_divider2);
+
+        if (view.findViewById(R.id.stock_scrollview) != null) {
+            stockScrollView = (ScrollView) view.findViewById(R.id.stock_scrollview);
+            stockNewsFeed = (RelativeLayout) view.findViewById(R.id.stock_news_feed);
+            newsFeedExpandButton = (ImageButton) view.findViewById(R.id.stock_news_feed_expand_button);
+
+            newsFeedExpandButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    LinearLayout.LayoutParams svParams = (LinearLayout.LayoutParams) stockScrollView.getLayoutParams();
+                    LinearLayout.LayoutParams nfParams = (LinearLayout.LayoutParams) stockNewsFeed.getLayoutParams();
+                    if (!expanded) {
+                        svParams.weight = 0.0f;
+                        nfParams.weight = 1.0f;
+                        newsFeedExpandButton.setImageResource(R.drawable.ic_action_collapse);
+                    } else {
+                        svParams.weight = 0.6f;
+                        nfParams.weight = 0.4f;
+                        newsFeedExpandButton.setImageResource(R.drawable.ic_action_expand);
+                    }
+                    expanded = !expanded;
+                    stockScrollView.setLayoutParams(svParams);
+                    stockNewsFeed.setLayoutParams(nfParams);
+                }
+            });
+        }
+
 
         getChildFragmentManager().beginTransaction()
                 .add(R.id.news_feed_frag_container, newsFeedFragment)
