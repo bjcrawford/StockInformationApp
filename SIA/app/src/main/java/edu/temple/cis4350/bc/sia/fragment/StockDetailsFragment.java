@@ -169,8 +169,6 @@ public class StockDetailsFragment extends Fragment implements
         Log.d(TAG, "onCreateView() fired");
         view = inflater.inflate(R.layout.fragment_stock_details, container, false);
 
-
-
         chartViewPager = (ChartViewPager) view.findViewById(R.id.chart_viewpager);
 
         chartPagerAdapter = new ChartPagerAdapter();
@@ -243,7 +241,6 @@ public class StockDetailsFragment extends Fragment implements
 
             @Override
             public void onPageSelected(int position) {
-                Log.d(TAG, "Page " + position + " selected");
                 for (int i = 0; i < chartControls.size(); i++) {
                     chartControls.get(i).setTextColor(i == position ? stockColor : 0xFF999999);
                 }
@@ -299,8 +296,6 @@ public class StockDetailsFragment extends Fragment implements
                 .add(R.id.news_feed_frag_container, newsFeedFragment)
                 .commit();
 
-        updateView();
-
         return view;
     }
 
@@ -320,7 +315,7 @@ public class StockDetailsFragment extends Fragment implements
     public void onResume() {
         super.onResume();
         Log.d(TAG, "onResume() fired");
-        updateNews();
+        update();
     }
 
     @Override

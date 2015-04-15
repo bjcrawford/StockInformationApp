@@ -98,7 +98,6 @@ public class Stocks {
             }
         }
         stocks.add(stock);
-        Log.d(TAG, "Successfully added " + stock.getStockSymbol() + " to list");
 
         return true;
     }

@@ -253,6 +253,7 @@ public class MainActivity extends Activity implements
                 for (Stock s : stocks.getCheckedItems()) {
                     stocks.remove(s);
                 }
+                saveStocks();
                 updateStocksAndNews();
                 drawerStockList.getAdapter().notifyDataSetChanged();
                 invalidateOptionsMenu();
@@ -308,8 +309,8 @@ public class MainActivity extends Activity implements
             if (stockName.endsWith("*")) { // Input from auto complete, parse out stock symbol
                 String words[] = stockName.split(" ");
                 stocks.add(new Stock(words[0], stockColor, stocks.size()));
-                updateStocksAndNews();
                 saveStocks();
+                updateStocksAndNews();
                 drawerStockList.getAdapter().notifyItemInserted(stocks.size() - 1);
             }
             else {
@@ -445,10 +446,10 @@ public class MainActivity extends Activity implements
             }
         }
         else {
-            drawerStockList.getAdapter().notifyDataSetChanged();
             newsArticles.clear();
-            newsFeedFragment.updateRecyclerView();
         }
+        drawerStockList.getAdapter().notifyDataSetChanged();
+        newsFeedFragment.updateRecyclerView();
     }
 
     private void launchFragment(int fragId, String stockSymbol) {

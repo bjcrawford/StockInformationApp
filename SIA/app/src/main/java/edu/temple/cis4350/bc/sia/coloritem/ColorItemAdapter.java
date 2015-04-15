@@ -24,7 +24,6 @@ public class ColorItemAdapter extends ArrayAdapter<ColorItem> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Log.d(TAG, "getView() fired");
 
         ColorItem ci = getItem(position);
 
