@@ -30,15 +30,14 @@ import java.util.ArrayList;
 
 import edu.temple.cis4350.bc.sia.MainActivity;
 import edu.temple.cis4350.bc.sia.R;
-import edu.temple.cis4350.bc.sia.api.APIRequestTask;
 import edu.temple.cis4350.bc.sia.api.APIResponseHandler;
 import edu.temple.cis4350.bc.sia.api.APIURLBuilder;
+import edu.temple.cis4350.bc.sia.api.DataRefreshService;
 import edu.temple.cis4350.bc.sia.chartpager.ChartPagerAdapter;
 import edu.temple.cis4350.bc.sia.chartpager.ChartViewPager;
 import edu.temple.cis4350.bc.sia.chartpager.DownloadImageTask;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
-import edu.temple.cis4350.bc.sia.util.Utils;
 
 public class StockDetailsFragment extends Fragment implements
         APIResponseHandler.OnAPIResponseHandlerInteractionListener {
@@ -100,7 +99,8 @@ public class StockDetailsFragment extends Fragment implements
     private NewsArticles newsArticles;
     private NewsFeedFragment newsFeedFragment;
 
-    private APIResponseHandler APIResponseHandler;
+    private DataRefreshService dataRefreshService;
+    private APIResponseHandler apiResponseHandler;
 
     public StockDetailsFragment() {
 
@@ -113,7 +113,7 @@ public class StockDetailsFragment extends Fragment implements
      * @param stock the stock object
      * @return A new instance of fragment StockDetailsFragment.
      */
-    public static StockDetailsFragment newInstance(Stock stock) {
+    public static StockDetailsFragment newInstance(Stock stock, DataRefreshService dataRefreshService) {
         StockDetailsFragment fragment = new StockDetailsFragment();
         fragment.stock = stock;
         Bundle args = new Bundle();
@@ -127,7 +127,12 @@ public class StockDetailsFragment extends Fragment implements
         args.putString(ARG_STOCK_MARKET_CAP, stock.getStockMarketCap());
         args.putString(ARG_STOCK_VOLUME, stock.getStockVolume());
         fragment.setArguments(args);
+        fragment.setDataRefreshService(dataRefreshService);
         return fragment;
+    }
+
+    private void setDataRefreshService(DataRefreshService dataRefreshService) {
+        this.dataRefreshService = dataRefreshService;
     }
 
 
@@ -156,7 +161,7 @@ public class StockDetailsFragment extends Fragment implements
             stockVolume = getArguments().getString(ARG_STOCK_VOLUME);
         }
 
-        APIResponseHandler = new APIResponseHandler(this);
+        apiResponseHandler = new APIResponseHandler(this);
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
 
@@ -399,17 +404,8 @@ public class StockDetailsFragment extends Fragment implements
      */
     protected void updateNews() {
 
-        if (Utils.hasConnection(getActivity())) {
-            try {
-                String apiUrl = APIURLBuilder.getNewsQueryURL(getStockSymbol());
-                new APIRequestTask(APIResponseHandler, apiUrl, MainActivity.NEWS_QUERY_ID).execute().get();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            // Notify user of lack of network connection
-            makeToast("No network connection");
-        }
+        String apiUrl = APIURLBuilder.getNewsQueryURL(getStockSymbol());
+        dataRefreshService.manualRefresh(apiResponseHandler, apiUrl);
     }
 
     /**

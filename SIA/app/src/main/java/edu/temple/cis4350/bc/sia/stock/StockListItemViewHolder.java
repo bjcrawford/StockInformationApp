@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.recyclerview;
+package edu.temple.cis4350.bc.sia.stock;
 
 import android.graphics.Color;
 import android.support.v7.widget.CardView;

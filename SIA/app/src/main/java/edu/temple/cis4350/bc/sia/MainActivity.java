@@ -8,17 +8,20 @@
 package edu.temple.cis4350.bc.sia;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,10 +35,10 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Timer;
 
 import edu.temple.cis4350.bc.sia.api.APIURLBuilder;
-import edu.temple.cis4350.bc.sia.stockdrawer.FloatingActionButton;
+import edu.temple.cis4350.bc.sia.api.DataRefreshService;
+import edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton;
 import edu.temple.cis4350.bc.sia.fragment.AddStockDialogFragment;
 import edu.temple.cis4350.bc.sia.fragment.HelpFragment;
 import edu.temple.cis4350.bc.sia.fragment.NewsFeedFragment;
@@ -44,10 +47,8 @@ import edu.temple.cis4350.bc.sia.fragment.StockDetailsFragment;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
 import edu.temple.cis4350.bc.sia.stock.Stock;
 import edu.temple.cis4350.bc.sia.stock.Stocks;
-import edu.temple.cis4350.bc.sia.recyclerview.StockListItemAdapter;
+import edu.temple.cis4350.bc.sia.stock.StockListItemAdapter;
 import edu.temple.cis4350.bc.sia.api.APIResponseHandler;
-import edu.temple.cis4350.bc.sia.api.APIRequestTask;
-import edu.temple.cis4350.bc.sia.timertask.RefreshTimerTask;
 import edu.temple.cis4350.bc.sia.util.Utils;
 
 public class MainActivity extends Activity implements
@@ -56,7 +57,6 @@ public class MainActivity extends Activity implements
         AddStockDialogFragment.OnAddStockListener,
         NewsFeedFragment.OnNewsFeedFragmentInteractionListener,
         APIResponseHandler.OnAPIResponseHandlerInteractionListener,
-        RefreshTimerTask.OnRefreshTimerTaskInteractionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final String TAG = "MainActivity";
@@ -74,6 +74,8 @@ public class MainActivity extends Activity implements
     private static final int SETTINGS_FRAG = 3;
     private static final int HELP_FRAG = 4;
 
+    public static final String NOTIFICATION_CHECKS_STOCKS = "edu.temple.cis4350.bc.sia.NOTIFICATION_CHECKS_STOCKS";
+
     public static final String KEY_PREF_REFRESH_RATE = "pref_refresh_rate";
     public static final String VALUE_PREF_REFRESH_5 = "5";
     public static final String VALUE_PREF_REFRESH_15 = "15";
@@ -88,7 +90,7 @@ public class MainActivity extends Activity implements
     private FloatingActionButton drawerFab;
     private StockListDrawerToggle drawerToggle;
 
-    private APIResponseHandler APIResponseHandler;
+    private APIResponseHandler apiResponseHandler;
 
     private int currentFrag;
     private StockDetailsFragment currentStockDetailsFragment;
@@ -98,8 +100,24 @@ public class MainActivity extends Activity implements
     private Stocks stocks;
     private NewsArticles newsArticles;
 
-    private Timer refreshTimer;
-    private RefreshTimerTask refreshTimerTask;
+    private boolean isBound;
+    private DataRefreshService boundDataRefreshService;
+
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            boundDataRefreshService = ((DataRefreshService.DataRefreshBinder)service).getService();
+            isBound = true;
+            refresh(true);
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName className) {
+            boundDataRefreshService = null;
+            isBound = false;
+        }
+    };
 
 /*====================================== Lifecycle Methods =======================================*/
 
@@ -108,6 +126,8 @@ public class MainActivity extends Activity implements
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate() fired");
         setContentView(R.layout.activity_main);
+
+        isBound = false;
 
         // Set up the stock drawer and toggle
         drawer = (RelativeLayout) findViewById(R.id.drawer);
@@ -128,8 +148,7 @@ public class MainActivity extends Activity implements
         drawerFab = (FloatingActionButton) findViewById(R.id.drawer_fab);
         drawerFab.setOnFABClickListener(this);
 
-        APIResponseHandler = new APIResponseHandler(this);
-
+        apiResponseHandler = new APIResponseHandler(this);
 
         newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
@@ -138,8 +157,6 @@ public class MainActivity extends Activity implements
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
-
-        updateStocksAndNews();
 
         // Take appropriate action on launch
         if (stocks.size() == 0) { // No stocks? Show help page
@@ -159,6 +176,11 @@ public class MainActivity extends Activity implements
         else { // Otherwise, just load the news feed
             launchFragment(NEWS_FEED_FRAG, null);
         }
+
+        // If the user tapped the notification, open the stocks drawer
+        if (getIntent().getAction().equals(NOTIFICATION_CHECKS_STOCKS)) {
+            drawerLayout.openDrawer(drawer);
+        }
     }
 
     @Override
@@ -171,6 +193,7 @@ public class MainActivity extends Activity implements
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart() fired");
+        doBindService();
     }
 
     @Override
@@ -178,7 +201,6 @@ public class MainActivity extends Activity implements
         super.onResume();
         Log.d(TAG, "onResume() fired");
 
-        startRefreshTimer();
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(this);
     }
@@ -202,7 +224,6 @@ public class MainActivity extends Activity implements
 
         PreferenceManager.getDefaultSharedPreferences(this)
                 .unregisterOnSharedPreferenceChangeListener(this);
-        stopRefreshTimer();
     }
 
     @Override
@@ -215,6 +236,7 @@ public class MainActivity extends Activity implements
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy() fired");
+        doUnbindService();
     }
 
 /*==================================== Options Menu Methods ======================================*/
@@ -244,7 +266,7 @@ public class MainActivity extends Activity implements
 
         switch (item.getItemId()) {
             case R.id.action_refresh:
-                updateStocksAndNews();
+                refresh(false);
                 return true;
             case R.id.action_discard:
                 if (currentFrag == STOCK_DETAILS_FRAG) {
@@ -254,7 +276,7 @@ public class MainActivity extends Activity implements
                     stocks.remove(s);
                 }
                 saveStocks();
-                updateStocksAndNews();
+                refresh(true);
                 drawerStockList.getAdapter().notifyDataSetChanged();
                 invalidateOptionsMenu();
                 return true;
@@ -266,6 +288,9 @@ public class MainActivity extends Activity implements
                 return true;
             case R.id.action_help:
                 launchFragment(HELP_FRAG, null);
+                return true;
+            case R.id.action_exit:
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -310,7 +335,7 @@ public class MainActivity extends Activity implements
                 String words[] = stockName.split(" ");
                 stocks.add(new Stock(words[0], stockColor, stocks.size()));
                 saveStocks();
-                updateStocksAndNews();
+                refresh(true);
                 drawerStockList.getAdapter().notifyItemInserted(stocks.size() - 1);
             }
             else {
@@ -352,21 +377,12 @@ public class MainActivity extends Activity implements
     }
 
     @Override
-    public void OnRefreshTimerTaskInteraction() {
-        this.runOnUiThread(new Runnable() {
-            public void run() {
-                updateStocksAndNews();
-                Log.d(TAG, "Refresh");
-            }
-        });
-    }
-
-    @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case KEY_PREF_REFRESH_RATE:
-                stopRefreshTimer();
-                startRefreshTimer();
+                //stopRefreshTimer();
+                //startRefreshTimer();
+                refresh(true);
                 break;
             default:
                 break;
@@ -427,22 +443,23 @@ public class MainActivity extends Activity implements
     /**
      * Updates the stock list and the news list.
      */
-    protected void updateStocksAndNews() {
+    protected void refresh(boolean auto) {
 
-        if (stocks.size() > 0) {
-            if (Utils.hasConnection(this)) {
-                try {
-                    String apiUrlStocks = APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray());
-                    new APIRequestTask(APIResponseHandler, apiUrlStocks, STOCK_QUERY_ID).execute().get();
+        if (stocks.size() > 0 && isBound) {
 
-                    String apiUrlNews = APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray());
-                    new APIRequestTask(APIResponseHandler, apiUrlNews, NEWS_QUERY_ID).execute().get();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else {
-                // Notify user of lack of network connection and un-updated stock details
-                makeToast("No network connection");
+            String[] apiUrls = new String[]{
+                    APIURLBuilder.getStockQueryURL(stocks.getStockSymbolStringArray()),
+                    APIURLBuilder.getNewsQueryURL(stocks.getStockSymbolStringArray())
+            };
+
+            if (auto) {
+                String strRate = PreferenceManager.getDefaultSharedPreferences(this).getString(KEY_PREF_REFRESH_RATE, "15");
+                int refreshRate = Integer.decode(strRate);
+
+                boundDataRefreshService.startAutoRefresh(apiResponseHandler, refreshRate, apiUrls);
+            }
+            else {
+                boundDataRefreshService.manualRefresh(apiResponseHandler, apiUrls);
             }
         }
         else {
@@ -458,7 +475,7 @@ public class MainActivity extends Activity implements
         switch (fragId) {
             case STOCK_DETAILS_FRAG:
                 Stock s = stocks.get(stockSymbol);
-                currentStockDetailsFragment = StockDetailsFragment.newInstance(s);
+                currentStockDetailsFragment = StockDetailsFragment.newInstance(s, boundDataRefreshService);
                 getFragmentManager().beginTransaction()
                         .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
                         .commit();
@@ -485,24 +502,13 @@ public class MainActivity extends Activity implements
         }
     }
 
-    private void startRefreshTimer() {
-
-        String strRate = PreferenceManager.getDefaultSharedPreferences(this).getString(KEY_PREF_REFRESH_RATE, "15");
-        Long refreshRate = Long.decode(strRate);
-
-        Log.d(TAG, "refresh rate: " + refreshRate);
-
-        if (refreshRate > 0) {
-            refreshTimer = new Timer();
-            refreshTimerTask = new RefreshTimerTask(this);
-            refreshTimer.schedule(refreshTimerTask, 0, refreshRate * 1000);
-        }
+    void doBindService() {
+        bindService(new Intent(MainActivity.this, DataRefreshService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
-    private void stopRefreshTimer() {
-        if (refreshTimer != null) {
-            refreshTimer.cancel();
-            refreshTimer = null;
+    void doUnbindService() {
+        if (isBound) {
+            unbindService(serviceConnection);
         }
     }
 

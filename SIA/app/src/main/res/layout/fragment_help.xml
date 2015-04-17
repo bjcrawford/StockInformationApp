@@ -80,7 +80,7 @@
                         android:textSize="20sp"
                         android:text="@string/help_stock_list_drawer_add"/>
 
-                        <edu.temple.cis4350.bc.sia.stockdrawer.FloatingActionButton
+                        <edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton
                             android:id="@+id/help_fab"
                             android:layout_width="@dimen/fab_size_small"
                             android:layout_height="@dimen/fab_size_small"
@@ -98,7 +98,7 @@
                                 android:layout_gravity="center"
                                 android:duplicateParentState="true"/>
 
-                        </edu.temple.cis4350.bc.sia.stockdrawer.FloatingActionButton>
+                        </edu.temple.cis4350.bc.sia.floatingactionbutton.FloatingActionButton>
 
                     <TextView
                         android:id="@+id/help_stock_list_drawer_remove"

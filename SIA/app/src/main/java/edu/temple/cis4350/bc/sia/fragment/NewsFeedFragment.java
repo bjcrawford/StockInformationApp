@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 
 import edu.temple.cis4350.bc.sia.R;
 import edu.temple.cis4350.bc.sia.newsarticle.NewsArticles;
-import edu.temple.cis4350.bc.sia.recyclerview.NewsArticleListItemAdapter;
+import edu.temple.cis4350.bc.sia.newsarticle.NewsArticleListItemAdapter;
 
 /**
  * A fragment to hold the news feed page.

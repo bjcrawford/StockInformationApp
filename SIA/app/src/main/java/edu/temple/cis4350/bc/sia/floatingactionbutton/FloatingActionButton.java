@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package edu.temple.cis4350.bc.sia.stockdrawer;
+package edu.temple.cis4350.bc.sia.floatingactionbutton;
 
 import android.content.Context;
 import android.graphics.Outline;
@@ -60,8 +60,7 @@ public class FloatingActionButton extends FrameLayout {
         this(context, attrs, defStyleAttr, 0);
     }
 
-    public FloatingActionButton(Context context, AttributeSet attrs, int defStyleAttr,
-                                         int defStyleRes) {
+    public FloatingActionButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr);
 
         setClickable(true);

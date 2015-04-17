@@ -5,7 +5,7 @@
   Spring 2015
  */
 
-package edu.temple.cis4350.bc.sia.recyclerview;
+package edu.temple.cis4350.bc.sia.stock;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.temple.cis4350.bc.sia.R;
-import edu.temple.cis4350.bc.sia.stock.Stocks;
 
 /**
  * This class is an Adapter for populating the RecyclerView used in
