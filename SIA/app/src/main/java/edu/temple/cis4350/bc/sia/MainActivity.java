@@ -493,7 +493,7 @@ public class MainActivity extends Activity implements
                         .replace(R.id.main_content_fragment_container, currentStockDetailsFragment)
                         .commit();
                 currentFrag = STOCK_DETAILS_FRAG;
-                getActionBar().setTitle(currentStockDetailsFragment.getStockSymbol());
+                getActionBar().setTitle(stockSymbol);
                 break;
             case NEWS_FEED_FRAG:
                 getFragmentManager().beginTransaction()
