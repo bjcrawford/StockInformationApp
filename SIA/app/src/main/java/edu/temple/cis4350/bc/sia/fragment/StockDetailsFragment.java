@@ -131,7 +131,7 @@ public class StockDetailsFragment extends Fragment implements
         return fragment;
     }
 
-    private void setDataRefreshService(DataRefreshService dataRefreshService) {
+    public void setDataRefreshService(DataRefreshService dataRefreshService) {
         this.dataRefreshService = dataRefreshService;
     }
 
@@ -402,10 +402,13 @@ public class StockDetailsFragment extends Fragment implements
     /**
      * Updates the news list. Launches an AsyncTask to retrieve a JSON news query.
      */
-    protected void updateNews() {
+    public void updateNews() {
 
         String apiUrl = APIURLBuilder.getNewsQueryURL(getStockSymbol());
-        dataRefreshService.manualRefresh(apiResponseHandler, apiUrl);
+        if (dataRefreshService != null) {
+            dataRefreshService.manualRefresh(apiResponseHandler, apiUrl);
+        }
+
     }
 
     /**

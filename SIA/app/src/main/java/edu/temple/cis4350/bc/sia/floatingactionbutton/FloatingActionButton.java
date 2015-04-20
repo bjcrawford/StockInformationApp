@@ -29,24 +29,18 @@ import android.widget.FrameLayout;
  */
 public class FloatingActionButton extends FrameLayout {
 
-    /**
-     * Interface definition for a callback to be invoked when the checked state
-     * of a compound button changes.
-     */
-    public static interface OnFABClickListener {
-
-        /**
-         * Called when the FAB button has been clicked.
-         *
-         * @param fabView   The FAB view that has been clicked.
-         */
-        void onFABClick(FloatingActionButton fabView);
-    }
-
     private static final String TAG = "FloatingActionButton";
 
+    /**
+     * Interface definition for a callback to be invoked when the button
+     * is clicked.
+     */
+    public static interface OnFloatingActionButtonInteractionListener {
+        void onFloatingActionButtonClick(FloatingActionButton fabView);
+    }
+
     // A listener to communicate that the FAB has been clicked
-    private OnFABClickListener onFABClickListener;
+    private OnFloatingActionButtonInteractionListener listener;
 
     public FloatingActionButton(Context context) {
         this(context, null, 0, 0);
@@ -87,8 +81,8 @@ public class FloatingActionButton extends FrameLayout {
      *
      * @param listener the callback to call on checked state change
      */
-    public void setOnFABClickListener(OnFABClickListener listener) {
-        onFABClickListener = listener;
+    public void setListener(OnFloatingActionButtonInteractionListener listener) {
+        this.listener = listener;
     }
 
     /**
@@ -97,8 +91,8 @@ public class FloatingActionButton extends FrameLayout {
     @Override
     public boolean performClick() {
 
-        if (onFABClickListener != null) {
-            onFABClickListener.onFABClick(this);
+        if (listener != null) {
+            listener.onFloatingActionButtonClick(this);
         }
         return super.performClick();
     }

@@ -28,11 +28,28 @@ public class NewsFeedFragment extends Fragment implements
 
     private static final String TAG = "NewsFeedFragment";
 
-    private View view;
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     */
+    public interface OnNewsFeedFragmentInteractionListener {
+        public void onNewsFeedFragmentNewsItemClick(String url);
+    }
+
     private OnNewsFeedFragmentInteractionListener listener;
 
+    private View view;
     private RecyclerView newsList;
     private NewsArticles newsArticles;
+
+    /**
+     * Required empty public constructor
+     */
+    public NewsFeedFragment() {
+
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -45,11 +62,6 @@ public class NewsFeedFragment extends Fragment implements
         return nff;
     }
 
-    /**
-     * Required empty public constructor
-     */
-    public NewsFeedFragment() {
-    }
 
     /**
      * Sets the list of news articles.
@@ -123,15 +135,4 @@ public class NewsFeedFragment extends Fragment implements
             newsList.getAdapter().notifyDataSetChanged();
         }
     }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     */
-    public interface OnNewsFeedFragmentInteractionListener {
-        public void onNewsFeedFragmentNewsItemClick(String url);
-    }
-
 }

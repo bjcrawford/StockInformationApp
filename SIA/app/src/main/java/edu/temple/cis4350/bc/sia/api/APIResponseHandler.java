@@ -21,6 +21,16 @@ public class APIResponseHandler extends Handler {
 
     private static final String TAG = "APIResponseHandler";
 
+    /**
+     * This interface must be implemented by activities that contain this
+     * handler to allow an interaction in this handler to be communicated
+     * to the activity.
+     */
+    public interface OnAPIResponseHandlerInteractionListener {
+        public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId);
+        public void onAPIResponseHandlerError(String errorMsg);
+    }
+
     private OnAPIResponseHandlerInteractionListener listener;
 
     public APIResponseHandler(OnAPIResponseHandlerInteractionListener listener) {
@@ -62,15 +72,5 @@ public class APIResponseHandler extends Handler {
         if (listener != null) {
             listener.onAPIResponseHandlerError(errorMsg);
         }
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * handler to allow an interaction in this handler to be communicated
-     * to the activity.
-     */
-    public interface OnAPIResponseHandlerInteractionListener {
-        public void onAPIResponseHandlerInteraction(JSONObject jsonObject, int taskId);
-        public void onAPIResponseHandlerError(String errorMsg);
     }
 }

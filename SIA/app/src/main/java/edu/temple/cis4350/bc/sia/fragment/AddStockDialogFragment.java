@@ -23,8 +23,36 @@ public class AddStockDialogFragment extends DialogFragment {
 
     private static final String TAG = "AddStockDialogFragment";
 
+    public interface OnAddStockDialogFragmentInteractionListener {
+        public void onStockAdded(String stockName, int stockColor);
+    }
+
+    private OnAddStockDialogFragmentInteractionListener listener;
     private AutoCompleteTextView stockName;
     private Spinner colorSpinner;
+
+    /**
+     * Required empty public constructor
+     */
+    public AddStockDialogFragment() {
+
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     * @return A new instance of fragment AddStockDialogFragment.
+     */
+    public static AddStockDialogFragment newInstance(OnAddStockDialogFragmentInteractionListener listener) {
+        AddStockDialogFragment asdf = new AddStockDialogFragment();
+        asdf.setListener(listener);
+
+        return asdf;
+    }
+
+    private void setListener(OnAddStockDialogFragmentInteractionListener listener) {
+        this.listener = listener;
+    }
 
     /**
      * Called when the Dialog is created. Handles defining button event
@@ -90,7 +118,6 @@ public class AddStockDialogFragment extends DialogFragment {
                         AddStockDialogFragment.this.doAddClick();
                     }
                 }
-
         );
         builder.setNegativeButton(R.string.cancel_button,
                 new DialogInterface.OnClickListener() {
@@ -98,7 +125,6 @@ public class AddStockDialogFragment extends DialogFragment {
                         AddStockDialogFragment.this.doCancel();
                     }
                 }
-
         );
 
         // Create the AlertDialog object and return it
@@ -108,14 +134,10 @@ public class AddStockDialogFragment extends DialogFragment {
     public void doAddClick() {
         String stockName = this.stockName.getText().toString();
         int stockColor = ((ColorItem) colorSpinner.getSelectedItem()).getItemColorCode();
-        ((OnAddStockListener) getActivity()).onAddStock(stockName, stockColor);
+        listener.onStockAdded(stockName, stockColor);
     }
 
     public void doCancel() {
 
-    }
-
-    public interface OnAddStockListener {
-        public void onAddStock(String stockName, int stockColor);
     }
 }

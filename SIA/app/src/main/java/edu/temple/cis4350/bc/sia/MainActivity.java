@@ -52,9 +52,9 @@ import edu.temple.cis4350.bc.sia.api.APIResponseHandler;
 import edu.temple.cis4350.bc.sia.util.Utils;
 
 public class MainActivity extends Activity implements
-        StockListItemAdapter.OnStockListItemClickListener,
-        FloatingActionButton.OnFABClickListener,
-        AddStockDialogFragment.OnAddStockListener,
+        StockListItemAdapter.OnStockListItemAdapterInteractionListener,
+        FloatingActionButton.OnFloatingActionButtonInteractionListener,
+        AddStockDialogFragment.OnAddStockDialogFragmentInteractionListener,
         NewsFeedFragment.OnNewsFeedFragmentInteractionListener,
         APIResponseHandler.OnAPIResponseHandlerInteractionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
@@ -108,8 +108,13 @@ public class MainActivity extends Activity implements
         @Override
         public void onServiceConnected(ComponentName className, IBinder service) {
             boundDataRefreshService = ((DataRefreshService.DataRefreshBinder)service).getService();
+            Log.d(TAG, "Service is bound");
             isBound = true;
             refresh(true);
+            if (currentFrag == STOCK_DETAILS_FRAG) {
+                currentStockDetailsFragment.setDataRefreshService(boundDataRefreshService);
+                currentStockDetailsFragment.updateNews();
+            }
         }
 
         @Override
@@ -136,8 +141,11 @@ public class MainActivity extends Activity implements
         drawerToggle = new StockListDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
 
-        initStocks();
+        restoreStocks();
+        newsArticles = new NewsArticles();
 
         // Set up the recycler view in the stock drawer
         drawerStockList = (RecyclerView) findViewById(R.id.drawer_recyclerview);
@@ -146,17 +154,14 @@ public class MainActivity extends Activity implements
 
         // Set up floating action button in stock drawer
         drawerFab = (FloatingActionButton) findViewById(R.id.drawer_fab);
-        drawerFab.setOnFABClickListener(this);
+        drawerFab.setListener(this);
 
         apiResponseHandler = new APIResponseHandler(this);
 
-        newsArticles = new NewsArticles();
         newsFeedFragment = NewsFeedFragment.newInstance(newsArticles);
-
         helpFragment = HelpFragment.newInstance();
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        doBindService();
 
         // Take appropriate action on launch
         if (stocks.size() == 0) { // No stocks? Show help page
@@ -193,7 +198,6 @@ public class MainActivity extends Activity implements
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart() fired");
-        doBindService();
     }
 
     @Override
@@ -250,6 +254,8 @@ public class MainActivity extends Activity implements
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
 
+        // Toggle the refresh and discard buttons on and off
+        // based on the state of the stock list items
         boolean anyChecked = stocks.areAnyChecked();
         menu.findItem(R.id.action_refresh).setVisible(!anyChecked);
         menu.findItem(R.id.action_discard).setVisible(anyChecked);
@@ -324,12 +330,12 @@ public class MainActivity extends Activity implements
     }
 
     @Override
-    public void onFABClick(FloatingActionButton fabView) {
-        new AddStockDialogFragment().show(getFragmentManager(), null);
+    public void onFloatingActionButtonClick(FloatingActionButton fabView) {
+        AddStockDialogFragment.newInstance(this).show(getFragmentManager(), null);
     }
 
     @Override
-    public void onAddStock(String stockName, int stockColor) {
+    public void onStockAdded(String stockName, int stockColor) {
         if (!stockName.equals("")) {
             if (stockName.endsWith("*")) { // Input from auto complete, parse out stock symbol
                 String words[] = stockName.split(" ");
@@ -380,8 +386,6 @@ public class MainActivity extends Activity implements
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case KEY_PREF_REFRESH_RATE:
-                //stopRefreshTimer();
-                //startRefreshTimer();
                 refresh(true);
                 break;
             default:
@@ -393,9 +397,10 @@ public class MainActivity extends Activity implements
 
 
     /**
-     * Initializes the stock list. Pulls and uses a json representation from an internal file if
+     * Restores the stock list. Pulls and uses a json representation from an internal
+     * file if found.
      */
-    private void initStocks() {
+    private void restoreStocks() {
 
         String strStocksJSONArray = Utils.fileToString(openStorageFile());
 
@@ -414,7 +419,7 @@ public class MainActivity extends Activity implements
     }
 
     /**
-     * Saves the stock list. The stock is is persisted into an internal file.
+     * Saves the stock list. The stock list is persisted into an internal file.
      */
     private void saveStocks() {
 
@@ -441,7 +446,7 @@ public class MainActivity extends Activity implements
     }
 
     /**
-     * Updates the stock list and the news list.
+     * Updates the stock list and the news list using the bound data refresh service.
      */
     protected void refresh(boolean auto) {
 
@@ -469,6 +474,14 @@ public class MainActivity extends Activity implements
         newsFeedFragment.updateRecyclerView();
     }
 
+    /**
+     * Launches a specified fragment. If the stock details fragment is launched, a string
+     * specifying the stock symbol of the stock to load must be given. For other fragments,
+     * the string can be passed in as null.
+     *
+     * @param fragId The id of the fragment to launch
+     * @param stockSymbol The stock symbol if launching a stock detail fragment, otherwise null
+     */
     private void launchFragment(int fragId, String stockSymbol) {
 
         currentStockDetailsFragment = null;
@@ -502,16 +515,28 @@ public class MainActivity extends Activity implements
         }
     }
 
+    /**
+     * Binds the refresh data service to this activity
+     */
     void doBindService() {
+        Log.d(TAG, "Binding to service");
         bindService(new Intent(MainActivity.this, DataRefreshService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
+    /**
+     * Unbinds the data refresh service from this activity
+     */
     void doUnbindService() {
         if (isBound) {
             unbindService(serviceConnection);
         }
     }
 
+    /**
+     * A helper method for easily creating a toast
+     *
+     * @param text The text to display
+     */
     public void makeToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
@@ -531,6 +556,7 @@ public class MainActivity extends Activity implements
         public void onDrawerClosed(View view) {
             super.onDrawerClosed(view);
 
+            // Restore the correct action bar title
             switch (currentFrag) {
                 case NEWS_FEED_FRAG:
                     getActionBar().setTitle(R.string.news_feed_ab_title);
@@ -543,6 +569,7 @@ public class MainActivity extends Activity implements
                     break;
             }
 
+            // Clear any checked states on the stock list
             stocks.setSelectable(false);
             stocks.setAllChecked(false);
 

@@ -20,11 +20,20 @@ import edu.temple.cis4350.bc.sia.R;
  */
 public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemViewHolder> {
 
+    /**
+     * This interface must be implemented by activities using this adapter.
+     * This allows for interaction between the adapter and the activity.
+     */
+    public interface OnStockListItemAdapterInteractionListener {
+        public void onStockListItemClick(View view, int position);
+        public boolean onStockListItemLongClick(View view, int position);
+    }
+
     /* A reference to the Stocks object */
     private Stocks stocks;
 
     /* A listener for click events */
-    private OnStockListItemClickListener listener;
+    private OnStockListItemAdapterInteractionListener listener;
 
     /**
      * A constructor for the StockListItemAdapter.
@@ -32,7 +41,7 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
      * @param stocks the Stocks object
      * @param listener the listener for click events
      */
-    public StockListItemAdapter(Stocks stocks, OnStockListItemClickListener listener) {
+    public StockListItemAdapter(Stocks stocks, OnStockListItemAdapterInteractionListener listener) {
         this.stocks = stocks;
         this.listener = listener;
     }
@@ -63,14 +72,5 @@ public class StockListItemAdapter extends RecyclerView.Adapter<StockListItemView
     @Override
     public int getItemCount() {
         return stocks.size();
-    }
-
-    /**
-     * This interface must be implemented by activities using this adapter.
-     * This allows for interaction between the adapter and the activity.
-     */
-    public interface OnStockListItemClickListener {
-        public void onStockListItemClick(View view, int position);
-        public boolean onStockListItemLongClick(View view, int position);
     }
 }
